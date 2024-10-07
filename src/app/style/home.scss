@@ -1,0 +1,27 @@
+.home-page {
+  .screen-section {
+    height: calc(100vh - 53px);
+    @media (min-width: 1024px) {
+      height: calc(100vh - 73px);
+    }
+  }
+
+  .partners {
+    ul {
+      li {
+        display: inline-block;
+        border-right: 1px solid white;
+        padding: 0px 24px;
+        @apply text-lg;
+        line-height: 1;
+        @media screen and (max-width: 767px) {
+          border: 0 !important;
+        }
+      }
+      li:nth-child(1) {
+        border-left: 1px solid white;
+      }
+      
+    }
+  }
+}

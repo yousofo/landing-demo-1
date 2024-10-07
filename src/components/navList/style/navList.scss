@@ -1,0 +1,31 @@
+.nav-list{
+  transform: translate(-100%);
+  transition: all 0.3s ease;
+  &.open{
+    transform: translate(0);
+  }
+  nav{
+    ul{
+      display: flex;
+      flex-direction: column;
+      li{
+        padding: 10px 16px 10px 16px;
+        text-transform: capitalize;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        color: var(--primary);
+        font-weight: 500;
+        &:hover{
+          span{
+            transition: translate 0.1s ease;
+
+            display: inline-block;
+            translate: 0px 3px;
+          }
+          background-color: var(--primary);
+          color: white;
+        }
+      }
+    }
+  }
+}
