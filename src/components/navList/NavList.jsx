@@ -71,7 +71,10 @@ const NavList = () => {
             </Link>
           </li>
           <li>
-            <Link href="/contact">
+            <Link
+              onClick={(e) => handleClicked(e, "/contact")}
+              href="/contact"
+            >
               <span>Contacts</span>
             </Link>
           </li>
