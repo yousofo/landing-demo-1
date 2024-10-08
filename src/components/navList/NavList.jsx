@@ -8,12 +8,41 @@ import { useRouter } from "next/navigation";
 
 const NavList = () => {
   const isOpen = useSelector((store) => store.navList.isOpen);
+  const swiper = useSelector((store) => store.swiper.swiper);
+
   const dispatch = useDispatch();
   const router = useRouter();
-  function handleClicked(e, link) {
+  // function handleClicked(e, link) {
+  //   e.preventDefault();
+  //   router.push(link);
+  //   dispatch(toggleCloseNavList());
+  // }
+  const links = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "About",
+      link: "/about",
+    },
+    {
+      name: "Services",
+      link: "/services",
+    },
+    {
+      name: "cyber Security Services",
+      link: "/cyberSecurityServices",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+  ];
+  function handleLinkClick(e,i){
     e.preventDefault();
-    router.push(link);
     dispatch(toggleCloseNavList());
+    swiper.slideTo(i);
   }
   return (
     <div
@@ -44,40 +73,15 @@ const NavList = () => {
       </div>
       <nav>
         <ul>
-          <li>
-            <Link onClick={(e) => handleClicked(e, "/")} href="/">
-              <span>Home</span>
-            </Link>
-          </li>
-          <li>
-            <Link onClick={(e) => handleClicked(e, "/about")} href="/about">
-              <span>About us</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={(e) => handleClicked(e, "/services")}
-              href="/services"
-            >
-              <span>Our services</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={(e) => handleClicked(e, "/cyberSecurityServices")}
-              href="/cyberSecurityServices"
-            >
-              <span>cyber security services</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={(e) => handleClicked(e, "/contact")}
-              href="/contact"
-            >
-              <span>Contacts</span>
-            </Link>
-          </li>
+          {
+            links.map((link, i) => (
+              <li key={i}>
+                <Link onClick={(e) => handleLinkClick(e,i)} href={link.link}>
+                  <span className="capitalize">{link.name}</span>
+                </Link>
+              </li>
+            ))
+          }
         </ul>
       </nav>
     </div>

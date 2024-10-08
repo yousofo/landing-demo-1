@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import ScreenWrapper from "../shared/ScreenWrapper";
 import "./style/header.css";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleOpenNavList } from "@/state/features/navList/navListSlice";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -13,20 +13,8 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  // hover:h-[52px] lg:hover:h-[72px]
-  console.log(pathname);
+  const swiper = useSelector((store) => store.swiper.swiper);
   useEffect(() => {
-    // const handleScroll = () => {
-    //   const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    //   if (scrollTop > 0) {
-    //     setScrolled(true);
-    //     console.log("scrolled");
-    //   } else {
-    //     console.log("not scrolled");
-    //     setScrolled(false);
-    //   }
-    // };
-    // window.addEventListener("scroll", handleScroll);
     const logoInterval = setInterval(() => {
       document.querySelector(".logo").classList.remove("active");
       const logoTimeout = setTimeout(() => {
@@ -34,17 +22,43 @@ const Header = () => {
         clearTimeout(logoTimeout);
       }, 2000);
     }, 10000);
-    // Cleanup event listener on component unmount
     return () => {
-      // window.removeEventListener("scroll", handleScroll);
       clearInterval(logoInterval);
     };
   }, []);
+
+  const links = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "About",
+      link: "/about",
+    },
+    {
+      name: "Services",
+      link: "/services",
+    },
+    {
+      name: "cyber Security Services",
+      link: "/cyberSecurityServices",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+  ];
+
+  function handleLinkClick(e,i){
+    e.preventDefault();
+    swiper.slideTo(i);
+  }
   return (
     <header
       className={`bg-white  transition-all main-header  sticky  top-0 z-40  py-2  lg:py-0 ${
         scrolled ? "scrolled" : ""
-      } ${!(pathname === "/") ? "scrolled2" : ""}`}
+      } ${!(pathname === "/") ? "scrolled2" : ""} drop-shadow`}
     >
       <ScreenWrapper className="flex justify-between items-center py-0 h-full">
         <Link
@@ -71,26 +85,15 @@ const Header = () => {
         </Link>
         <nav className="hidden lg:block h-full">
           <ul className="h-full">
-            <li>
-              <Link href="/about">
-                <span>About us</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/services">
-                <span>Our services</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/cyberSecurityServices">
-                <span>cyber security services</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <span>Contacts</span>
-              </Link>
-            </li>
+            {
+              links.map((link,i) => (
+                <li key={link.name}>
+                  <Link onClick={(e)=>handleLinkClick(e,i)} href={link.link}>
+                    <span className="capitalize">{link.name}</span>
+                  </Link>
+                </li>
+              ))
+            }
           </ul>
         </nav>
         <button
