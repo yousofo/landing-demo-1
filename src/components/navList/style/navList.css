@@ -10,12 +10,16 @@
   flex-direction: column;
 }
 .nav-list nav ul li {
-  padding: 10px 16px 10px 16px;
   text-transform: capitalize;
   transition: all 0.3s ease;
   cursor: pointer;
   color: var(--primary);
   font-weight: 500;
+}
+.nav-list nav ul li a {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 16px 10px 16px;
 }
 .nav-list nav ul li:hover {
   background-color: var(--primary);
