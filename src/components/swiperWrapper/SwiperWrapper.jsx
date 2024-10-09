@@ -21,7 +21,7 @@ const SwiperWrapper = () => {
       slidesPerView={1}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => dispatch(setSwiper(swiper))}
-      className="w-full h-min"
+      className="w-full h-min flex-1 "
       autoHeight={true}  // Enable autoHeight
       modules={[EffectFade]}
       effect="fade"
@@ -32,11 +32,11 @@ const SwiperWrapper = () => {
       </SwiperSlide>
       {/* 1 */}
       <SwiperSlide>
-        <Contact />
+        <About />
       </SwiperSlide>
       {/* 2 */}
       <SwiperSlide>
-        <About />
+        <Services />
       </SwiperSlide>
       {/* 3 */}
       <SwiperSlide>
@@ -44,7 +44,7 @@ const SwiperWrapper = () => {
       </SwiperSlide>
       {/* 4 */}
       <SwiperSlide>
-        <Services />
+        <Contact />
       </SwiperSlide>
     </Swiper>
   );

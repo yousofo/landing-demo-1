@@ -24,7 +24,16 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.swiper-slide{
+  display: flex !important;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    min-height: calc(100vh - 244px);
+  }
+  >*{
+    flex-grow: 1;
+  }
+}
 /* @layer utilities {
   .text-balance {
     text-wrap: balance;
