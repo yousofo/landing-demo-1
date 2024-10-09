@@ -240,7 +240,7 @@ const Contact = () => {
         <div ref={overlayContainerRef} class="overlay-container">
           <div ref={overlayRef} class="overlay">
             <div class="overlay-left p-4">
-              <h1>Let's Connect!</h1>
+              <h1>Let&apos;s Connect!</h1>
               {/*  Tell us about your company's needs and how we can assist. */}
               <p>or</p>
               <button
