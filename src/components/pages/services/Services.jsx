@@ -41,11 +41,11 @@ export default Services;
 
 const ServiceCard = ({ icon, title, details, img }) => {
   return (
-    <div className="w-full px-4 md:w-1/2 lg:w-1/3 ">
-      <div className="mb-9 rounded-2xl transition-all cursor-pointer bg-white p-6 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
+    <div className="w-full p-4 md:w-1/2 lg:w-1/3 ">
+      <div className="rounded-2xl transition-all cursor-pointer bg-white p-6 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
         <div className="mb-8 flex  items-center justify-center rounded-2xl bg-primary overflow-hidden">
           {/* {icon} */}
-          <img src={img} alt="" />
+          <img src={img} className="w-full h-full object-cover" alt="" />
         </div>
         <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
           {title}
