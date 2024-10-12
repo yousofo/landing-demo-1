@@ -25,8 +25,8 @@ const Contact = () => {
     });
 
     return () => {
-      signInRef.current.removeEventListener("click", () => {});
-      signUpRef.current.removeEventListener("click", () => {});
+      signInRef.current?.removeEventListener("click", () => {});
+      signUpRef.current?.removeEventListener("click", () => {});
     };
   }, []);
 
@@ -114,16 +114,18 @@ const Contact = () => {
     //   </div>
     // </section>
     <main className="bg-white flex items-center justify-center">
-      <div class="container contact">
+      <div className="container contact">
         <div className="contact-swiper flex w-full md:hidden ">
-          <button onClick={(e) => handleContactSwiper(e, 1)} >
+          <button onClick={(e) => handleContactSwiper(e, 1)}>
             Universites
           </button>
-          <button onClick={(e) => handleContactSwiper(e, 2)} className="active">Companies</button>
+          <button onClick={(e) => handleContactSwiper(e, 2)} className="active">
+            Companies
+          </button>
         </div>
         <div className="flex w-full">
-          <div ref={universitiesFormRef} class="form sign-in-form">
-            <div class="wrapper">
+          <div ref={universitiesFormRef} className="form sign-in-form">
+            <div className="wrapper">
               <form action="#">
                 <h1>Universites</h1>
                 <div className="input">
@@ -166,21 +168,21 @@ const Contact = () => {
                   <textarea
                     id="message"
                     rows="6"
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block resize-none p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                     placeholder="Leave a comment..."
                   ></textarea>
                 </div>
                 <button
                   type="button"
-                  className="py-3 px-5 text-sm font-medium border border-primary text-center text-primary rounded-lg bg-primary-700 sm:w-fit hover:bg-primary hover:text-white hover:border-white transition-all focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                  className="py-3 px-5  text-sm font-medium border border-primary text-center text-primary rounded-lg bg-primary-700 sm:w-fit hover:bg-primary hover:text-white hover:border-white transition-all focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                 >
                   Send message
                 </button>
               </form>
             </div>
           </div>
-          <div ref={companiesFormRef} class="form sign-up-form active">
-            <div class="wrapper">
+          <div ref={companiesFormRef} className="form sign-up-form active">
+            <div className="wrapper">
               <form action="#">
                 <h1>Companies</h1>
                 <div className="input">
@@ -223,7 +225,7 @@ const Contact = () => {
                   <textarea
                     id="message"
                     rows="6"
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block resize-none p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                     placeholder="Leave a comment..."
                   ></textarea>
                 </div>
@@ -237,31 +239,73 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div ref={overlayContainerRef} class="overlay-container">
-          <div ref={overlayRef} class="overlay">
-            <div class="overlay-left p-4">
-              <h1>Let&apos;s Connect!</h1>
+        <div ref={overlayContainerRef} className="overlay-container">
+          <div ref={overlayRef} className="overlay text-start">
+            <div className="overlay-left p-4 flex flex-col gap-4 text-white">
+              <h1 className="font-medium text-2xl">Why Choose RSAY?</h1>
+              <ul className="flex flex-col gap-2 list-disc ps-4">
+                <li>
+                  Ensure teaching stability, rigorous standards, and
+                  high-quality courses, supported by their public accessibility
+                  and millions of views
+                </li>
+                <li>
+                  Ensure teaching stability, rigorous standards, and
+                  high-quality courses, supported by their public accessibility
+                  and millions of views
+                </li>
+                <li>
+                  Ensure teaching stability, rigorous standards, and
+                  high-quality courses, supported by their public accessibility
+                  and millions of views
+                </li>
+              </ul>
+              {/* <h1>Let&apos;s Connect!</h1> */}
               {/*  Tell us about your company's needs and how we can assist. */}
-              <p>or</p>
-              <button
-                className="!bg-white !text-[#ed143d]"
-                ref={signInRef}
-                id="signInButton"
-              >
-                To Universites
-              </button>
+              <div className="relative">
+                <hr />
+                <button
+                  className="!bg-white !text-[#ed143d] mt-2"
+                  ref={signInRef}
+                  id="signInButton"
+                >
+                  To Universites
+                </button>
+              </div>
             </div>
-            <div class="overlay-right p-4">
-              <h1>Reach out to us!</h1>
+            <div className="overlay-right p-4 flex flex-col gap-4 text-white">
+              <h1 className="font-medium text-2xl">Why Choose RSAY?</h1>
+              <ul className="flex flex-col gap-2 list-disc ps-4">
+                <li>
+                  Ensure teaching stability, rigorous standards, and
+                  high-quality courses, supported by their public accessibility
+                  and millions of views
+                </li>
+                <li>
+                  Ensure teaching stability, rigorous standards, and
+                  high-quality courses, supported by their public accessibility
+                  and millions of views
+                </li>
+                <li>
+                  Ensure teaching stability, rigorous standards, and
+                  high-quality courses, supported by their public accessibility
+                  and millions of views
+                </li>
+              </ul>
+              {/* <h1>Reach out to us!</h1> */}
               {/*  Let us know how we can collaborate with your institution. */}
-              <p>or</p>
+              {/* <p>or</p> */}
+              <div className="relative">
+              <hr />
               <button
-                className="!bg-white !text-[#ed143d]"
+                className="!bg-white !text-[#ed143d] mt-2"
                 ref={signUpRef}
                 id="signUpButton"
               >
                 To Companies
               </button>
+              </div>
+              
             </div>
           </div>
         </div>

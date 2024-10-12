@@ -1,8 +1,15 @@
+"use client";
 import ScreenWrapper from "@/components/shared/ScreenWrapper";
 import Link from "next/link";
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const swiper = useSelector((store) => store.swiper.swiper);
+  function handleLinkClick(e, i) {
+    e.preventDefault();
+    swiper.slideTo(i);
+  }
   return (
     <section className="home-page relative flex flex-col overflow-hidden">
       <ScreenWrapper className="text-white flex flex-col justify-between py-8 screen-section">
@@ -45,13 +52,15 @@ const Home = () => {
             </p>
             <div className="flex items-center gap-2">
               <Link
-                href={"/about"}
+                href={"/contact"}
+                onClick={(e) => handleLinkClick(e, 4)}
                 className="text-white border border-white py-1 px-5 rounded-sm hover:bg-white hover:text-primary transition-all"
               >
                 start now
               </Link>
               <Link
                 href={"/about"}
+                onClick={(e) => handleLinkClick(e, 1)}
                 className="text-white border border-primary py-1 px-5 bg-primary rounded-sm hover:bg-white hover:border-primary hover:text-primary transition-all"
               >
                 learn more
@@ -65,8 +74,9 @@ const Home = () => {
           <span>start your plan now</span>
           <span>upgrade to premium and access all features</span>
           <Link
-            href="/about"
             className="text-white border border-white py-0.5 px-3 rounded-sm hover:bg-white hover:text-primary transition-all"
+            href="/contact"
+            onClick={(e) => handleLinkClick(e, 4)}
           >
             start now
           </Link>

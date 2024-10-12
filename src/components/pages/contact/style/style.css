@@ -107,7 +107,6 @@ section {
   font-weight: 500;
   font-size: 14px;
   text-transform: capitalize;
-  line-height: 25px;
   margin-bottom: 30px;
 }
 .container.contact .form input {
@@ -159,7 +158,6 @@ section {
 .container.contact .overlay-container .overlay .overlay-left,
 .container.contact .overlay-container .overlay .overlay-right {
   flex-basis: 50%;
-  text-align: center;
 }
 .container.contact .overlay-container .overlay h1 {
   font-family: "Montserrat";
@@ -170,13 +168,11 @@ section {
 .container.contact .overlay-container .overlay p {
   color: white;
   font-family: "Roboto";
-  font-size: 25px;
   font-weight: 300;
 }
 .container.contact .overlay-container .overlay button {
   background-color: white;
   color: crimson;
-  margin-top: 20px;
 }
 @media (max-width: 767px) {
   .container.contact .overlay-container {

@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleOpenNavList } from "@/state/features/navList/navListSlice";
 import { usePathname, useRouter } from "next/navigation";
+import LanguageSwitcher from "./languageSwitcher/LanguageSwitcher";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,10 @@ const Header = () => {
   const router = useRouter();
   const pathname = usePathname();
   const swiper = useSelector((store) => store.swiper.swiper);
+  function handleLinkClick(e, i) {
+    e.preventDefault();
+    swiper.slideTo(i);
+  }
   useEffect(() => {
     const logoInterval = setInterval(() => {
       document.querySelector(".logo").classList.remove("active");
@@ -50,10 +55,7 @@ const Header = () => {
     },
   ];
 
-  function handleLinkClick(e, i) {
-    e.preventDefault();
-    swiper.slideTo(i);
-  }
+
   return (
     <header
       className={`bg-white  transition-all main-header  sticky  top-0 z-40  py-2  lg:py-0 ${
@@ -63,6 +65,7 @@ const Header = () => {
       <ScreenWrapper className="flex justify-between items-center py-0 h-full">
         <Link
           href="/"
+          onClick={(e) => handleLinkClick(e, 0)}
           className="text-primary font-bold text-3xl lg:text-5xl flex relative items-center logo active"
         >
           <span>R</span>
@@ -83,7 +86,11 @@ const Header = () => {
             </svg>
           </span>
         </Link>
-        <nav className="hidden lg:block h-full">
+
+        
+
+        <nav className="hidden lg:flex h-full items-center">
+        {/* <LanguageSwitcher/> */}
           <ul className="h-full">
             {links.map((link, i) => (
               <li key={link.name}>
@@ -94,6 +101,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+        
         <div className="flex items-center gap-4 lg:hidden">
           <Link
             href="/contact"
