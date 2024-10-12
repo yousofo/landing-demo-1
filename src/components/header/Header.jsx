@@ -50,7 +50,7 @@ const Header = () => {
     },
   ];
 
-  function handleLinkClick(e,i){
+  function handleLinkClick(e, i) {
     e.preventDefault();
     swiper.slideTo(i);
   }
@@ -85,37 +85,44 @@ const Header = () => {
         </Link>
         <nav className="hidden lg:block h-full">
           <ul className="h-full">
-            {
-              links.map((link,i) => (
-                <li key={link.name}>
-                  <Link onClick={(e)=>handleLinkClick(e,i)} href={link.link}>
-                    <span className="capitalize">{link.name}</span>
-                  </Link>
-                </li>
-              ))
-            }
+            {links.map((link, i) => (
+              <li key={link.name}>
+                <Link onClick={(e) => handleLinkClick(e, i)} href={link.link}>
+                  <span className="capitalize">{link.name}</span>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
-        <button
-          onClick={() => dispatch(toggleOpenNavList())}
-          className="text-primary lg:hidden"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
+        <div className="flex items-center gap-4 lg:hidden">
+          <Link
+            href="/contact"
+            onClick={(e) => handleLinkClick(e, 4)}
+            className="text-primary hover:bg-primary hover:text-white transition-all font-bold text-xs uppercase border border-primary px-4 py-1 rounded"
           >
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2.5}
-              d="M3 6h18M3 12h18M3 18h18"
-            ></path>
-          </svg>
-        </button>
+            contact us
+          </Link>
+          <button
+            onClick={() => dispatch(toggleOpenNavList())}
+            className="text-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M3 6h18M3 12h18M3 18h18"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </ScreenWrapper>
     </header>
   );

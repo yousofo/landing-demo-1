@@ -116,10 +116,10 @@ const Contact = () => {
     <main className="bg-white flex items-center justify-center">
       <div class="container contact">
         <div className="contact-swiper flex w-full md:hidden ">
-          <button onClick={(e) => handleContactSwiper(e, 1)} className="active">
+          <button onClick={(e) => handleContactSwiper(e, 1)} >
             Universites
           </button>
-          <button onClick={(e) => handleContactSwiper(e, 2)}>Companies</button>
+          <button onClick={(e) => handleContactSwiper(e, 2)} className="active">Companies</button>
         </div>
         <div className="flex w-full">
           <div ref={universitiesFormRef} class="form sign-in-form">
