@@ -1,6 +1,10 @@
+"use client";
+import Link from "next/link";
+import { useSelector } from "react-redux";
+
 const Services = () => {
   const img = "/images/placeholders/cybersecurity.jpg";
-  const titles =[
+  const titles = [
     "تدريب الأمن السيبراني و أمن المعلومات",
     "تدريب إدارة المخاطر",
     "تدريب إدارة الانظمة و الشبكات",
@@ -8,8 +12,8 @@ const Services = () => {
     "تدريب الذكاء الاصطناعي",
     "تدريب الحوسبة السحابية",
     "تدريب  إدارة الجودة و المشاريع",
-    "تدريب علي تقنيات التحول الرقمي"
-  ]
+    "تدريب علي تقنيات التحول الرقمي",
+  ];
   return (
     <section className="pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px] bg-white">
       <div className="container mx-auto">
@@ -35,7 +39,7 @@ const Services = () => {
             .fill(0)
             .map((_, index) => (
               <ServiceCard
-                title="Refreshing Design"
+                title={titles[index]}
                 details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
                 img={img}
                 key={index}
@@ -50,9 +54,14 @@ const Services = () => {
 export default Services;
 
 const ServiceCard = ({ icon, title, details, img }) => {
+  const swiper = useSelector((store) => store.swiper.swiper);
+  function handleLinkClick(e, i) {
+    e.preventDefault();
+    swiper.slideTo(i);
+  }
   return (
     <div className="w-full p-4 md:w-1/2 lg:w-1/3 ">
-      <div className="rounded-2xl transition-all cursor-pointer bg-white p-6 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
+      <div className="rounded-2xl transition-all bg-white p-6 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
         <div className="mb-8 flex  items-center justify-center rounded-2xl bg-primary overflow-hidden">
           {/* {icon} */}
           <img src={img} className="w-full h-full object-cover" alt="" />
@@ -61,6 +70,13 @@ const ServiceCard = ({ icon, title, details, img }) => {
           {title}
         </h4>
         <p className="text-body-color dark:text-dark-6">{details}</p>
+        <Link
+          onClick={(e) => handleLinkClick(e, 5)}
+          href="/service"
+          className="px-2 py-0.5 mt-4 border-primary border rounded text-sm font-semibold inline-block text-primary hover:bg-primary hover:text-white transition-all" 
+        >
+          show more
+        </Link>
       </div>
     </div>
   );

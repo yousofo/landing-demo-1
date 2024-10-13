@@ -13,6 +13,7 @@ import About from "../pages/about/About";
 import Services from "../pages/services/Services";
 import { useDispatch } from "react-redux";
 import { setSwiper } from "@/state/features/swiper/SwiperSlice";
+import Service from "../pages/service/Service";
 const SwiperWrapper = () => {
   const dispatch = useDispatch();
   return (
@@ -45,6 +46,10 @@ const SwiperWrapper = () => {
       {/* 4 */}
       <SwiperSlide>
         <Contact />
+      </SwiperSlide>
+      {/* 5 */}
+      <SwiperSlide>
+        <Service />
       </SwiperSlide>
     </Swiper>
   );

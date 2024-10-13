@@ -108,7 +108,7 @@ const Home = () => {
         <ScreenWrapper className="z-10 flex flex-wrap">
           {Array.from({ length: 3 }, (_, i) => (
             <div className="w-full p-4 md:w-1/2 lg:w-1/3 ">
-              <div className="rounded-2xl transition-all cursor-pointer bg-white bg-opacity-90 p-4 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
+              <div className="rounded-2xl transition-all bg-white bg-opacity-90 p-4 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
                 <div className="mb-8 flex  items-center justify-center rounded-2xl bg-primary overflow-hidden">
                   {/* {icon} */}
                   <img
@@ -124,6 +124,13 @@ const Home = () => {
                   We dejoy working with discerning clients, people for whom
                   qualuty, service, integrity & aesthetics.
                 </p>
+                <Link
+                  onClick={(e) => handleLinkClick(e, 5)}
+                  href="/service"
+                  className="px-2 py-0.5 mt-4 border-primary border rounded text-sm font-semibold inline-block text-primary hover:bg-primary hover:text-white transition-all"
+                >
+                  show more
+                </Link>
               </div>
             </div>
           ))}

@@ -111,7 +111,7 @@ const Header = () => {
           </span>
         </Link>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 lg:gap-4">
           <div className="flex">
             {locale === "en" ? (
               <button
@@ -142,11 +142,11 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <div className="flex items-center gap-4 lg:hidden">
+        <div className="flex items-center gap-2 lg:gap-4 lg:hidden">
           <Link
             href="/contact"
             onClick={(e) => handleLinkClick(e, 4)}
-            className="text-primary hover:bg-primary hover:text-white transition-all font-bold text-xs uppercase border border-primary px-4 py-1 rounded"
+            className="text-primary hover:bg-primary hover:text-white transition-all font-bold text-xs uppercase border border-primary px-2 lg:px-4 py-1 rounded"
           >
             contact us
           </Link>
