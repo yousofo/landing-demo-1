@@ -3,13 +3,35 @@ import ScreenWrapper from "@/components/shared/ScreenWrapper";
 import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import { EffectFade } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import { Autoplay } from "swiper/modules";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+// import "swiper/css/effect-fade";
 
 const Home = () => {
   const swiper = useSelector((store) => store.swiper.swiper);
+  const translate = useTranslations('HomePage');
+  // t('title')
+  const slideStyles = "flex justify-center items-center text-lg h-fit";
   function handleLinkClick(e, i) {
     e.preventDefault();
     swiper.slideTo(i);
   }
+  const styles = {
+    slide: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "300px",
+      backgroundColor: "#4a90e2",
+      color: "#fff",
+      fontSize: "2rem",
+    },
+  };
   return (
     <section className="home-page relative flex flex-col overflow-hidden">
       <ScreenWrapper className="text-white flex flex-col justify-between py-8 screen-section">
@@ -39,16 +61,14 @@ const Home = () => {
         <section className="flex flex-col items-center justify-center gap-4 flex-1 max-w-[700px]">
           <div className="flex flex-col gap-4 items-center md:items-start">
             <p className="text-base md:text-xl font-light">
-              IMPROVE YOUR SECURITY WITH RSAY
+              {translate("title")}
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold uppercase flex flex-col text-center md:text-start">
-              <span>rsay</span> <span>information technology</span>
-              <span className="text-xs">company</span>
+              <span className="leading-[1.2]">{translate("name")}</span> <span>{translate("field")}</span>
+              <span className="text-xs">{translate("organizationType")}</span>
             </h1>
             <p className="text-base md:text-lg font-light text-center md:text-start">
-              RSAY is a leading technology company specialized in IT Security
-              and security services. <br /> We have a team of experts and
-              professionals who are experts in all IT services and security.
+              {translate("about1")} <br /> {translate("about2")}
             </p>
             <div className="flex items-center gap-2">
               <Link
@@ -56,14 +76,14 @@ const Home = () => {
                 onClick={(e) => handleLinkClick(e, 4)}
                 className="text-white border border-white py-1 px-5 rounded-sm hover:bg-white hover:text-primary transition-all"
               >
-                start now
+                {translate('startBtn')}
               </Link>
               <Link
                 href={"/about"}
                 onClick={(e) => handleLinkClick(e, 1)}
                 className="text-white border border-primary py-1 px-5 bg-primary rounded-sm hover:bg-white hover:border-primary hover:text-primary transition-all"
               >
-                learn more
+                {translate('learnBtn')}
               </Link>
             </div>
           </div>
@@ -82,15 +102,76 @@ const Home = () => {
           </Link>
         </p>
       </section>
+      <section className="h-fit relative py-10">
+        <ScreenWrapper className="z-10 flex flex-wrap">
+          {Array.from({ length: 3 }, (_, i) => (
+            <div className="w-full p-4 md:w-1/2 lg:w-1/3 ">
+              <div className="rounded-2xl transition-all cursor-pointer bg-white bg-opacity-90 p-4 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
+                <div className="mb-8 flex  items-center justify-center rounded-2xl bg-primary overflow-hidden">
+                  {/* {icon} */}
+                  <img
+                    src="/images/placeholders/cybersecurity.jpg"
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
+                </div>
+                <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
+                  Refreshing Design
+                </h4>
+                <p className="text-body-color dark:text-dark-6">
+                  We dejoy working with discerning clients, people for whom
+                  qualuty, service, integrity & aesthetics.
+                </p>
+              </div>
+            </div>
+          ))}
+        </ScreenWrapper>
+        <Image
+          src={
+            "/images/placeholders/tata_strive_cybersecurity_women_banner_desktop_1920x1080.jpg"
+          }
+          alt="image"
+          fill
+          quality={100}
+          className="w-full h-full object-cover"
+        />
+      </section>
       <section className="partners bg-gray-900 flex flex-col w-full items-center justify-center gap-8 px-4 py-14 md:h-[300px]  text-white">
         <h3 className="text-2xl">Our Partners</h3>
-        <ul className="flex flex-col md:flex-row gap-4 md:gap-0 w-fit py-2">
-          <li className="text-lg">example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-        </ul>
+        <Swiper
+          spaceBetween={0}
+          slidesPerView={3}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => dispatch(setSwiper(swiper))}
+          className="w-full"
+          // autoHeight={true}
+          modules={[Autoplay]}
+          loop={true}
+          autoplay={{ delay: 1000, disableOnInteraction: false }}
+          effect="fade"
+        >
+          {/* 0 */}
+          <SwiperSlide>
+            <div className={slideStyles}>example</div>
+          </SwiperSlide>
+          {/* 1 */}
+          <SwiperSlide>
+            <div className={slideStyles}>example</div>
+          </SwiperSlide>
+          {/* 2 */}
+          <SwiperSlide>
+            <div className={slideStyles}>example</div>
+          </SwiperSlide>
+          {/* 3 */}
+          <SwiperSlide>
+            <div className={slideStyles}>example</div>
+          </SwiperSlide>
+          {/* 4 */}
+          <SwiperSlide>
+            <div className={slideStyles}>example</div>
+          </SwiperSlide>
+        </Swiper>
+        <ul className="flex flex-col md:flex-row gap-4 md:gap-0 w-fit py-2"></ul>
       </section>
       <div className="absolute inset-0 w-[calc(100%+40px)] h-[calc(100vh+40px)] left-[-20px] top-[-20px] -z-10">
         <div className="absolute inset-0 w-full h-full bg-black/70"></div>

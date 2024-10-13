@@ -1,6 +1,26 @@
 {
+  "info":{
+    "name":"rsay",
+    "organizationType":"company",
+    "field":"information technology"
+  },
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "name":"rsay",
+    "organizationType":"company",
+    "field":"information technology",
+    "title": "improve your security with rsay",
+    "about1": "RSAY is a leading technology company specialized in IT Security and security services. ",
+    "about2": "We provide cutting-edge technologies and best practices to improve your security.",
+    "startBtn": "Start Now",
+    "learnBtn": "Learn More",
+    "planSecTitle1": "start your plan now",
+    "planSecTitle2": "upgrade to premium and access all features"
+  },
+  "Header":{
+    "home":"home",
+    "about":"about",
+    "services":"services",
+    "contact":"contact",
+    "cyberSecurityServices":"Cyber Security Services"
   }
 }

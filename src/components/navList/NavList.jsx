@@ -27,12 +27,12 @@ const NavList = () => {
       link: "/about",
     },
     {
-      name: "Services",
-      link: "/services",
-    },
-    {
       name: "cyber Security Services",
       link: "/cyberSecurityServices",
+    },
+    {
+      name: "Services",
+      link: "/services",
     },
     {
       name: "Contact",

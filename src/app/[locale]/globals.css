@@ -24,13 +24,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-.swiper-slide{
+.main-swiper > .swiper-wrapper > .swiper-slide {
   display: flex !important;
   flex-direction: column;
   @media (min-width: 768px) {
     min-height: calc(100vh - 244px);
   }
-  >*{
+  > * {
     flex-grow: 1;
   }
 }
