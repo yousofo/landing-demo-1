@@ -107,7 +107,7 @@ const Home = () => {
       <section className="h-fit relative py-10 flex flex-col gap-6">
         <ScreenWrapper className="z-10 flex flex-wrap">
           {Array.from({ length: 3 }, (_, i) => (
-            <div className="w-full p-4 md:w-1/2 lg:w-1/3 ">
+            <div key={i} className="w-full p-4 md:w-1/2 lg:w-1/3 ">
               <div className="rounded-2xl transition-all bg-white bg-opacity-90 p-4 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
                 <div className="mb-8 flex  items-center justify-center rounded-2xl bg-primary overflow-hidden">
                   {/* {icon} */}

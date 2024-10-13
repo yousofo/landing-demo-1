@@ -28,7 +28,7 @@ const Service = () => {
         <h3 className="capitalize text-2xl font-bold">service benefit</h3>
         <ul className="flex flex-wrap gap-4">
           {Array.from(Array(6).keys()).map((i) => (
-            <li className="flex gap-4 items-center lg:w-[calc(50%-16px)] p-4 bg-white drop-shadow rounded-lg">
+            <li key={i} className="flex gap-4 items-center lg:w-[calc(50%-16px)] p-4 bg-white drop-shadow rounded-lg">
               <div className="p-0.5 rounded-full bg-[#34A853] flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
