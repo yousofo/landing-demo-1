@@ -14,7 +14,7 @@ import { useTranslations } from "next-intl";
 
 const Home = () => {
   const swiper = useSelector((store) => store.swiper.swiper);
-  const translate = useTranslations('HomePage');
+  const translate = useTranslations("HomePage");
   // t('title')
   const slideStyles = "flex justify-center items-center text-lg h-fit";
   function handleLinkClick(e, i) {
@@ -64,7 +64,8 @@ const Home = () => {
               {translate("title")}
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold uppercase flex flex-col text-center md:text-start">
-              <span className="leading-[1.2]">{translate("name")}</span> <span>{translate("field")}</span>
+              <span className="leading-[1.2]">{translate("name")}</span>{" "}
+              <span>{translate("field")}</span>
               <span className="text-xs">{translate("organizationType")}</span>
             </h1>
             <p className="text-base md:text-lg font-light text-center md:text-start">
@@ -76,14 +77,14 @@ const Home = () => {
                 onClick={(e) => handleLinkClick(e, 4)}
                 className="text-white border border-white py-1 px-5 rounded-sm hover:bg-white hover:text-primary transition-all"
               >
-                {translate('startBtn')}
+                {translate("startBtn")}
               </Link>
               <Link
                 href={"/about"}
                 onClick={(e) => handleLinkClick(e, 1)}
                 className="text-white border border-primary py-1 px-5 bg-primary rounded-sm hover:bg-white hover:border-primary hover:text-primary transition-all"
               >
-                {translate('learnBtn')}
+                {translate("learnBtn")}
               </Link>
             </div>
           </div>
@@ -102,7 +103,8 @@ const Home = () => {
           </Link>
         </p>
       </section>
-      <section className="h-fit relative py-10">
+      {/* services */}
+      <section className="h-fit relative py-10 flex flex-col gap-6">
         <ScreenWrapper className="z-10 flex flex-wrap">
           {Array.from({ length: 3 }, (_, i) => (
             <div className="w-full p-4 md:w-1/2 lg:w-1/3 ">
@@ -116,7 +118,7 @@ const Home = () => {
                   />
                 </div>
                 <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
-                  Refreshing Design
+                  تدريب الأمن السيبراني و أمن المعلومات
                 </h4>
                 <p className="text-body-color dark:text-dark-6">
                   We dejoy working with discerning clients, people for whom
@@ -126,6 +128,28 @@ const Home = () => {
             </div>
           ))}
         </ScreenWrapper>
+        <Link
+          href="/services"
+          onClick={(e) => handleLinkClick(e, 2)}
+          className="text-white z-10 border border-white py-1 px-5  rounded-sm hover:bg-white hover:border-primary hover:text-primary transition-all flex gap-4 items-center"
+        >
+          <span className="font-medium">show all</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1.78em"
+            height="1em"
+            viewBox="0 0 16 9"
+          >
+            <path
+              fill="currentColor"
+              d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+            ></path>
+            <path
+              fill="currentColor"
+              d="M6 8.5a.47.47 0 0 1-.35-.15l-3.5-3.5c-.2-.2-.2-.51 0-.71L5.65.65c.2-.2.51-.2.71 0s.2.51 0 .71L3.21 4.51l3.15 3.15c.2.2.2.51 0 .71c-.1.1-.23.15-.35.15Z"
+            ></path>
+          </svg>
+        </Link>
         <Image
           src={
             "/images/placeholders/tata_strive_cybersecurity_women_banner_desktop_1920x1080.jpg"
@@ -136,6 +160,7 @@ const Home = () => {
           className="w-full h-full object-cover"
         />
       </section>
+      {/* Partners */}
       <section className="partners bg-gray-900 flex flex-col w-full items-center justify-center gap-8 px-4 py-14 md:h-[300px]  text-white">
         <h3 className="text-2xl">Our Partners</h3>
         <Swiper
@@ -173,6 +198,7 @@ const Home = () => {
         </Swiper>
         <ul className="flex flex-col md:flex-row gap-4 md:gap-0 w-fit py-2"></ul>
       </section>
+      {/* video background */}
       <div className="absolute inset-0 w-[calc(100%+40px)] h-[calc(100vh+40px)] left-[-20px] top-[-20px] -z-10">
         <div className="absolute inset-0 w-full h-full bg-black/70"></div>
         <video

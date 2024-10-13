@@ -1,5 +1,15 @@
 const Services = () => {
   const img = "/images/placeholders/cybersecurity.jpg";
+  const titles =[
+    "تدريب الأمن السيبراني و أمن المعلومات",
+    "تدريب إدارة المخاطر",
+    "تدريب إدارة الانظمة و الشبكات",
+    "تدريب تطوير البرمجيات و إدارة قواعد البيانات",
+    "تدريب الذكاء الاصطناعي",
+    "تدريب الحوسبة السحابية",
+    "تدريب  إدارة الجودة و المشاريع",
+    "تدريب علي تقنيات التحول الرقمي"
+  ]
   return (
     <section className="pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px] bg-white">
       <div className="container mx-auto">

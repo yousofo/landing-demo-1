@@ -19,10 +19,10 @@ const SwiperWrapper = () => {
     <Swiper
       spaceBetween={0}
       slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
+      onSlideChange={() => (document.documentElement.scrollTop = 0)}
       onSwiper={(swiper) => dispatch(setSwiper(swiper))}
       className="w-full h-min flex-1 main-swiper"
-      autoHeight={true}  // Enable autoHeight
+      autoHeight={true} // Enable autoHeight
       modules={[EffectFade]}
       effect="fade"
     >
