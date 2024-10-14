@@ -7,10 +7,10 @@ import ProviderWrapper from "@/state/ProviderWrapper";
 // import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { Alegreya } from "next/font/google";
+import { Cairo } from "next/font/google";
 
 // If loading a variable font, you don't need to specify the font weight
-const alegreya = Alegreya({
+const cairo = Cairo({
   subsets: ["latin"],
   display: "swap",
 });
@@ -48,7 +48,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
         <body
           // ${geistSans.variable} ${geistMono.variable}
           // ${roboto_Flex.className}
-          className={`${alegreya.className} antialiased`}
+          className={`${cairo.className} antialiased`}
         >
           <NextIntlClientProvider messages={messages}>
             <Header />

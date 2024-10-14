@@ -77,3 +77,18 @@
     }
   }
 }
+form{
+  .input{
+    @apply p-4 flex flex-col gap-3;
+    label{
+      text-align: start;
+      @apply text-lg font-bold text-gray-800 capitalize;
+    }
+    input,textarea{
+      @apply bg-white border drop-shadow-sm rounded-3xl p-4 resize-none text-xl;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}

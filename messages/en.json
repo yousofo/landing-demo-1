@@ -40,8 +40,7 @@
   "HomePage": {
     "name": "rsay information technology company",
     "title": "improve your security with rsay",
-    "about1": "RSAY is a leading technology company specialized in IT Security and security services. ",
-    "about2": "We provide cutting-edge technologies and best practices to improve your security.",
+    "about1": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success",
     "startBtn": "Start Now",
     "learnBtn": "Learn More",
     "planSecTitle1": "start your plan now",
@@ -54,5 +53,14 @@
     "services": "services",
     "contact": "contact",
     "cyberSecurityServices": "Cyber Security Services"
+  },
+  "form":{
+    "name": "name",
+    "email": "email address",
+    "site": "site",
+    "phone": "phone",
+    "send": "send",
+    "role": "position or role",
+    "message": "message"
   }
 }

@@ -67,4 +67,18 @@
   width: 100%;
   height: 1.5px;
   background-color: rgb(219, 219, 219);
+}
+
+form .input {
+  @apply p-4 flex flex-col gap-3;
+}
+form .input label {
+  text-align: start;
+  @apply text-lg font-bold text-gray-800 capitalize;
+}
+form .input input, form .input textarea {
+  @apply bg-white border drop-shadow-sm rounded-3xl p-4 resize-none text-xl;
+}
+form .input input:focus, form .input textarea:focus {
+  outline: none;
 }/*# sourceMappingURL=home.css.map */

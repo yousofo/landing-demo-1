@@ -55,8 +55,8 @@ const Home = () => {
               {translate("name")}
             </h1>
             {/* below header info */}
-            <p className="text-lg md:text-xl font-medium text-center">
-              {translate("about1")} <br /> {translate("about2")}
+            <p className="text-lg md:text-xl font-normal text-center">
+              {translate("about1")}
             </p>
             {/* links */}
             <div className="flex items-center gap-2">

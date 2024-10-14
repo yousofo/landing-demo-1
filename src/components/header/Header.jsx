@@ -20,8 +20,7 @@ const Header = () => {
   const locale = useLocale(); // Get the current locale (e.g., 'en' or 'ar')
 
   const searchParams = useSearchParams(); // Preserve query params
-  function handleLinkClick(e, i) {
-    e.preventDefault();
+  function handleLinkClick(i) {
     swiper.slideTo(i);
   }
   const switchLocale = (locale) => {
@@ -91,9 +90,8 @@ const Header = () => {
       // 
     >
       <ScreenWrapper className="flex justify-between items-center py-0 h-full">
-        <Link
-          href="/"
-          onClick={(e) => handleLinkClick(e, 0)}
+        <button
+          onClick={(e) => handleLinkClick( 0)}
           className="text-primary font-bold text-3xl lg:text-5xl flex relative items-center logo active"
           dir="ltr"
         >
@@ -114,7 +112,7 @@ const Header = () => {
               ></path>
             </svg>
           </span>
-        </Link>
+        </button>
 
         <div className="flex items-center gap-2 lg:gap-4">
           <div className="flex [&>button]:text-lg font-medium">
@@ -139,22 +137,21 @@ const Header = () => {
             <ul className="h-full">
               {links.map((link, i) => (
                 <li key={link.name}>
-                  <Link onClick={(e) => handleLinkClick(e, i)} href={link.link}>
+                  <button onClick={(e) => handleLinkClick(i)} href={link.link}>
                     <span className="capitalize text-lg font-semibold">{link.name}</span>
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
           </nav>
         </div>
         <div className="flex items-center gap-2 lg:gap-4 lg:hidden">
-          <Link
-            href="/contact"
-            onClick={(e) => handleLinkClick(e, 4)}
+          <button
+            onClick={(e) => handleLinkClick(3)}
             className="text-primary hover:bg-primary hover:text-white transition-all font-bold text-xs uppercase border border-primary px-2 lg:px-4 py-1 rounded"
           >
             contact us
-          </Link>
+          </button>
           <button
             onClick={() => dispatch(toggleOpenNavList())}
             className="text-primary"

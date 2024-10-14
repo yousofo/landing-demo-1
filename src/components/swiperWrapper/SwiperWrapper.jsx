@@ -13,6 +13,7 @@ import About from "../pages/about/About";
 import Services from "../pages/services/Services";
 import { useDispatch } from "react-redux";
 import { setSwiper } from "@/state/features/swiper/SwiperSlice";
+import UniversitiesContact from "../pages/universitiesContact/UniversitiesContact";
 // import Service from "../pages/service/Service";
 const SwiperWrapper = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const SwiperWrapper = () => {
       className="w-full h-min flex-1 main-swiper"
       autoHeight={true} // Enable autoHeight
       modules={[EffectFade]}
+      allowTouchMove={false}
       effect="fade"
     >
       {/* 0 */}
@@ -41,12 +43,13 @@ const SwiperWrapper = () => {
       </SwiperSlide>
       {/* 3 */}
       <SwiperSlide>
+        <UniversitiesContact />
+      </SwiperSlide>
+      <SwiperSlide>
         <Contact />
       </SwiperSlide>
       {/* 4 */}
-      {/* <SwiperSlide>
-        <CyberSecurityServices />
-      </SwiperSlide> */}
+
       {/* 5 */}
       {/* <SwiperSlide>
         <Service />
