@@ -29,23 +29,24 @@
   text-transform: capitalize;
   transition: all 0.3s ease;
   cursor: pointer;
-  color: var(--primary);
   height: 100%;
   font-weight: 500;
 }
-.main-header nav ul li button {
+.main-header nav ul li > button {
+  background-color: white;
+  color: var(--primary);
   display: inline-block;
   padding: 16px 24px;
   height: 100%;
 }
-.main-header nav ul li:hover {
-  background-color: var(--primary);
-  color: white;
-}
-.main-header nav ul li:hover span {
+.main-header nav ul li:not(.no-ani):hover span {
   transition: translate 0.1s ease;
   display: inline-block;
   translate: 0px 3px;
+}
+.main-header nav ul li:not(.no-ani):hover > button {
+  background-color: var(--primary);
+  color: white;
 }
 .main-header.scrolled {
   @apply drop-shadow;

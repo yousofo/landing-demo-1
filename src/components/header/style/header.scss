@@ -36,32 +36,35 @@
         text-transform: capitalize;
         transition: all 0.3s ease;
         cursor: pointer;
-        color: var(--primary);
         height: 100%;
         font-weight: 500;
-        button {
+        >button {
+          background-color: white;
+          color: var(--primary);
           display: inline-block;
           padding: 16px 24px;
           height: 100%;
         }
-        &:hover {
+        &:not(.no-ani):hover {
           span {
             transition: translate 0.1s ease;
 
             display: inline-block;
             translate: 0px 3px;
           }
-          background-color: var(--primary);
-          color: white;
+          >button {
+            background-color: var(--primary);
+            color: white;
+          }
         }
       }
     }
   }
   &.scrolled {
-    @apply drop-shadow
+    @apply drop-shadow;
   }
   &.scrolled2 {
-    @apply drop-shadow
+    @apply drop-shadow;
   }
 }
 // @keyframes fadeIn {

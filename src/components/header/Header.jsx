@@ -12,7 +12,7 @@ import { useLocale, useTranslations } from "next-intl";
 const Header = () => {
   const dispatch = useDispatch();
   const [scrolled, setScrolled] = useState(false);
-  const translate = useTranslations('Header');
+  const translate = useTranslations("Header");
   // t('title')
   const pathname = usePathname();
   const swiper = useSelector((store) => store.swiper.swiper);
@@ -25,20 +25,19 @@ const Header = () => {
   }
   const switchLocale = (locale) => {
     // Extract current locale from the path (e.g., "/en/about" -> "en")
-    const pathSegments = pathname.split('/').filter(Boolean); // Split and remove empty segments
+    const pathSegments = pathname.split("/").filter(Boolean); // Split and remove empty segments
     const currentLocale = pathSegments[0]; // First segment is the locale
-  
+
     // If the first segment is a locale, remove it
-    const newPathname =
-      ['en', 'ar'].includes(currentLocale) // Check if it's a valid locale
-        ? pathSegments.slice(1).join('/') // Remove locale
-        : pathSegments.join('/'); // No locale in path
-  
+    const newPathname = ["en", "ar"].includes(currentLocale) // Check if it's a valid locale
+      ? pathSegments.slice(1).join("/") // Remove locale
+      : pathSegments.join("/"); // No locale in path
+
     // Construct the new path with the selected locale
-    const newUrl = `/${locale}${newPathname ? `/${newPathname}` : ''}${
-      searchParams ? `?${searchParams}` : ''
+    const newUrl = `/${locale}${newPathname ? `/${newPathname}` : ""}${
+      searchParams ? `?${searchParams}` : ""
     }`;
-  
+
     // Replace the current URL with the new one
     router.replace(newUrl);
   };
@@ -56,7 +55,7 @@ const Header = () => {
       } else {
         setScrolled(false);
       }
-    })
+    });
     return () => {
       window.removeEventListener("scroll", () => {});
       clearInterval(logoInterval);
@@ -87,11 +86,11 @@ const Header = () => {
       className={`bg-white  transition-all main-header  sticky  top-0 z-40  py-2  lg:py-0 ${
         scrolled ? "scrolled" : ""
       } `}
-      // 
+      //
     >
       <ScreenWrapper className="flex justify-between items-center py-0 h-full">
         <button
-          onClick={(e) => handleLinkClick( 0)}
+          onClick={(e) => handleLinkClick(0)}
           className="text-primary font-bold text-3xl lg:text-5xl flex relative items-center logo active"
           dir="ltr"
         >
@@ -117,10 +116,7 @@ const Header = () => {
         <div className="flex items-center gap-2 lg:gap-4">
           <div className="flex [&>button]:text-lg font-medium">
             {locale === "en" ? (
-              <button
-                className="underline"
-                onClick={() => switchLocale("ar")}
-              >
+              <button className="underline" onClick={() => switchLocale("ar")}>
                 العربية
               </button>
             ) : (
@@ -137,11 +133,47 @@ const Header = () => {
             <ul className="h-full">
               {links.map((link, i) => (
                 <li key={link.name}>
-                  <button onClick={(e) => handleLinkClick(i)} href={link.link}>
-                    <span className="capitalize text-lg font-semibold">{link.name}</span>
+                  <button onClick={(e) => handleLinkClick(i)}>
+                    <span className="capitalize text-lg font-semibold">
+                      {link.name}
+                    </span>
                   </button>
                 </li>
               ))}
+              <li className="relative no-ani group ">
+                <button className="!flex items-center gap-2 relative z-10">
+                  <span className="capitalize text-lg font-semibold">
+                    contact us
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="m19 9l-7 7l-7-7"
+                    ></path>
+                  </svg>
+                </button>
+                <div className="absolute bottom-0 z-0  right-0 transition-all group-hover:translate-y-full  w-max h-fit bg-white opacity-0 group-hover:opacity-100 flex flex-col border rounded-b-md">
+                  <button onClick={(e) => handleLinkClick(3)} className="px-4 py-2">
+                    <span className="capitalize text-lg font-semibold text-primary">
+                      for universities
+                    </span>
+                  </button>
+                  <button onClick={(e) => handleLinkClick(3)} className="px-4 py-2">
+                    <span className="capitalize text-lg font-semibold text-primary">
+                      for companies
+                    </span>
+                  </button>
+                </div>
+              </li>
             </ul>
           </nav>
         </div>
