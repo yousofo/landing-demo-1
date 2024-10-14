@@ -14,8 +14,8 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const translate = useTranslations("Header");
   // t('title')
-  const pathname = usePathname();
   const swiper = useSelector((store) => store.swiper.swiper);
+  const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale(); // Get the current locale (e.g., 'en' or 'ar')
 

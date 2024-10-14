@@ -4,7 +4,7 @@ import "./style/navList.css";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCloseNavList } from "@/state/features/navList/navListSlice";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 
 const NavList = () => {
@@ -14,6 +14,7 @@ const NavList = () => {
   const dispatch = useDispatch();
   const router = useRouter();
   const locale = useLocale(); // Get the current locale (e.g., 'en' or 'ar')
+  const pathname = usePathname();
 
   const searchParams = useSearchParams(); // Preserve query params
 
@@ -98,11 +99,17 @@ const NavList = () => {
       </nav>
       <div className="flex  p-4 [&>button]:text-lg font-medium">
         {locale === "en" ? (
-          <button className="underline border bg-primary border-primary px-4 py-0.5 rounded-lg text-white" onClick={() => switchLocale("ar")}>
+          <button
+            className="underline border bg-primary border-primary px-4 py-0.5 rounded-lg text-white"
+            onClick={() => switchLocale("ar")}
+          >
             العربية
           </button>
         ) : (
-          <button className="underline border bg-primary border-primary px-4 py-0.5 rounded-lg text-white  " onClick={() => switchLocale("en")}>
+          <button
+            className="underline border bg-primary border-primary px-4 py-0.5 rounded-lg text-white  "
+            onClick={() => switchLocale("en")}
+          >
             English
           </button>
         )}
