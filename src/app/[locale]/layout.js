@@ -7,7 +7,13 @@ import ProviderWrapper from "@/state/ProviderWrapper";
 // import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Alegreya } from "next/font/google";
 
+// If loading a variable font, you don't need to specify the font weight
+const alegreya = Alegreya({
+  subsets: ["latin"],
+  display: "swap",
+});
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -37,10 +43,12 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   // }
 
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html lang={locale??"en"} dir={locale === "ar" ? "rtl" : "ltr"}>
       <ProviderWrapper>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          // ${geistSans.variable} ${geistMono.variable}
+          // ${roboto_Flex.className}
+          className={`${alegreya.className} antialiased`}
         >
           <NextIntlClientProvider messages={messages}>
             <Header />

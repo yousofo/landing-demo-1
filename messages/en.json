@@ -1,26 +1,58 @@
 {
-  "info":{
-    "name":"rsay",
-    "organizationType":"company",
-    "field":"information technology"
+  "info": {
+    "name": "rsay",
+    "organization": "rsay information technology company"
+  },
+  "courses": {
+    "course1": {
+      "title": "Software Development and Database Management Training",
+      "content": "This training provides the necessary skills to develop efficient software applications and manage databases securely. It covers modern programming concepts and software development tools, including popular programming languages. Participants will also learn how to use database management tools and design secure databases. The program emphasizes strategies to ensure software quality and data security, offering practical examples on performance optimization and reliability improvement."
+    },
+    "course2": {
+      "title": "Artificial Intelligence (AI) Training",
+      "content": "This course covers the fundamentals of AI and machine learning with practical applications in business. It explains the core concepts underpinning AI, how to analyze data, and apply predictive models. The training also explores how to integrate AI into business strategies to improve efficiency and foster innovation, with real-world examples of successful use cases across various sectors."
+    },
+    "course3": {
+      "title": "Cloud Computing Training",
+      "content": "This training focuses on the concept of cloud computing and its use in enhancing performance and flexibility in business. It reviews various types of cloud services, such as SaaS, PaaS, and IaaS, along with guidelines on how to transition to a cloud environment securely. Participants will also learn best practices for managing cloud resources and ensuring security, gaining insights into how cloud computing can improve operations."
+    },
+    "course4": {
+      "title": "Quality Management and Project Management Training",
+      "content": "This program aims to enhance the skills required to ensure service and product quality within projects. It covers essential project management tools, including planning, execution, and monitoring. Participants will learn about total quality management (TQM) concepts and how to apply them across various fields, along with techniques for performance improvement and problem-solving. The course strengthens participants' ability to meet quality objectives efficiently and effectively."
+    },
+    "course5": {
+      "title": "Digital Transformation Technologies Training",
+      "content":"This training provides insights into adopting digital transformation in business. It focuses on strategies for using technology to optimize operations and deliver value to customers. The program highlights the importance of digital transformation and how to identify related opportunities and challenges. It also includes practical examples of successful transformations and guidance on managing cultural change within organizations to ensure the success of digital strategies."
+    },
+    "course6": {
+      "title": "Cybersecurity and Information Security Training",
+      "content": "This training offers comprehensive knowledge on how to protect information and systems from cyber threats. It covers identifying various types of threats, such as viruses, malware, and cyberattacks. Participants will also learn effective strategies to mitigate these threats, including the use of encryption and firewalls. The course focuses on risk management by applying risk assessment tools and developing incident response plans. Additionally, it reviews relevant laws and legal standards to ensure compliance with data protection regulations."
+    },
+    "course7": {
+      "title": "Risk Management Training",
+      "content": "This program aims to empower participants to identify and manage risks effectively in the workplace. It begins by explaining how to conduct thorough risk analysis to identify potential risks and assess their impact. Participants will develop strategies to mitigate risks, including emergency planning. The course introduces modern tools and techniques, such as scenario analysis and risk matrices, while promoting a culture of risk management through continuous process improvement within the organization."
+    },
+    "course8": {
+      "title": "Systems and Network Management Training",
+      "content": "This training focuses on efficiently designing and managing systems and networks. It covers setting up wired and wireless networks, along with configuring the necessary hardware. Participants will learn how to troubleshoot and quickly resolve issues to ensure smooth and secure system performance. The course also reviews essential concepts of network management, including network optimization, performance enhancement, and regular updates. The goal is to equip participants with the skills needed to manage systems independently and effectively."
+    }
   },
   "HomePage": {
-    "name":"rsay",
-    "organizationType":"company",
-    "field":"information technology",
+    "name": "rsay information technology company",
     "title": "improve your security with rsay",
     "about1": "RSAY is a leading technology company specialized in IT Security and security services. ",
     "about2": "We provide cutting-edge technologies and best practices to improve your security.",
     "startBtn": "Start Now",
     "learnBtn": "Learn More",
     "planSecTitle1": "start your plan now",
-    "planSecTitle2": "upgrade to premium and access all features"
+    "planSecTitle2": "upgrade to premium and access all features",
+    "services": "services"
   },
-  "Header":{
-    "home":"home",
-    "about":"about",
-    "services":"services",
-    "contact":"contact",
-    "cyberSecurityServices":"Cyber Security Services"
+  "Header": {
+    "home": "home",
+    "about": "about",
+    "services": "services",
+    "contact": "contact",
+    "cyberSecurityServices": "Cyber Security Services"
   }
 }

@@ -47,6 +47,9 @@
   display: inline-block;
   translate: 0px 3px;
 }
+.main-header.scrolled {
+  @apply drop-shadow;
+}
 .main-header.scrolled2 {
-  border-bottom: 1px solid #e5e7eb;
+  @apply drop-shadow;
 }/*# sourceMappingURL=header.css.map */

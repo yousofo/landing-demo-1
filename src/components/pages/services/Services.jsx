@@ -1,19 +1,19 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 
 const Services = () => {
-  const img = "/images/placeholders/cybersecurity.jpg";
-  const titles = [
-    "تدريب الأمن السيبراني و أمن المعلومات",
-    "تدريب إدارة المخاطر",
-    "تدريب إدارة الانظمة و الشبكات",
-    "تدريب تطوير البرمجيات و إدارة قواعد البيانات",
-    "تدريب الذكاء الاصطناعي",
-    "تدريب الحوسبة السحابية",
-    "تدريب  إدارة الجودة و المشاريع",
-    "تدريب علي تقنيات التحول الرقمي",
-  ];
+  const images = [
+    "/images/placeholders/softwareengineering.jpeg",
+    "/images/placeholders/ai-training.webp",
+    "/images/placeholders/cloud-computing-900x600.jpg",
+    "/images/placeholders/quality-management.webp",
+    "/images/placeholders/Digital-transformation-for-organisations-1080x609.jpg",
+    "/images/placeholders/cybersecurity.jpg",
+    "/images/placeholders/risk-management.jpg",
+  ]
+  const translate = useTranslations("courses");
   return (
     <section className="pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px] bg-white">
       <div className="container mx-auto">
@@ -35,13 +35,13 @@ const Services = () => {
         </div>
 
         <div className=" flex flex-wrap">
-          {Array(6)
+          {Array(7)
             .fill(0)
             .map((_, index) => (
               <ServiceCard
-                title={titles[index]}
-                details="We dejoy working with discerning clients, people for whom qualuty, service, integrity & aesthetics."
-                img={img}
+                title={translate(`course${index + 1}.title`)}
+                details={translate(`course${index + 1}.content`)}
+                img={images[index]}
                 key={index}
               />
             ))}
@@ -55,28 +55,26 @@ export default Services;
 
 const ServiceCard = ({ icon, title, details, img }) => {
   const swiper = useSelector((store) => store.swiper.swiper);
-  function handleLinkClick(e, i) {
-    e.preventDefault();
-    swiper.slideTo(i);
-  }
+  // function handleLinkClick(e, i) {
+  //   e.preventDefault();
+  //   swiper.slideTo(i);
+  // }
   return (
-    <div className="w-full p-4 md:w-1/2 lg:w-1/3 ">
-      <div className="rounded-2xl transition-all bg-white p-6 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
-        <div className="mb-8 flex  items-center justify-center rounded-2xl bg-primary overflow-hidden">
+    <div className="w-full p-4 md:w-1/2 lg:w-1/3">
+      <div className="rounded-2xl transition-all h-full bg-white p-6 drop-shadow hover:drop-shadow-lg  ">
+        <div className="mb-8 flex aspect-video max-h-[300px] items-center justify-center rounded-2xl bg-primary overflow-hidden">
           {/* {icon} */}
           <img src={img} className="w-full h-full object-cover" alt="" />
         </div>
-        <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
-          {title}
-        </h4>
-        <p className="text-body-color dark:text-dark-6">{details}</p>
-        <Link
+        <h4 className="mb-[14px] text-2xl font-semibold ">{title}</h4>
+        <p className="text-body-color text-xl font-medium text-gray-700">{details}</p>
+        {/* <Link
           onClick={(e) => handleLinkClick(e, 5)}
           href="/service"
-          className="px-2 py-0.5 mt-4 border-primary border rounded text-sm font-semibold inline-block text-primary hover:bg-primary hover:text-white transition-all" 
+          className="px-2 py-0.5 mt-4 border-primary border rounded text-sm font-semibold inline-block text-primary hover:bg-primary hover:text-white transition-all"
         >
           show more
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

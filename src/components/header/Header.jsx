@@ -51,7 +51,15 @@ const Header = () => {
         clearTimeout(logoTimeout);
       }, 2000);
     }, 10000);
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    })
     return () => {
+      window.removeEventListener("scroll", () => {});
       clearInterval(logoInterval);
     };
   }, []);
@@ -64,10 +72,6 @@ const Header = () => {
     {
       name: translate("about"),
       link: "/about",
-    },
-    {
-      name: translate("cyberSecurityServices"),
-      link: "/cyberSecurityServices",
     },
     {
       name: translate("services"),
@@ -83,7 +87,8 @@ const Header = () => {
     <header
       className={`bg-white  transition-all main-header  sticky  top-0 z-40  py-2  lg:py-0 ${
         scrolled ? "scrolled" : ""
-      } ${!(pathname === "/") ? "scrolled2" : ""} drop-shadow`}
+      } `}
+      // 
     >
       <ScreenWrapper className="flex justify-between items-center py-0 h-full">
         <Link
@@ -112,17 +117,17 @@ const Header = () => {
         </Link>
 
         <div className="flex items-center gap-2 lg:gap-4">
-          <div className="flex">
+          <div className="flex [&>button]:text-lg font-medium">
             {locale === "en" ? (
               <button
-                className="underline font-medium"
+                className="underline"
                 onClick={() => switchLocale("ar")}
               >
                 العربية
               </button>
             ) : (
               <button
-                className="underline font-medium"
+                className="underline  "
                 onClick={() => switchLocale("en")}
               >
                 English
@@ -135,7 +140,7 @@ const Header = () => {
               {links.map((link, i) => (
                 <li key={link.name}>
                   <Link onClick={(e) => handleLinkClick(e, i)} href={link.link}>
-                    <span className="capitalize">{link.name}</span>
+                    <span className="capitalize text-lg font-semibold">{link.name}</span>
                   </Link>
                 </li>
               ))}

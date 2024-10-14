@@ -15,10 +15,10 @@ import { useTranslations } from "next-intl";
 const Home = () => {
   const swiper = useSelector((store) => store.swiper.swiper);
   const translate = useTranslations("HomePage");
+  const translate2 = useTranslations("courses");
   // t('title')
   const slideStyles = "flex justify-center items-center text-lg h-fit";
-  function handleLinkClick(e, i) {
-    e.preventDefault();
+  function handleLinkClick(i) {
     swiper.slideTo(i);
   }
   const styles = {
@@ -32,113 +32,88 @@ const Home = () => {
       fontSize: "2rem",
     },
   };
+
   return (
     <section className="home-page relative flex flex-col overflow-hidden">
-      <ScreenWrapper className="text-white flex flex-col justify-between py-8 screen-section">
-        {/* <section className="lg:flex justify-between items-center">
-          <h1 className="text-4xl font-bold">
-            <span className="uppercase">rsay</span>{" "}
-            <span className="capitalize">information technology company</span>
-          </h1>
-          <h2 className="uppercase hidden lg:block text-3xl md:text-5xl lg:text-7xl xl:text-9xl font-bold">
-            rsay
-          </h2>
-        </section>
-        <section className="flex flex-col lg:flex-row justify-between items-center gap-4">
-          <h2 className="text-2xl w-full font-bold text-end lg:text-start">
-            شركة رساي لتقنية المعلومات
-          </h2>
-          <p className="text-base w-full lg:text-xl" dir="rtl">
-            رساي شركة سعودية تقنية متخصصة بالخدمات التقنية وخدمات الامن
-            السيبراني.
-            <br />
-            لدي رساي فريق عمل محترفين وخبرة عالية في الخدمات التقنية ومتخصصين في
-            كشف الثغرات لجميع الأنظمة. <br />
-            تستهدف رساي القطاع بتقديم خدمات بجودة عالية وخدمة ما بعد البيع
-            للقطاع الحكومي والخاص.
-          </p>
-        </section> */}
-        <section className="flex flex-col items-center justify-center gap-4 flex-1 max-w-[700px]">
-          <div className="flex flex-col gap-4 items-center md:items-start">
-            <p className="text-base md:text-xl font-light">
+      <ScreenWrapper className="text-white first-sec relative flex flex-col justify-between py-8 screen-section items-center">
+        <section className="flex  flex-col items-center justify-center gap-4 flex-1 max-w-[900px]">
+          <div className="flex flex-col gap-4 items-center md:items-center">
+            {/* above header title */}
+            <p className="text-lg md:text-2xl font-light capitalize text-center">
               {translate("title")}
             </p>
-            <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold uppercase flex flex-col text-center md:text-start">
-              <span className="leading-[1.2]">{translate("name")}</span>{" "}
-              <span>{translate("field")}</span>
-              <span className="text-xs">{translate("organizationType")}</span>
+            {/* main header  */}
+            <h1
+              style={{ wordSpacing: "10px" }}
+              className="text-3xl md:text-4xl lg:text-7xl font-bold  uppercase flex flex-col text-center spacing"
+            >
+              {translate("name")}
             </h1>
-            <p className="text-base md:text-lg font-light text-center md:text-start">
+            {/* below header info */}
+            <p className="text-lg md:text-xl font-medium text-center">
               {translate("about1")} <br /> {translate("about2")}
             </p>
+            {/* links */}
             <div className="flex items-center gap-2">
-              <Link
+              <button
                 href={"/contact"}
-                onClick={(e) => handleLinkClick(e, 4)}
+                onClick={(e) => handleLinkClick(3)}
                 className="text-white border border-white py-1 px-5 rounded-sm hover:bg-white hover:text-primary transition-all"
               >
                 {translate("startBtn")}
-              </Link>
-              <Link
+              </button>
+              <button
                 href={"/about"}
-                onClick={(e) => handleLinkClick(e, 1)}
+                onClick={(e) => handleLinkClick(1)}
                 className="text-white border border-primary py-1 px-5 bg-primary rounded-sm hover:bg-white hover:border-primary hover:text-primary transition-all"
               >
                 {translate("learnBtn")}
-              </Link>
+              </button>
             </div>
           </div>
         </section>
       </ScreenWrapper>
-      <section className="bg-primary text-white p-4">
-        <p className="flex flex-col md:flex-row gap-4 md:gap-2 uppercase text-center   items-center justify-center text-inherit">
-          <span>start your plan now</span>
-          <span>upgrade to premium and access all features</span>
-          <Link
-            className="text-white border border-white py-0.5 px-3 rounded-sm hover:bg-white hover:text-primary transition-all"
-            href="/contact"
-            onClick={(e) => handleLinkClick(e, 4)}
-          >
-            start now
-          </Link>
-        </p>
-      </section>
       {/* services */}
-      <section className="h-fit relative py-10 flex flex-col gap-6">
-        <ScreenWrapper className="z-10 flex flex-wrap">
-          {Array.from({ length: 3 }, (_, i) => (
-            <div key={i} className="w-full p-4 md:w-1/2 lg:w-1/3 ">
-              <div className="rounded-2xl transition-all bg-white bg-opacity-90 p-4 shadow-2 drop-shadow hover:shadow-lg dark:bg-dark-2 ">
-                <div className="mb-8 flex  items-center justify-center rounded-2xl bg-primary overflow-hidden">
-                  {/* {icon} */}
-                  <img
-                    src="/images/placeholders/cybersecurity.jpg"
-                    className="w-full h-full object-cover"
-                    alt=""
-                  />
+      <section className="h-fit second-sec relative py-10 pt-5 flex flex-col gap-6 bg-white">
+        <ScreenWrapper className="z-10 flex flex-col items-center">
+          <div className="second-sec-title">
+            <h3 className="capitalize text-2xl font-bold text-primary pb-3">
+              {translate("services")}
+            </h3>
+          </div>
+          <div className="z-10 flex flex-wrap">
+            {Array.from({ length: 3 }, (_, i) => (
+              <div key={i} className="w-full p-4 md:w-1/2 lg:w-1/3 ">
+                <div className="rounded-2xl transition-all bg-white  p-4 ">
+                  <div className="mb-8 flex  items-center justify-center rounded-2xl bg-primary overflow-hidden">
+                    {/* {icon} */}
+                    <img
+                      src="/images/placeholders/cybersecurity.jpg"
+                      className="w-full h-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                  <h4 className="mb-[14px] text-gray-900 text-2xl font-semibold">
+                    {translate2(`course${i + 1}.title`)}
+                  </h4>
+                  <p className="text-lg lg:text-xl font-medium text-gray-700">
+                  {translate2(`course${i + 1}.content`)}
+                  </p>
+                  {/* <Link
+                    onClick={(e) => handleLinkClick(e, 5)}
+                    href="/service"
+                    className="px-2 py-0.5 mt-4 border-primary border rounded text-sm font-semibold inline-block text-primary hover:bg-primary hover:text-white transition-all"
+                  >
+                    show more
+                  </Link> */}
                 </div>
-                <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
-                  تدريب الأمن السيبراني و أمن المعلومات
-                </h4>
-                <p className="text-body-color dark:text-dark-6">
-                  We dejoy working with discerning clients, people for whom
-                  qualuty, service, integrity & aesthetics.
-                </p>
-                <Link
-                  onClick={(e) => handleLinkClick(e, 5)}
-                  href="/service"
-                  className="px-2 py-0.5 mt-4 border-primary border rounded text-sm font-semibold inline-block text-primary hover:bg-primary hover:text-white transition-all"
-                >
-                  show more
-                </Link>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </ScreenWrapper>
-        <Link
-          href="/services"
-          onClick={(e) => handleLinkClick(e, 2)}
-          className="text-white z-10 border border-white py-1 px-5  rounded-sm hover:bg-white hover:border-primary hover:text-primary transition-all flex gap-4 items-center"
+        <button
+          onClick={(e) => handleLinkClick(2)}
+          className="text-primary z-10 border border-primary py-1 px-5  rounded-sm hover:bg-primary hover:border-white hover:text-white transition-all flex gap-4 items-center"
         >
           <span className="font-medium">show all</span>
           <svg
@@ -156,8 +131,9 @@ const Home = () => {
               d="M6 8.5a.47.47 0 0 1-.35-.15l-3.5-3.5c-.2-.2-.2-.51 0-.71L5.65.65c.2-.2.51-.2.71 0s.2.51 0 .71L3.21 4.51l3.15 3.15c.2.2.2.51 0 .71c-.1.1-.23.15-.35.15Z"
             ></path>
           </svg>
-        </Link>
-        <Image
+        </button>
+        {/* background image */}
+        {/* <Image
           src={
             "/images/placeholders/tata_strive_cybersecurity_women_banner_desktop_1920x1080.jpg"
           }
@@ -165,7 +141,7 @@ const Home = () => {
           fill
           quality={100}
           className="w-full h-full object-cover"
-        />
+        /> */}
       </section>
       {/* Partners */}
       <section className="partners bg-gray-900 flex flex-col w-full items-center justify-center gap-8 px-4 py-14 md:h-[300px]  text-white">
@@ -203,7 +179,7 @@ const Home = () => {
             <div className={slideStyles}>example</div>
           </SwiperSlide>
         </Swiper>
-        <ul className="flex flex-col md:flex-row gap-4 md:gap-0 w-fit py-2"></ul>
+        {/* <ul className="flex flex-col md:flex-row gap-4 md:gap-0 w-fit py-2"></ul> */}
       </section>
       {/* video background */}
       <div className="absolute inset-0 w-[calc(100%+40px)] h-[calc(100vh+40px)] left-[-20px] top-[-20px] -z-10">

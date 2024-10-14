@@ -57,11 +57,11 @@
       }
     }
   }
-  // &.scrolled {
-  //   border-bottom: 1px solid #e5e7eb;
-  // }
+  &.scrolled {
+    @apply drop-shadow
+  }
   &.scrolled2 {
-    border-bottom: 1px solid #e5e7eb;
+    @apply drop-shadow
   }
 }
 // @keyframes fadeIn {

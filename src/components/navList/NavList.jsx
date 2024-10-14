@@ -27,10 +27,6 @@ const NavList = () => {
       link: "/about",
     },
     {
-      name: "cyber Security Services",
-      link: "/cyberSecurityServices",
-    },
-    {
       name: "Services",
       link: "/services",
     },
@@ -39,8 +35,8 @@ const NavList = () => {
       link: "/contact",
     },
   ];
-  function handleLinkClick(e,i){
-    e.preventDefault();
+  function handleLinkClick(i){
+    // e.preventDefault();
     dispatch(toggleCloseNavList());
     swiper.slideTo(i);
   }
@@ -51,9 +47,9 @@ const NavList = () => {
       }`}
     >
       <div className="nav-list-header flex justify-between items-center border-b p-4">
-        <Link href="/">
+        <button onClick={() => handleLinkClick(0)}>
           <h3 className="text-primary font-bold text-2xl">RSAY</h3>
-        </Link>
+        </button>
         <button
           onClick={() => dispatch(toggleCloseNavList())}
           className="text-primary"
@@ -76,7 +72,7 @@ const NavList = () => {
           {
             links.map((link, i) => (
               <li key={i}>
-                <Link onClick={(e) => handleLinkClick(e,i)} href={link.link}>
+                <Link onClick={(e) => handleLinkClick(i)} href={link.link}>
                   <span className="capitalize">{link.name}</span>
                 </Link>
               </li>

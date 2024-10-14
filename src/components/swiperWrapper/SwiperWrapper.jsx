@@ -8,12 +8,12 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import Home from "../pages/home/Home";
 import Contact from "../pages/contact/Contact";
-import CyberSecurityServices from "../pages/cyberSecurityServices/CyberSecurityServices";
+// import CyberSecurityServices from "../pages/cyberSecurityServices/CyberSecurityServices";
 import About from "../pages/about/About";
 import Services from "../pages/services/Services";
 import { useDispatch } from "react-redux";
 import { setSwiper } from "@/state/features/swiper/SwiperSlice";
-import Service from "../pages/service/Service";
+// import Service from "../pages/service/Service";
 const SwiperWrapper = () => {
   const dispatch = useDispatch();
   return (
@@ -41,16 +41,16 @@ const SwiperWrapper = () => {
       </SwiperSlide>
       {/* 3 */}
       <SwiperSlide>
-        <CyberSecurityServices />
-      </SwiperSlide>
-      {/* 4 */}
-      <SwiperSlide>
         <Contact />
       </SwiperSlide>
+      {/* 4 */}
+      {/* <SwiperSlide>
+        <CyberSecurityServices />
+      </SwiperSlide> */}
       {/* 5 */}
-      <SwiperSlide>
+      {/* <SwiperSlide>
         <Service />
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   );
 };
