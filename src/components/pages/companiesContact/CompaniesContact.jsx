@@ -101,7 +101,7 @@ const CompaniesContact = () => {
                 By offering continuous training, we assist companies in
                 fostering a culture of lifelong learning within the workplace.
                 This motivates employees and increases their loyalty and
-                commitment to the company’s goals.
+                commitment to the company&apos;s goals.
               </span>
             </li>
             <li>

@@ -98,7 +98,7 @@ const UniversitiesContact = () => {
             <li>
               <span>Enhancing Trainer Skills:</span>{" "}
               <span>
-                Our partnership with universities allows us to enhance trainers’
+                Our partnership with universities allows us to enhance trainers&apos;
                 skills through joint workshops and advanced training programs,
                 ensuring the delivery of high-quality training content that
                 aligns with the latest trends in education and training.
