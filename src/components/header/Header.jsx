@@ -20,9 +20,7 @@ const Header = () => {
   const locale = useLocale(); // Get the current locale (e.g., 'en' or 'ar')
 
   const searchParams = useSearchParams(); // Preserve query params
-  function handleLinkClick(i) {
-    swiper.slideTo(i);
-  }
+
   const switchLocale = (locale) => {
     // Extract current locale from the path (e.g., "/en/about" -> "en")
     const pathSegments = pathname.split("/").filter(Boolean); // Split and remove empty segments
@@ -41,6 +39,9 @@ const Header = () => {
     // Replace the current URL with the new one
     router.replace(newUrl);
   };
+  function handleLinkClick(i) {
+    swiper.slideTo(i);
+  }
   useEffect(() => {
     const logoInterval = setInterval(() => {
       document.querySelector(".logo").classList.remove("active");
@@ -75,20 +76,16 @@ const Header = () => {
       name: translate("services"),
       link: "/services",
     },
-    {
-      name: translate("contact"),
-      link: "/contact",
-    },
   ];
 
   return (
     <header
-      className={`bg-white  transition-all main-header  sticky  top-0 z-40  py-2  lg:py-0 ${
+      className={`bg-white  transition-all main-header  sticky  top-0 z-40   lg:py-0 ${
         scrolled ? "scrolled" : ""
       } `}
       //
     >
-      <ScreenWrapper className="flex justify-between items-center py-0 h-full">
+      <ScreenWrapper className="flex lg:justify-between items-center py-0 h-full">
         <button
           onClick={(e) => handleLinkClick(0)}
           className="text-primary font-bold text-3xl lg:text-5xl flex relative items-center logo active"
@@ -113,8 +110,8 @@ const Header = () => {
           </span>
         </button>
 
-        <div className="flex items-center gap-2 lg:gap-4">
-          <div className="flex [&>button]:text-lg font-medium">
+        <div className="flex ms-auto items-center gap-2 lg:gap-4">
+          <div className="hidden lg:flex [&>button]:text-lg font-medium">
             {locale === "en" ? (
               <button className="underline" onClick={() => switchLocale("ar")}>
                 العربية
@@ -140,50 +137,50 @@ const Header = () => {
                   </button>
                 </li>
               ))}
-              <li className="relative no-ani group ">
-                <button className="!flex items-center gap-2 relative z-10">
-                  <span className="capitalize text-lg font-semibold">
-                    contact us
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="m19 9l-7 7l-7-7"
-                    ></path>
-                  </svg>
-                </button>
-                <div className="absolute bottom-0 z-0  right-0 transition-all group-hover:translate-y-full  w-max h-fit bg-white opacity-0 group-hover:opacity-100 flex flex-col border rounded-b-md">
-                  <button onClick={(e) => handleLinkClick(3)} className="px-4 py-2">
-                    <span className="capitalize text-lg font-semibold text-primary">
-                      for universities
-                    </span>
-                  </button>
-                  <button onClick={(e) => handleLinkClick(3)} className="px-4 py-2">
-                    <span className="capitalize text-lg font-semibold text-primary">
-                      for companies
-                    </span>
-                  </button>
-                </div>
-              </li>
             </ul>
           </nav>
+          <div className="relative no-ani group h-auto p-4">
+            <button className="!flex items-center gap-2 relative z-10">
+              <span className="capitalize text-lg font-semibold text-primary">
+                contact us
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="#004aad"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="m19 9l-7 7l-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div className="absolute bottom-0 z-0  right-0 transition-all group-hover:translate-y-full  w-max h-fit bg-white opacity-0 group-hover:opacity-100 flex flex-col border rounded-b-md">
+              <button onClick={(e) => handleLinkClick(3)} className="px-4 py-2">
+                <span className="capitalize text-lg font-semibold text-primary">
+                  for universities
+                </span>
+              </button>
+              <button onClick={(e) => handleLinkClick(4)} className="px-4 py-2">
+                <span className="capitalize text-lg font-semibold text-primary">
+                  for companies
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
         <div className="flex items-center gap-2 lg:gap-4 lg:hidden">
-          <button
+          {/* <button
             onClick={(e) => handleLinkClick(3)}
             className="text-primary hover:bg-primary hover:text-white transition-all font-bold text-xs uppercase border border-primary px-2 lg:px-4 py-1 rounded"
           >
             contact us
-          </button>
+          </button> */}
           <button
             onClick={() => dispatch(toggleOpenNavList())}
             className="text-primary"

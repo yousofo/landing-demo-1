@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import "./style/style.css";
 import ScreenWrapper from "@/components/shared/ScreenWrapper";
 import { useTranslations } from "next-intl";
 
@@ -61,7 +60,7 @@ const UniversitiesContact = () => {
   //   "message": "الرسالة"
   // }
   return (
-    <ScreenWrapper className="bg-white universities-contact ">
+    <ScreenWrapper className="bg-white contact ">
       <div className="flex flex-col gap-6 lg:flex-row lg:gap-20 xl:gap-40">
         <section className="" dir="ltr">
           <div>

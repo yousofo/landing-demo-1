@@ -14,6 +14,7 @@ import Services from "../pages/services/Services";
 import { useDispatch } from "react-redux";
 import { setSwiper } from "@/state/features/swiper/SwiperSlice";
 import UniversitiesContact from "../pages/universitiesContact/UniversitiesContact";
+import CompaniesContact from "../pages/companiesContact/CompaniesContact";
 // import Service from "../pages/service/Service";
 const SwiperWrapper = () => {
   const dispatch = useDispatch();
@@ -45,11 +46,14 @@ const SwiperWrapper = () => {
       <SwiperSlide>
         <UniversitiesContact />
       </SwiperSlide>
+      {/* 4 */}
       <SwiperSlide>
-        <Contact />
+        <CompaniesContact />
       </SwiperSlide>
+
       {/* 4 */}
 
+      {/* <Contact /> */}
       {/* 5 */}
       {/* <SwiperSlide>
         <Service />
