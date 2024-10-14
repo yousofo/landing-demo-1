@@ -87,7 +87,7 @@ const Home = () => {
             </p>
             {/* main header  */}
             <h1
-              style={{ wordSpacing: "10px" }}
+              // style={{ wordSpacing: "10px" }}
               className="text-3xl md:text-4xl lg:text-7xl lg:leading-tight font-bold max-w-[800px] uppercase flex flex-col text-center spacing"
             >
               {translate("name")}
