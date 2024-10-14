@@ -82,7 +82,7 @@ const CompaniesContact = () => {
                 Through collaboration with companies, we can design specialized
                 training programs that meet your unique needs. We work to
                 understand your requirements and provide tailored training
-                solutions that enhance your employees' skills and achieve your
+                solutions that enhance your employees&apos; skills and achieve your
                 strategic objectives.
               </span>
             </li>
