@@ -63,7 +63,7 @@ const UniversitiesContact = () => {
   return (
     <ScreenWrapper className="bg-white universities-contact ">
       <div className="flex flex-col gap-6 lg:flex-row lg:gap-20 xl:gap-40">
-        <section className="">
+        <section className="" dir="ltr">
           <div>
             <h2>Partnership Invitation with Universities</h2>
             <p>

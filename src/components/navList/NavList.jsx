@@ -5,11 +5,12 @@ import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCloseNavList } from "@/state/features/navList/navListSlice";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const NavList = () => {
   const isOpen = useSelector((store) => store.navList.isOpen);
   const swiper = useSelector((store) => store.swiper.swiper);
-
+  const translate = useTranslations("Header");
   const dispatch = useDispatch();
   const router = useRouter();
   // function handleClicked(e, link) {
@@ -19,19 +20,19 @@ const NavList = () => {
   // }
   const links = [
     {
-      name: "Home",
+      name: translate("home"),
       link: "/",
     },
     {
-      name: "About",
+      name: translate("about"),
       link: "/about",
     },
     {
-      name: "Services",
+      name: translate("services"),
       link: "/services",
     },
     {
-      name: "Contact",
+      name: translate("contact"),
       link: "/contact",
     },
   ];
