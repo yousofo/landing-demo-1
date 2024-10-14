@@ -72,9 +72,9 @@ const NavList = () => {
           {
             links.map((link, i) => (
               <li key={i}>
-                <Link onClick={(e) => handleLinkClick(i)} href={link.link}>
+                <button onClick={(e) => handleLinkClick(i)} href={link.link}>
                   <span className="capitalize">{link.name}</span>
-                </Link>
+                </button>
               </li>
             ))
           }
