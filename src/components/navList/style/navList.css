@@ -16,7 +16,7 @@
   color: var(--primary);
   font-weight: 500;
 }
-.nav-list nav ul li a {
+.nav-list nav ul li button {
   display: inline-block;
   width: 100%;
   padding: 10px 16px 10px 16px;
