@@ -21,6 +21,11 @@ const Home = () => {
   function handleLinkClick(i) {
     swiper.slideTo(i);
   }
+  const images = [
+    "/images/placeholders/softwareengineering.jpeg",
+    "/images/placeholders/ai-training.webp",
+    "/images/placeholders/cloud-computing-900x600.jpg",
+  ]
   const styles = {
     slide: {
       display: "flex",
@@ -85,10 +90,10 @@ const Home = () => {
             {Array.from({ length: 3 }, (_, i) => (
               <div key={i} className="w-full p-4 md:w-1/2 lg:w-1/3 ">
                 <div className="rounded-2xl transition-all bg-white  p-4 ">
-                  <div className="mb-8 flex  items-center justify-center rounded-2xl bg-primary overflow-hidden">
+                  <div className="mb-8 flex aspect-video items-center justify-center rounded-2xl bg-primary overflow-hidden">
                     {/* {icon} */}
                     <img
-                      src="/images/placeholders/cybersecurity.jpg"
+                      src={images[i]}
                       className="w-full h-full object-cover"
                       alt=""
                     />
