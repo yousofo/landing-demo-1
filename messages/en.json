@@ -22,7 +22,7 @@
     },
     "course5": {
       "title": "Digital Transformation Technologies Training",
-      "content":"This training provides insights into adopting digital transformation in business. It focuses on strategies for using technology to optimize operations and deliver value to customers. The program highlights the importance of digital transformation and how to identify related opportunities and challenges. It also includes practical examples of successful transformations and guidance on managing cultural change within organizations to ensure the success of digital strategies."
+      "content": "This training provides insights into adopting digital transformation in business. It focuses on strategies for using technology to optimize operations and deliver value to customers. The program highlights the importance of digital transformation and how to identify related opportunities and challenges. It also includes practical examples of successful transformations and guidance on managing cultural change within organizations to ensure the success of digital strategies."
     },
     "course6": {
       "title": "Cybersecurity and Information Security Training",
@@ -51,16 +51,22 @@
     "home": "home",
     "about": "about",
     "services": "services",
-    "contact": "contact",
+    "contact": "contact us",
     "cyberSecurityServices": "Cyber Security Services"
   },
-  "form":{
+  "form": {
     "name": "name",
+    "namePH": "type your name",
     "email": "email address",
+    "emailPH": "type your email",
     "site": "site",
+    "sitePH": "type your organization's site",
     "phone": "phone",
+    "phonePH": "type your phone number",
     "send": "send",
     "role": "position or role",
-    "message": "message"
+    "rolePH": "type your position or role",
+    "message": "message",
+    "messagePH": "type your message"
   }
 }

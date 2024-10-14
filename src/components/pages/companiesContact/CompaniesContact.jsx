@@ -201,32 +201,32 @@ const CompaniesContact = () => {
           {/* name */}
           <div className="input">
             <label htmlFor="">{transleForm("name")}</label>
-            <input type="text" required />
+            <input placeholder={transleForm("namePH")}  type="text" required />
           </div>
           {/*  email */}
           <div className="input">
             <label htmlFor="">{transleForm("email")}</label>
-            <input type="email" required />
+            <input placeholder={transleForm("emailPH")} type="email" required />
           </div>
           {/*  phone */}
           <div className="input">
-            <label htmlFor="">{transleForm("site")}</label>
-            <input type="text" required />
+            <label htmlFor="">{transleForm("phone")}</label>
+            <input  placeholder={transleForm("phonePH")} type="text" required />
           </div>
           {/* site */}
           <div className="input">
             <label htmlFor="">{transleForm("site")}</label>
-            <input type="text" required />
+            <input placeholder={transleForm("sitePH")} type="text" required />
           </div>
           {/* role */}
           <div className="input">
             <label htmlFor="">{transleForm("role")}</label>
-            <input type="text" required />
+            <input placeholder={transleForm("rolePH")} type="text" required />
           </div>
           {/* message */}
           <div className="input">
             <label htmlFor="">{transleForm("message")}</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea placeholder={transleForm("messagePH")} name="" id="" cols="30" rows="10" required></textarea>
           </div>
           {/* submit */}
           <input

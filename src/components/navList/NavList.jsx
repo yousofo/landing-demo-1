@@ -35,6 +35,7 @@ const NavList = () => {
 
     // Replace the current URL with the new one
     router.replace(newUrl);
+    dispatch(toggleCloseNavList());
   };
   const links = [
     {

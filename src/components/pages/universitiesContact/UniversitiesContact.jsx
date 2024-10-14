@@ -167,37 +167,43 @@ const UniversitiesContact = () => {
         </section>
       </div>
       <section className="w-full mt-4 lg:mt-8">
-        <form action="" className="w-full">
+      <form action="" className="w-full">
           {/* name */}
           <div className="input">
             <label htmlFor="">{transleForm("name")}</label>
-            <input type="text" required/>
+            <input placeholder={transleForm("namePH")}  type="text" required />
           </div>
           {/*  email */}
           <div className="input">
             <label htmlFor="">{transleForm("email")}</label>
-            <input type="email" required />
+            <input placeholder={transleForm("emailPH")} type="email" required />
           </div>
           {/*  phone */}
           <div className="input">
-            <label htmlFor="">{transleForm("site")}</label>
-            <input type="text" required/>
+            <label htmlFor="">{transleForm("phone")}</label>
+            <input  placeholder={transleForm("phonePH")} type="text" required />
           </div>
           {/* site */}
           <div className="input">
             <label htmlFor="">{transleForm("site")}</label>
-            <input type="text" required/>
+            <input placeholder={transleForm("sitePH")} type="text" required />
           </div>
           {/* role */}
           <div className="input">
             <label htmlFor="">{transleForm("role")}</label>
-            <input type="text" required/>
+            <input placeholder={transleForm("rolePH")} type="text" required />
           </div>
           {/* message */}
           <div className="input">
             <label htmlFor="">{transleForm("message")}</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea placeholder={transleForm("messagePH")} name="" id="" cols="30" rows="10" required></textarea>
           </div>
+          {/* submit */}
+          <input
+            type="submit"
+            value={transleForm("send")}
+            className="bg-primary hover:bg-white text-white m-4 hover:text-primary  font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline"
+          />
         </form>
       </section>
     </ScreenWrapper>

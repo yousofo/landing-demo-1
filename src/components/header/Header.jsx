@@ -142,7 +142,7 @@ const Header = () => {
           <div className="relative no-ani group h-auto p-4">
             <button className="!flex items-center gap-2 relative z-10">
               <span className="capitalize text-lg font-semibold text-primary">
-                contact us
+                {translate("contact")}
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
