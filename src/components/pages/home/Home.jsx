@@ -25,7 +25,7 @@ const Home = () => {
     "/images/placeholders/softwareengineering.jpeg",
     "/images/placeholders/ai-training.webp",
     "/images/placeholders/cloud-computing-900x600.jpg",
-  ]
+  ];
   const styles = {
     slide: {
       display: "flex",
@@ -37,7 +37,45 @@ const Home = () => {
       fontSize: "2rem",
     },
   };
-
+  // const partners = (
+  //   <section className="partners bg-gray-900 flex flex-col w-full items-center justify-center gap-8 px-4 py-14 md:h-[300px]  text-white">
+  //     <h3 className="text-2xl">Our Partners</h3>
+  //     <Swiper
+  //       spaceBetween={0}
+  //       slidesPerView={3}
+  //       // onSlideChange={() => console.log("slide change")}
+  //       // onSwiper={(swiper) => dispatch(setSwiper(swiper))}
+  //       className="w-full"
+  //       // autoHeight={true}
+  //       modules={[Autoplay]}
+  //       loop={true}
+  //       autoplay={{ delay: 1000, disableOnInteraction: false }}
+  //       effect="fade"
+  //     >
+  //       {/* 0 */}
+  //       <SwiperSlide>
+  //         <div className={slideStyles}>example</div>
+  //       </SwiperSlide>
+  //       {/* 1 */}
+  //       <SwiperSlide>
+  //         <div className={slideStyles}>example</div>
+  //       </SwiperSlide>
+  //       {/* 2 */}
+  //       <SwiperSlide>
+  //         <div className={slideStyles}>example</div>
+  //       </SwiperSlide>
+  //       {/* 3 */}
+  //       <SwiperSlide>
+  //         <div className={slideStyles}>example</div>
+  //       </SwiperSlide>
+  //       {/* 4 */}
+  //       <SwiperSlide>
+  //         <div className={slideStyles}>example</div>
+  //       </SwiperSlide>
+  //     </Swiper>
+  //     {/* <ul className="flex flex-col md:flex-row gap-4 md:gap-0 w-fit py-2"></ul> */}
+  //   </section>
+  // );
   return (
     <section className="home-page relative flex flex-col overflow-hidden">
       <ScreenWrapper className="text-white first-sec relative flex flex-col justify-between py-8 screen-section items-center">
@@ -50,7 +88,7 @@ const Home = () => {
             {/* main header  */}
             <h1
               style={{ wordSpacing: "10px" }}
-              className="text-3xl md:text-4xl lg:text-7xl font-bold  uppercase flex flex-col text-center spacing"
+              className="text-3xl md:text-4xl lg:text-7xl lg:leading-tight font-bold max-w-[800px] uppercase flex flex-col text-center spacing"
             >
               {translate("name")}
             </h1>
@@ -102,7 +140,7 @@ const Home = () => {
                     {translate2(`course${i + 1}.title`)}
                   </h4>
                   <p className="text-lg lg:text-xl font-medium text-gray-700">
-                  {translate2(`course${i + 1}.content`)}
+                    {translate2(`course${i + 1}.content`)}
                   </p>
                   {/* <Link
                     onClick={(e) => handleLinkClick(e, 5)}
@@ -149,43 +187,7 @@ const Home = () => {
         /> */}
       </section>
       {/* Partners */}
-      <section className="partners bg-gray-900 flex flex-col w-full items-center justify-center gap-8 px-4 py-14 md:h-[300px]  text-white">
-        <h3 className="text-2xl">Our Partners</h3>
-        <Swiper
-          spaceBetween={0}
-          slidesPerView={3}
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => dispatch(setSwiper(swiper))}
-          className="w-full"
-          // autoHeight={true}
-          modules={[Autoplay]}
-          loop={true}
-          autoplay={{ delay: 1000, disableOnInteraction: false }}
-          effect="fade"
-        >
-          {/* 0 */}
-          <SwiperSlide>
-            <div className={slideStyles}>example</div>
-          </SwiperSlide>
-          {/* 1 */}
-          <SwiperSlide>
-            <div className={slideStyles}>example</div>
-          </SwiperSlide>
-          {/* 2 */}
-          <SwiperSlide>
-            <div className={slideStyles}>example</div>
-          </SwiperSlide>
-          {/* 3 */}
-          <SwiperSlide>
-            <div className={slideStyles}>example</div>
-          </SwiperSlide>
-          {/* 4 */}
-          <SwiperSlide>
-            <div className={slideStyles}>example</div>
-          </SwiperSlide>
-        </Swiper>
-        {/* <ul className="flex flex-col md:flex-row gap-4 md:gap-0 w-fit py-2"></ul> */}
-      </section>
+
       {/* video background */}
       <div className="absolute inset-0 w-[calc(100%+40px)] h-[calc(100vh+40px)] left-[-20px] top-[-20px] -z-10">
         <div className="absolute inset-0 w-full h-full bg-black/70"></div>
