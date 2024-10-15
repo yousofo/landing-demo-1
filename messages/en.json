@@ -3,6 +3,13 @@
     "name": "rsay",
     "organization": "rsay information technology company"
   },
+  "button":{
+    "download":"Download Company Profile",
+    "showAll":"Show All "
+  },
+  "services":{
+    "header":""
+  },
   "footer":{
     "about": "about us"
   },
