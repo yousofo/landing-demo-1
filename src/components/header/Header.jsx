@@ -42,7 +42,7 @@ const Header = () => {
     // Replace the current URL with the new one
     router.replace(newUrl);
   };
-  
+
   useEffect(() => {
     const logoInterval = setInterval(() => {
       document.querySelector(".logo").classList.remove("active");
@@ -112,7 +112,7 @@ const Header = () => {
         </button>
 
         <div className="flex ms-auto items-center gap-2 lg:gap-4">
-          <div className="hidden lg:flex [&>button]:text-lg font-medium">
+          {/* <div className="hidden lg:flex [&>button]:text-lg font-medium">
             {locale === "en" ? (
               <button className="underline" onClick={() => switchLocale("ar")}>
                 العربية
@@ -125,7 +125,9 @@ const Header = () => {
                 English
               </button>
             )}
-          </div>
+          </div> */}
+
+          {/* nav */}
           <nav className="hidden lg:flex h-full items-center">
             {/* <LanguageSwitcher/> */}
             <ul className="h-full">
@@ -140,7 +142,9 @@ const Header = () => {
               ))}
             </ul>
           </nav>
+          {/* contact */}
           <div className="relative no-ani group h-auto p-4">
+            {/* button */}
             <button className="!flex items-center gap-2 relative z-10">
               <span className="capitalize text-lg font-semibold text-primary">
                 {translate("contact")}
@@ -161,6 +165,7 @@ const Header = () => {
                 ></path>
               </svg>
             </button>
+            {/* hidden list  */}
             <div className="absolute bottom-0 z-0  right-0 transition-all group-hover:translate-y-full  w-max h-fit bg-white opacity-0 group-hover:opacity-100 flex flex-col border rounded-b-md">
               <button onClick={(e) => handleLinkClick(3)} className="px-4 py-2">
                 <span className="capitalize text-lg font-semibold text-primary">
@@ -170,6 +175,54 @@ const Header = () => {
               <button onClick={(e) => handleLinkClick(4)} className="px-4 py-2">
                 <span className="capitalize text-lg font-semibold text-primary">
                   for companies
+                </span>
+              </button>
+            </div>
+          </div>
+          {/* language */}
+          <div className="relative no-ani group h-auto p-4">
+            {/* button */}
+            <button className="!flex items-center gap-2 relative z-10">
+              <span className="capitalize text-lg font-semibold text-primary flex items-center gap-0.5">
+                {/* {locale === "en" ? "اللغة" : "Language"} */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m12.87 15.07l-2.54-2.51l.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35C8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5l3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7l1.62-4.33L19.12 17z"
+                  ></path>
+                </svg>
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="#004aad"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="m19 9l-7 7l-7-7"
+                ></path>
+              </svg>
+            </button>
+            {/* hidden list  */}
+            <div className="absolute bottom-0 z-0  right-0 transition-all group-hover:translate-y-full  w-max h-fit bg-white opacity-0 group-hover:opacity-100 flex flex-col border rounded-b-md">
+              <button onClick={(e) => switchLocale("ar")} className="px-4 py-2">
+                <span className="capitalize text-lg font-semibold text-primary">
+                  العربية
+                </span>
+              </button>
+              <button onClick={(e) => switchLocale("en")} className="px-4 py-2">
+                <span className="capitalize text-lg font-semibold text-primary">
+                  English
                 </span>
               </button>
             </div>

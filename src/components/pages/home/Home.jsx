@@ -187,8 +187,14 @@ const Home = () => {
           className="w-full h-full object-cover"
         /> */}
       </section>
+      {/* who are we */}
+      <ScreenWrapper>
+        <section></section>
+        <div>
+          <Image   />
+        </div> 
+      </ScreenWrapper>
       {/* Partners */}
-      <hr />
       <ScreenWrapper className="flex flex-col items-center py-8">
         <img
           className="w-full max-w-lg"

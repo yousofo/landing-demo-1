@@ -66,7 +66,7 @@ const UniversitiesContact = () => {
           <div>
             <h2>Partnership Invitation with Universities</h2>
             <p>
-              Rasay is pleased to invite universities and academic institutions
+              RSAY is pleased to invite universities and academic institutions
               to collaborate with us in providing advanced and professional
               training programs. We believe in the importance of strategic
               partnerships in enhancing the quality of education and vocational
@@ -75,7 +75,7 @@ const UniversitiesContact = () => {
               workforce that meets the changing needs of the job market.
             </p>
           </div>
-          <h3>Why Partner with Rasay?</h3>
+          <h3>Why Partner with RSAY?</h3>
           <ul>
             <li>
               <span>Achieving Academic Excellence:</span>{" "}
@@ -120,17 +120,17 @@ const UniversitiesContact = () => {
           <div>
             <h2>للشراكة مع الجامعات</h2>
             <p>
-              يسر شركة وسامي أن تدعو الجامعات والمؤسسات الأكاديمية للتعاون معنا
+              يسر شركة رسائي أن تدعو الجامعات والمؤسسات الأكاديمية للتعاون معنا
               في تقديم برامج تدريبية متقدمة ومهنية. نحن نؤمن بأهمية الشركات
               الاستراتيجية في تعزيز جودة التعليم والتدريب المهني، ونعمل في
               التعاون مع الجامعات في صياغة فريدة لاستحداث آفاقًا للشراكة في
               تطوير قوى عاملة ماهرة تلبي احتياجات سوق العمل المتغيرة.
             </p>
           </div>
-          <h3>لماذا الشراكة مع وسامي؟</h3>
+          <h3>لماذا الشراكة مع رسائي؟</h3>
           <ul>
             <li>
-              <span>لماذا الشراكة مع وسامي؟</span>{" "}
+              <span>لماذا الشراكة مع رسائي؟</span>{" "}
               <span>
                 نحن نسعى لتقديم برامج تدريبية تتماشى مع أحدث التطورات في مجالات
                 الأعمال والتكنولوجيا، من خلال التعاون مع الجامعات، وبذلك ندمج
@@ -202,7 +202,7 @@ const UniversitiesContact = () => {
           <input
             type="submit"
             value={transleForm("send")}
-            className="bg-primary hover:bg-white text-white m-4 hover:text-primary  font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline"
+            className="bg-primary hover:bg-white border border-transparent hover:border-primary cursor-pointer text-white m-4 hover:text-primary  font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline transition-all"
           />
         </form>
       </section>

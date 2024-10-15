@@ -66,7 +66,7 @@ const CompaniesContact = () => {
           <div>
             <h2>Invitation for Partnership with Companies in Training</h2>
             <p>
-              Rasay expresses its desire to establish strategic partnerships
+              RSAY expresses its desire to establish strategic partnerships
               with companies across various sectors to deliver specialized
               training programs aimed at enhancing the skills and competencies
               necessary to meet market challenges. We believe in the importance
@@ -74,7 +74,7 @@ const CompaniesContact = () => {
               workforce development and improve institutional performance.
             </p>
           </div>
-          <h3>Importance of Partnering with Rasay:</h3>
+          <h3>Importance of Partnering with RSAY:</h3>
           <ul>
             <li>
               <span>Customized Training Programs:</span>{" "}
@@ -138,14 +138,14 @@ const CompaniesContact = () => {
           <div>
             <h2>دعوة للشراكة مع الشركات في تقديم التدريب</h2>
             <p>
-              تعبر شركة وسامي عن رغبتها في إقامة شراكات استراتيجية مع الشركات في
+              تعبر شركة رسائي عن رغبتها في إقامة شراكات استراتيجية مع الشركات في
               مختلف القطاعات لتقديم برامج تدريبية متخصصة تهدف إلى تعزيز المهارات
               والكفاءات اللازمة لمواجهة تحديات السوق. نحن نؤمن بأهمية التعاون مع
               الشركات لتحقيق أهداف مشتركة في تطوير القوى العاملة ورفع مستوى
               الأداء المؤسسي.
             </p>
           </div>
-          <h3>أهمية الشراكة مع وسامي</h3>
+          <h3>أهمية الشراكة مع رسائي</h3>
           <ul>
             <li>
               <span>تخصيص البرامج التدريبية:</span>{" "}

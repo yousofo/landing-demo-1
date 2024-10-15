@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import ScreenWrapper from "../shared/ScreenWrapper";
 import { useTranslations } from "use-intl";
@@ -6,45 +6,57 @@ import { useSelector } from "react-redux";
 
 const Footer = () => {
   const swiper = useSelector((store) => store.swiper.swiper);
-  const translateFooter = useTranslations("footer")
+  const translateFooter = useTranslations("footer");
   function handleLinkClick(i) {
     swiper.slideTo(i);
   }
   return (
-    <footer className="text-white  border-t  bg-white rounded-lg shadow dark:bg-gray-900">
+    <footer className="text-white  border-t  bg-white rounded-lg shadow ">
       <ScreenWrapper className="flex flex-col lg:flex-row justify-between py-4 md:py-8 items-center">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <button onClick={()=>handleLinkClick(0)} href="/" className="flex items-center">
+            <button
+              onClick={() => handleLinkClick(0)}
+              href="/"
+              className="flex items-center"
+            >
               <img
                 src="/images/placeholders/rsay-logo-white.png"
                 className="w-20 rounded-full"
                 alt="FlowBite Logo"
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap">
                 RSAY
               </span>
             </button>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-500  font-medium">
                 <li>
-                  <button onClick={()=>handleLinkClick(0)} href="/" className="hover:underline">
+                  <button
+                    onClick={() => handleLinkClick(0)}
+                    href="/"
+                    className="hover:underline"
+                  >
                     RSAY
                   </button>
                 </li>
                 <li>
-                  <button onClick={()=>handleLinkClick(0)} className="hover:underline">
+                  <button
+                    onClick={() => handleLinkClick(0)}
+                    className="hover:underline"
+                  >
                     {translateFooter("about")}
                   </button>
                 </li>
               </ul>
             </div>
             <div>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-500  font-medium">
                 <li>
-                  <button onClick={()=>handleLinkClick(0)}
+                  <button
+                    onClick={() => handleLinkClick(0)}
                     href="#"
                     className="hover:underline "
                   >
@@ -52,8 +64,9 @@ const Footer = () => {
                   </button>
                 </li>
                 <li>
-                  <button onClick={()=>handleLinkClick(0)}
-                    href="#"
+                  <button
+                    onClick={() => handleLinkClick(0)}
+                    href=" "
                     className="hover:underline"
                   >
                     social example
@@ -63,19 +76,22 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 w-full lg:w-0 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6 border-gray-200 w-full lg:w-0 sm:mx-auto  lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-500 sm:text-cente">
             © 2024{" "}
-            <button onClick={()=>handleLinkClick(0)} href="/" className="hover:underline">
+            <button
+              onClick={() => handleLinkClick(0)}
+              className="hover:underline    "
+            >
               RSAY™
             </button>
             . All Rights Reserved.
           </span>
-          <div className="flex mt-4 sm:justify-center sm:mt-0">
+          {/* <div className="flex mt-4 sm:justify-center sm:mt-0">
             <button onClick={()=>handleLinkClick(0)}
               href="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500 hover:text-gray-900 "
             >
               <svg
                 className="w-4 h-4"
@@ -94,7 +110,7 @@ const Footer = () => {
             </button>
             <button onClick={()=>handleLinkClick(0)}
               href="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-gray-900  ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -109,7 +125,7 @@ const Footer = () => {
             </button>
             <button onClick={()=>handleLinkClick(0)}
               href="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-gray-900  ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -128,7 +144,7 @@ const Footer = () => {
             </button>
             <button onClick={()=>handleLinkClick(0)}
               href="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-gray-900  ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -147,7 +163,7 @@ const Footer = () => {
             </button>
             <button onClick={()=>handleLinkClick(0)}
               href="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-gray-900  ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -164,7 +180,7 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Dribbble account</span>
             </button>
-          </div>
+          </div> */}
         </div>
       </ScreenWrapper>
     </footer>
