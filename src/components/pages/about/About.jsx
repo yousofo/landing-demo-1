@@ -33,103 +33,134 @@ const About = () => {
           alt=""
         />
         <ScreenWrapper className="relative z-30 flex flex-col h-full gap-4 items-center justify-center">
-          <h1 className="text-5xl font-bold text-white uppercase">About Us</h1>
+          <h2 className="text-5xl font-bold text-white uppercase">
+            {translateAbout("title")}
+          </h2>
           <p className="text-2xl text-white font-semibold text-center">
-            A goal properly set with{" "}
+            {translateAbout("message").split("**")[0]}{" "}
             <span
               style={{ animationDuration: "3s" }}
-              className="font-bold animate-pulse underline italic pe-1"
+              className="font-bold animate-pulse underline italic pe-1 uppercase"
             >
-              RSAY
+              {translateAbout("name")}
             </span>{" "}
-            is halfway reached!
+            {translateAbout("message").split("**")[1]}
           </p>
         </ScreenWrapper>
       </div>
-      <ScreenWrapper className="flex flex-col items-center pt-8 text-rsayBlack text-center">
-        <h1 className="text-3xl font-bold w-full pb-2 border-b-2 max-w-60">{translateAbout("section1.first")}</h1>
-        <p className="text-xl font-semibold pt-2">{translateAbout("section1.second")}</p>
+      <ScreenWrapper className="flex flex-col gap-2 items-center pt-8 text-rsayBlack text-center  px-8">
+        <h2 className="text-3xl font-bold w-full pb-3 border-b-2 border-gray-300 max-w-60">
+          {translateAbout("section1.first")}
+        </h2>
+        <p className="text-xl font-semibold pt-2 flex flex-col gap-4 list-disc">
+          {translateAbout("section1.info1")}
+        </p>
       </ScreenWrapper>
       {/* courses cards */}
-      <Marquee>
-        {Array(7)
-          .fill(0)
-          .map((_, index) => (
-            <div
-              img={images[index]}
-              key={`first-${index}`}
-              className="w-[300px] h-[200px] bg-white rounded-lg py-4 px-2 overflow-hidden relative group cursor-pointer"
-              onClick={() => handleLinkClick(2)}
-            >
-              <div className="w-full h-full top-0 left-0 z-10 relative  rounded-lg overflow-hidden">
-                <div className="w-full h-full absolute top-0 left-0 z-20 bg-black opacity-40 p-4"></div>
-                <img
-                  className="w-full h-full object-cover group-hover:scale-110 duration-500"
-                  src={images[index]}
-                  alt=""
-                />
+      <div dir="ltr" className="w-full">
+        <Marquee>
+          {Array(7)
+            .fill(0)
+            .map((_, index) => (
+              <div
+                img={images[index]}
+                key={`first-${index}`}
+                className="w-[300px] h-[200px] bg-white rounded-lg py-4 px-2 overflow-hidden relative group cursor-pointer"
+                onClick={() => handleLinkClick(2)}
+              >
+                <div className="w-full h-full top-0 left-0 z-10 relative  rounded-lg overflow-hidden">
+                  <div className="w-full h-full absolute top-0 left-0 z-20 bg-black opacity-40 p-4"></div>
+                  <img
+                    className="w-full h-full object-cover group-hover:scale-110 duration-500"
+                    src={images[index]}
+                    alt=""
+                  />
+                </div>
+                <div className="absolute bottom-0 z-20 left-0 h-[40%] w-full flex items-start p-7 text-white">
+                  <h4 className="font-bold text-lg">
+                    {translateCourses(`course${index + 1}.title`)}
+                  </h4>
+                </div>
               </div>
-              <div className="absolute bottom-0 z-20 left-0 h-[40%] w-full flex items-start p-7 text-white">
-                <h4 className="font-bold text-lg">
-                  {translateCourses(`course${index + 1}.title`)}
-                </h4>
+            ))}
+          {Array(7)
+            .fill(0)
+            .map((_, index) => (
+              <div
+                img={images[index]}
+                key={`second-${index}`}
+                className="w-[300px] h-[200px] bg-white rounded-lg py-4 px-2 overflow-hidden relative group cursor-pointer"
+                onClick={() => handleLinkClick(2)}
+              >
+                <div className="w-full h-full top-0 left-0 z-10 relative  rounded-lg overflow-hidden">
+                  <div className="w-full h-full absolute top-0 left-0 z-20 bg-black opacity-40 p-4"></div>
+                  <img
+                    className="w-full h-full object-cover group-hover:scale-110 duration-500"
+                    src={images[index]}
+                    alt=""
+                  />
+                </div>
+                <div className="absolute bottom-0 z-20 left-0 h-[40%] w-full flex items-start p-7 text-white">
+                  <h4 className="font-bold text-lg">
+                    {translateCourses(`course${index + 1}.title`)}
+                  </h4>
+                </div>
               </div>
-            </div>
-          ))}
-        {Array(7)
-          .fill(0)
-          .map((_, index) => (
-            <div
-              img={images[index]}
-              key={`second-${index}`}
-              className="w-[300px] h-[200px] bg-white rounded-lg py-4 px-2 overflow-hidden relative group cursor-pointer"
-              onClick={() => handleLinkClick(2)}
-            >
-              <div className="w-full h-full top-0 left-0 z-10 relative  rounded-lg overflow-hidden">
-                <div className="w-full h-full absolute top-0 left-0 z-20 bg-black opacity-40 p-4"></div>
-                <img
-                  className="w-full h-full object-cover group-hover:scale-110 duration-500"
-                  src={images[index]}
-                  alt=""
-                />
-              </div>
-              <div className="absolute bottom-0 z-20 left-0 h-[40%] w-full flex items-start p-7 text-white">
-                <h4 className="font-bold text-lg">
-                  {translateCourses(`course${index + 1}.title`)}
-                </h4>
-              </div>
-            </div>
-          ))}
-      </Marquee>
-      <ScreenWrapper className="flex flex-col lg:flex-row flex-1 justify-between h-auto  gap-4 items-center py-20">
-        <section className="flex-1 flex flex-col gap-4 items-center lg:items-start">
-          <h1 className="text-xl capitalize">about us</h1>
-          <h4 className="text-4xl font-bold capitalize leading-[1.3] text-center lg:text-start">
-            upgrade your security <br /> with us effortlessly
-          </h4>
-          <p className="text-lg text-center lg:text-start">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            atque autem, voluptates magnam, voluptate rem, necessitatibus
-            repellendus voluptatibus facilis dolores doloremque. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit.
-          </p>
-        </section>
-        <section className="flex-1 flex flex-col gap-2">
-          <img src="/images/placeholders/team.png" alt="" />
-          <div className="flex gap-4 w-full justify-center flex-col lg:flex-row">
-            <div className="border rounded-lg p-3">
-              <h5 className="text-primary text-xl mb-4">
-                33+ years of experience
-              </h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="border rounded-lg p-3">
-              <h5 className="text-primary text-xl mb-4">120+ projects</h5>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-        </section>
+            ))}
+        </Marquee>
+      </div>
+      {/* about */}
+      <ScreenWrapper className="flex flex-col gap-2 items-start py-8 mb-8 text-rsayBlack text-start  px-8">
+        <h2 className="text-3xl font-bold w-full pb-3 border-b-2 border-gray-300 max-w-60">
+          {translateAbout("section2.first")}
+        </h2>
+        <ul className="text-xl font-semibold pt-2 flex flex-col gap-4 list-disc">
+          <li>{translateAbout("section2.info1")}</li>
+          <li>{translateAbout("section2.info2")}</li>
+          <li>{translateAbout("section2.info3")}</li>
+          <li>{translateAbout("section2.info4")}</li>
+          <li>{translateAbout("section2.info5")}</li>
+        </ul>
       </ScreenWrapper>
+      {/* <hr className="w-full my-12" /> */}
+      <div className="flex flex-col justify-between gap-4 items-center bg-[#f1f4f6] w-full">
+        <ScreenWrapper className="flex justify-between gap-4 py-0">
+          <section className="flex flex-col gap-4 items-start justify-start p-4">
+            <h2 className="text-3xl font-bold w-full pb-3 border-b-2 border-gray-300 max-w-60">
+              {translateAbout("section3.first")}
+            </h2>
+            <p className="text-xl font-semibold pt-2 flex flex-col gap-4 list-disc">
+              {translateAbout("section3.info1")}
+            </p>
+          </section>
+          <div className="hidden lg:block w-full aspect-video relative">
+            <img
+              className="abosulte w-full h-full object-cover"
+              src="/images/placeholders/about-vision.jpg"
+              alt=""
+            />
+          </div>
+        </ScreenWrapper>
+      </div>
+      <div className="flex flex-col justify-between gap-4  items-center bg-[#f3efec] w-full">
+        <ScreenWrapper className="flex justify-between gap-4 py-0">
+          <section className="flex order-2 flex-col gap-4 items-start justify-start p-4">
+            <h2 className="text-3xl font-bold w-full pb-3 border-b-2 border-gray-300 max-w-60">
+              {translateAbout("section4.first")}
+            </h2>
+            <p className="text-xl font-semibold pt-2 flex flex-col gap-4 list-disc">
+              {translateAbout("section4.info1")}
+            </p>
+          </section>
+          <div className="hidden lg:block w-full aspect-video relative">
+            <img
+              className="abosulte w-full h-full object-cover"
+              src="/images/placeholders/about-mission-800x380.jpg"
+              alt=""
+            />
+          </div>
+        </ScreenWrapper>
+      </div>
     </section>
   );
 };

@@ -69,10 +69,29 @@
     "message": "message",
     "messagePH": "type your message"
   },
-  "about":{
-    "section1":{
-      "first":"RSAY ITC",
-      "second":"is a leading Saudi company specializing in professional education services across various fields, including cybersecurity, quality management, and risk management, along with other technical disciplines. We offer flexible learning solutions, allowing you to choose between online learning or attending sessions in state-of-the-art training facilities. This enables ambitious individuals to enhance their skills and grow their expertise while aligning their learning journey with their passion and schedule."
+  "about": {
+    "name":"rsay",
+    "title": "about us",
+    "message":"A goal properly set with ** is halfway reached!",
+    "section1": {
+      "first": "RSAY ITC",
+      "info1": "A leading Saudi company specializing in professional education services across various fields, including cybersecurity, quality management, and risk management, along with other technical disciplines. We offer flexible learning solutions, allowing you to choose between online learning or attending sessions in state-of-the-art training facilities. This enables ambitious individuals to enhance their skills and grow their expertise while aligning their learning journey with their passion and schedule."
+    },
+    "section2": {
+      "first": "RSAY ITC",
+      "info1": "A leading provider of professional training and development services, backed by a team of certified experts and professionals across various business domains. We support learners throughout their journey, helping them achieve professionalism and advance in their careers.",
+      "info2": "Our programs are carefully designed to align with the latest trends in the business world, developed by industry experts, and enhanced through global partnerships to offer internationally accredited courses across diverse fields.",
+      "info3": "Our course content is comprehensive, concise, and interactive, ensuring an optimal learning experience that keeps pace with the modern business landscape.",
+      "info4": "We also provide flexible learning options, allowing learners to choose between online education or in-person sessions in state-of-the-art training facilities, empowering them to grow their expertise according to their personal schedules.",
+      "info5": "RSAY is your premier destination for earning internationally recognized certificates through engaging, easy-to-understand programs. We also offer hundreds of practice questions to help participants confidently pass their exams."
+    },
+    "section3": {
+      "first": "Vision",
+      "info1": "To be Rsay first choice for professional education and development in the Arab world by offering innovative training programs and internationally accredited certificates that meet market needs and contribute to building professional competencies capable of achieving sustainable success."
+    },
+    "section4": {
+      "first": "Mission",
+      "info1": "At Rsay, we are committed to empowering individuals to achieve their professional ambitions and develop their skills by providing flexible and comprehensive educational services, supported by local and global expertise, to ensure a holistic learning experience that enhances efficiency and professionalism in evolving work environments."
     }
   }
 }
