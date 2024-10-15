@@ -11,6 +11,7 @@ const About = () => {
     swiper.slideTo(i);
   }
   const translateCourses = useTranslations("courses");
+  const translateAbout = useTranslations("about");
   const images = [
     "/images/placeholders/softwareengineering.jpeg",
     "/images/placeholders/ai-training.webp",
@@ -22,6 +23,7 @@ const About = () => {
   ];
   return (
     <section className="flex-1 flex-col bg-white">
+      {/* first section */}
       <div className="w-full  h-[400px] mx-auto 2x l:rounded-2xl overflow-hidden relative">
         <div className="w-full h-full absolute top-0 left-0 z-20 bg-black opacity-60"></div>
         {/* <div className="w-full h-full absolute top-0 left-0 z-20 bg-slate-200 opacity-5"></div> */}
@@ -44,6 +46,11 @@ const About = () => {
           </p>
         </ScreenWrapper>
       </div>
+      <ScreenWrapper className="flex flex-col items-center pt-8 text-rsayBlack text-center">
+        <h1 className="text-3xl font-bold w-full pb-2 border-b-2 max-w-60">{translateAbout("section1.first")}</h1>
+        <p className="text-xl font-semibold pt-2">{translateAbout("section1.second")}</p>
+      </ScreenWrapper>
+      {/* courses cards */}
       <Marquee>
         {Array(7)
           .fill(0)
