@@ -68,5 +68,11 @@
     "rolePH": "type your position or role",
     "message": "message",
     "messagePH": "type your message"
+  },
+  "about":{
+    "section1":{
+      "first":"RSAY ITC",
+      "second":"is a leading Saudi company specializing in professional education services across various fields, including cybersecurity, quality management, and risk management, along with other technical disciplines. We offer flexible learning solutions, allowing you to choose between online learning or attending sessions in state-of-the-art training facilities. This enables ambitious individuals to enhance their skills and grow their expertise while aligning their learning journey with their passion and schedule."
+    }
   }
 }

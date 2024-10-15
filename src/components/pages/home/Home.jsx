@@ -14,13 +14,14 @@ import { useTranslations } from "next-intl";
 
 const Home = () => {
   const swiper = useSelector((store) => store.swiper.swiper);
+  function handleLinkClick(i) {
+    swiper.slideTo(i);
+  }
   const translate = useTranslations("HomePage");
   const translate2 = useTranslations("courses");
   // t('title')
   const slideStyles = "flex justify-center items-center text-lg h-fit";
-  function handleLinkClick(i) {
-    swiper.slideTo(i);
-  }
+  
   const images = [
     "/images/placeholders/softwareengineering.jpeg",
     "/images/placeholders/ai-training.webp",
