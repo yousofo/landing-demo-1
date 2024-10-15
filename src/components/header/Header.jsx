@@ -81,7 +81,7 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-white  transition-all main-header  sticky  top-0 z-40   lg:py-0 ${
+      className={`bg-white  transition-all main-header  h-[60px] sticky  top-0 z-40   lg:py-0 ${
         scrolled ? "scrolled" : ""
       } `}
       //
@@ -111,7 +111,7 @@ const Header = () => {
           </span>
         </button>
 
-        <div className="flex ms-auto items-center gap-2 lg:gap-4">
+        <div className="flex ms-auto items-center gap-2 lg:gap-4 h-full">
           {/* <div className="hidden lg:flex [&>button]:text-lg font-medium">
             {locale === "en" ? (
               <button className="underline" onClick={() => switchLocale("ar")}>
@@ -146,7 +146,7 @@ const Header = () => {
           <div className="relative no-ani group h-auto p-4">
             {/* button */}
             <button className="!flex items-center gap-2 relative z-10">
-              <span className="capitalize text-lg font-semibold text-primary">
+              <span className="capitalize text-lg font-semibold text-primary whitespace-nowrap">
                 {translate("contact")}
               </span>
               <svg
@@ -180,7 +180,7 @@ const Header = () => {
             </div>
           </div>
           {/* language */}
-          <div className="relative no-ani group h-auto p-4">
+          <div className="relative hidden md:block no-ani group h-auto p-4">
             {/* button */}
             <button className="!flex items-center gap-2 relative z-10">
               <span className="capitalize text-lg font-semibold text-primary flex items-center gap-0.5">

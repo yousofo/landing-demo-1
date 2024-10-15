@@ -50,10 +50,10 @@ const NavList = () => {
       name: translate("services"),
       link: "/services",
     },
-    {
-      name: translate("contact"),
-      link: "/contact",
-    },
+    // {
+    //   name: translate("contact"),
+    //   link: "/contact",
+    // },
   ];
   function handleLinkClick(i) {
     // e.preventDefault();

@@ -100,14 +100,12 @@ const Home = () => {
             {/* links */}
             <div className="flex items-center gap-2">
               <button
-                href={"/contact"}
                 onClick={(e) => handleLinkClick(3)}
                 className="text-white border border-white py-1 px-5 rounded-sm hover:bg-white hover:text-primary transition-all"
               >
                 {translate("startBtn")}
               </button>
               <button
-                href={"/about"}
                 onClick={(e) => handleLinkClick(1)}
                 className="text-white border border-primary py-1 px-5 bg-primary rounded-sm hover:bg-white hover:border-primary hover:text-primary transition-all"
               >
@@ -187,13 +185,34 @@ const Home = () => {
           className="w-full h-full object-cover"
         /> */}
       </section>
+      <div className="px-4 w-full">
+        <hr className="w-full max-w-lg mb-6" />
+      </div>
       {/* who are we */}
-      <ScreenWrapper>
-        <section></section>
-        <div>
-          <Image   />
-        </div> 
-      </ScreenWrapper>
+      <div className="px-4">
+        <ScreenWrapper className="bg-[#DCECE9] flex flex-col lg:flex-row justify-between gap-4 rounded-3xl lg:p-6">
+          <section className="flex flex-col gap-6 lg:items-start justify-center text-rsayBlack w-fit lg:ps-6">
+            <h4 className="text-3xl font-bold text-center lg:text-left capitalize w-fit">
+              {translate("who")}
+            </h4>
+            <p className="text-lg md:text-xl text-center lg:text-left !leading-relaxed font-normal max-w-[700px]">
+              {translate("about1")}
+            </p>
+            <button className="underline text-primary font-bold text-lg" onClick={(e) => handleLinkClick(1)}>
+              {translate("learnBtn")}
+            </button>
+          </section>
+          <div>
+            <Image
+              src={"/images/placeholders/home/about.png"}
+              alt="home more about rsay"
+              width={600}
+              height={0}
+              // className="w-full h-full object-cover"
+            />
+          </div>
+        </ScreenWrapper>
+      </div>
       {/* Partners */}
       <ScreenWrapper className="flex flex-col items-center py-8">
         <img
