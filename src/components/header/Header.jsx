@@ -15,6 +15,9 @@ const Header = () => {
   const translate = useTranslations("Header");
   // t('title')
   const swiper = useSelector((store) => store.swiper.swiper);
+  function handleLinkClick(i) {
+    swiper.slideTo(i);
+  }
   const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale(); // Get the current locale (e.g., 'en' or 'ar')
@@ -39,9 +42,7 @@ const Header = () => {
     // Replace the current URL with the new one
     router.replace(newUrl);
   };
-  function handleLinkClick(i) {
-    swiper.slideTo(i);
-  }
+  
   useEffect(() => {
     const logoInterval = setInterval(() => {
       document.querySelector(".logo").classList.remove("active");

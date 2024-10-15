@@ -111,4 +111,9 @@ form .input input:focus, form .input textarea:focus {
 }
 .contact > div > section ul li span:nth-child(2) {
   font-weight: 400;
+}
+
+footer li {
+  padding: 8px 16px;
+  margin: 0;
 }/*# sourceMappingURL=home.css.map */

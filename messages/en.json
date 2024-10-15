@@ -3,6 +3,9 @@
     "name": "rsay",
     "organization": "rsay information technology company"
   },
+  "footer":{
+    "about": "about us"
+  },
   "courses": {
     "course1": {
       "title": "Software Development and Database Management Training",

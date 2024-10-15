@@ -21,7 +21,7 @@ const Home = () => {
   const translate2 = useTranslations("courses");
   // t('title')
   const slideStyles = "flex justify-center items-center text-lg h-fit";
-  
+
   const images = [
     "/images/placeholders/softwareengineering.jpeg",
     "/images/placeholders/ai-training.webp",
@@ -188,7 +188,23 @@ const Home = () => {
         /> */}
       </section>
       {/* Partners */}
-
+      <hr />
+      <ScreenWrapper className="flex flex-col items-center py-8">
+        <img
+          className="w-full max-w-lg"
+          src="/images/placeholders/More-about-us-brown.png"
+          alt=""
+        />
+        <button className=""></button>
+        <a
+          className="px-4 py-1 underline bg-primary text-white hover:bg-opacity-70 transition-all rounded"
+          // href="https://drive.google.com/file/d/12FzQVQR1s5IXB3HCKLG9t8dC_mMx3NYI/"
+          href="https://drive.usercontent.google.com/download?id=12FzQVQR1s5IXB3HCKLG9t8dC_mMx3NYI&export=download&pli=1&authuser=0"
+          download="rsay-profile"
+        >
+          Download Company Profile
+        </a>
+      </ScreenWrapper>
       {/* video background */}
       <div className="absolute inset-0 w-[calc(100%+40px)] h-[calc(100vh+40px)] left-[-20px] top-[-20px] -z-10">
         <div className="absolute inset-0 w-full h-full bg-black/70"></div>
