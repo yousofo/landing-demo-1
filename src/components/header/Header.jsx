@@ -10,6 +10,8 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 
 const Header = () => {
+  const [contactBtnActive, setContactBtnActive] = useState(false);
+  const [langBtnActive, setLangBtnActive] = useState(false);
   const dispatch = useDispatch();
   const [scrolled, setScrolled] = useState(false);
   const translate = useTranslations("Header");
@@ -143,7 +145,10 @@ const Header = () => {
             </ul>
           </nav>
           {/* contact */}
-          <div className="relative no-ani group h-auto p-4">
+          <div
+            onClick={() => setContactBtnActive(!contactBtnActive)}
+            className={`relative no-ani group h-auto p-4`}
+          >
             {/* button */}
             <button className="!flex items-center gap-2 relative z-10">
               <span className="capitalize text-lg font-semibold text-primary whitespace-nowrap">
@@ -166,7 +171,11 @@ const Header = () => {
               </svg>
             </button>
             {/* hidden list  */}
-            <div className="absolute bottom-0 z-0  right-0 transition-all group-hover:translate-y-full  w-max h-fit bg-white opacity-0 group-hover:opacity-100 flex flex-col border rounded-b-md">
+            <div
+              className={`absolute bottom-0 z-0  right-0 transition-all  w-max h-fit bg-white opacity-0  flex flex-col border rounded-b-md ${
+                contactBtnActive ? " translate-y-full opacity-100 " : " "
+              }  `}
+            >
               <button onClick={(e) => handleLinkClick(3)} className="px-4 py-2">
                 <span className="capitalize text-lg font-semibold text-primary">
                   for universities
@@ -180,7 +189,10 @@ const Header = () => {
             </div>
           </div>
           {/* language */}
-          <div className="relative hidden md:block no-ani group h-auto p-4">
+          <div
+            onClick={() => setLangBtnActive(!langBtnActive)}
+            className="relative hidden md:block no-ani group h-auto p-4 cursor-pointer"
+          >
             {/* button */}
             <button className="!flex items-center gap-2 relative z-10">
               <span className="capitalize text-lg font-semibold text-primary flex items-center gap-0.5">
@@ -214,7 +226,11 @@ const Header = () => {
               </svg>
             </button>
             {/* hidden list  */}
-            <div className="absolute bottom-0 z-0  right-0 transition-all group-hover:translate-y-full  w-max h-fit bg-white opacity-0 group-hover:opacity-100 flex flex-col border rounded-b-md">
+            <div
+              className={`absolute bottom-0 z-0  right-0 transition-all  w-max h-fit bg-white opacity-0  flex flex-col border rounded-b-md ${
+                langBtnActive ? " translate-y-full opacity-100 " : " "
+              }}`}
+            >
               <button onClick={(e) => switchLocale("ar")} className="px-4 py-2">
                 <span className="capitalize text-lg font-semibold text-primary">
                   العربية

@@ -185,8 +185,9 @@ const Home = () => {
           className="w-full h-full object-cover"
         /> */}
       </section>
-      <div className="px-4 w-full">
-        <hr className="w-full max-w-lg mb-6" />
+      {/* separator */}
+      <div className="px-4 w-full ">
+        <hr className="w-full max-w-lg mb-6 mx-auto" />
       </div>
       {/* who are we */}
       <div className="px-4">
@@ -198,7 +199,10 @@ const Home = () => {
             <p className="text-lg md:text-xl text-center lg:text-left !leading-relaxed font-normal max-w-[700px]">
               {translate("about1")}
             </p>
-            <button className="underline text-primary font-bold text-lg" onClick={(e) => handleLinkClick(1)}>
+            <button
+              className="underline text-primary font-bold text-lg"
+              onClick={(e) => handleLinkClick(1)}
+            >
               {translate("learnBtn")}
             </button>
           </section>
@@ -213,23 +217,48 @@ const Home = () => {
           </div>
         </ScreenWrapper>
       </div>
-      {/* Partners */}
-      <ScreenWrapper className="flex flex-col items-center py-8">
+      {/* separator */}
+      <div className="px-4 w-full ">
+        <hr className="w-full max-w-lg my-6 mx-auto" />
+      </div>
+      {/* download */}
+      <ScreenWrapper className="flex justify-center flex-col lg:flex-row items-center gap-8">
         <img
+          src="/images/placeholders/home/download.png"
           className="w-full max-w-lg"
-          src="/images/placeholders/More-about-us-brown.png"
-          alt=""
+          alt="download rsay profile"
         />
-        <button className=""></button>
         <a
-          className="px-4 py-1 underline bg-primary text-white hover:bg-opacity-70 transition-all rounded"
+          className="px-7 py-4  relative text-primary font-bold border-primary border transition-all rounded-xl flex flex-col items-center  bg-white shadow-2xl hover:shadow-3xl hover:bg-primary hover:text-white hover:border-white group"
           // href="https://drive.google.com/file/d/12FzQVQR1s5IXB3HCKLG9t8dC_mMx3NYI/"
           href="https://drive.usercontent.google.com/download?id=12FzQVQR1s5IXB3HCKLG9t8dC_mMx3NYI&export=download&pli=1&authuser=0"
           download="rsay-profile"
         >
-          Download Company Profile
+          <span className="absolute top-0.5 right-0.5 text-rsayBlack animate-pulse group-hover:text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11zm-6 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z"
+              ></path>
+            </svg>
+          </span>
+          <span className="capitalize text-2xl">Download Profile</span>
+          <span className="capitalize">click here to start download</span>
         </a>
       </ScreenWrapper>
+      {/* download old */}
+      {/* <ScreenWrapper className="flex flex-col items-center py-8">
+        <img
+          className="w-full max-w-lg"
+          src="/images/placeholders/More-about-us-brown.png"
+          alt="download rsay profile"
+        />
+      </ScreenWrapper> */}
       {/* video background */}
       <div className="absolute inset-0 w-[calc(100%+40px)] h-[calc(100vh+40px)] left-[-20px] top-[-20px] -z-10">
         <div className="absolute inset-0 w-full h-full bg-black/70"></div>
