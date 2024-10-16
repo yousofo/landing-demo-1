@@ -12,7 +12,9 @@
     "info":"We offer specialized training programs that combine theoretical knowledge with practical experience, aiming to develop skills and enhance performance across various technical fields to meet evolving market demands."
   },
   "footer":{
-    "about": "about us"
+    "about": "about us",
+    "address":"Abdul Samad Al-Tanoukhi Street, Al-Zahra District, Riyadh"
+    
   },
   "courses": {
     "course1": {

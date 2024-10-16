@@ -30,7 +30,7 @@ const Footer = () => {
               </span>
             </button>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="flex gap-8 sm:gap-6">
             <div>
               <ul className="text-gray-500  font-medium">
                 <li>
@@ -53,14 +53,14 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <ul className="text-gray-500  font-medium">
+              <ul className="text-gray-500  font-medium text-start">
                 <li>
                   <button
                     onClick={() => handleLinkClick(0)}
                     href="#"
                     className="hover:underline "
                   >
-                    social example
+                    {translateFooter("address")}
                   </button>
                 </li>
                 <li>
@@ -69,7 +69,7 @@ const Footer = () => {
                     href=" "
                     className="hover:underline"
                   >
-                    social example
+                    example@mail.com
                   </button>
                 </li>
               </ul>
