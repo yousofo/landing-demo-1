@@ -60,8 +60,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="tel:0549851842" className="hover:underline">
-                    0549851842
+                  <a href="tel:+966549851842" className="hover:underline">
+                    +966549851842
                   </a>
                 </li>
               </ul>
