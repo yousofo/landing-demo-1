@@ -8,6 +8,7 @@ import ProviderWrapper from "@/state/ProviderWrapper";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Cairo } from "next/font/google";
+import WhatsApp from "@/components/shared/whatsApp/WhatsApp";
 
 // If loading a variable font, you don't need to specify the font weight
 const cairo = Cairo({
@@ -138,6 +139,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
             <Header />
             <NavList />
             {children}
+            <WhatsApp />
             <Footer />
           </NextIntlClientProvider>
         </body>
