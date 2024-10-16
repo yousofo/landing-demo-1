@@ -159,9 +159,9 @@ const About = () => {
           </section>
           <div>
             <Image
-              src={"/images/placeholders/mission.png"}
+              src={"/images/placeholders/mission-3.png"}
               alt="home more about rsay"
-              width={580}
+              width={600}
               height={0}
               // className="w-full h-full object-cover"
             />
