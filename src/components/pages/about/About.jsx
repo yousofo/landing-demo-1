@@ -161,7 +161,7 @@ const About = () => {
             <Image
               src={"/images/placeholders/mission.png"}
               alt="home more about rsay"
-              width={448}
+              width={580}
               height={0}
               // className="w-full h-full object-cover"
             />
