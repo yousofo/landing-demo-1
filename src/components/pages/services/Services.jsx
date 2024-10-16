@@ -9,10 +9,10 @@ const Services = () => {
     "/images/placeholders/ai-training.webp",
     "/images/placeholders/cloud-computing-900x600.jpg",
     "/images/placeholders/quality-management.webp",
-    "/images/placeholders/Digital-transformation-for-organisations-1080x609.jpg",
+    "/images/placeholders/Systems-Network-Management-Training.jpg",
     "/images/placeholders/cybersecurity.jpg",
     "/images/placeholders/risk-management.jpg",
-    "/images/placeholders/Systems-Network-Management-Training.jpg",
+    "/images/placeholders/Digital-transformation-for-organisations-1080x609.jpg",
   ];
   const translate = useTranslations("courses");
   const translateServices = useTranslations("services");

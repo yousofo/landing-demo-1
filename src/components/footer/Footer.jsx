@@ -44,7 +44,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <button
-                    onClick={() => handleLinkClick(0)}
+                    onClick={() => handleLinkClick(1)}
                     className="hover:underline"
                   >
                     {translateFooter("about")}
@@ -55,29 +55,30 @@ const Footer = () => {
             <div>
               <ul className="text-gray-500  font-medium text-start">
                 <li>
-                  <button
-                    onClick={() => handleLinkClick(0)}
-                    href="#"
-                    className="hover:underline "
-                  >
-                    {translateFooter("address")}
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => handleLinkClick(0)}
-                    href=" "
+                  <a
+                    href="mailto:info@rsaay.com"
                     className="hover:underline"
                   >
-                    example@mail.com
-                  </button>
+                    info@rsaay.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:0549851842"
+                    className="hover:underline"
+                  >
+                    0549851842
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <hr className="my-6 border-gray-200 w-full lg:w-0 sm:mx-auto  lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4">
+        <span className="text-sm text-gray-500 sm:text-cente">
+          {translateFooter("address")}
+          </span>
           <span className="text-sm text-gray-500 sm:text-cente">
             © 2024{" "}
             <button

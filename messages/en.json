@@ -3,18 +3,17 @@
     "name": "RSAY",
     "organization": "rsay information technology company"
   },
-  "button":{
-    "download":"Download Company Profile",
-    "showAll":"Show All"
+  "button": {
+    "download": "Download Company Profile",
+    "showAll": "Show All"
   },
-  "services":{
-    "title":"At RSAY",
-    "info":"We offer specialized training programs that combine theoretical knowledge with practical experience, aiming to develop skills and enhance performance across various technical fields to meet evolving market demands."
+  "services": {
+    "title": "At RSAY",
+    "info": "We offer specialized training programs that combine theoretical knowledge with practical experience, aiming to develop skills and enhance performance across various technical fields to meet evolving market demands."
   },
-  "footer":{
+  "footer": {
     "about": "about us",
-    "address":"Abdul Samad Al-Tanoukhi Street, Al-Zahra District, Riyadh"
-    
+    "address": "Abdul Samad Al-Tanoukhi Street, Al-Zahra District, Riyadh"
   },
   "courses": {
     "course1": {
@@ -34,8 +33,8 @@
       "content": "This program aims to enhance the skills required to ensure service and product quality within projects. It covers essential project management tools, including planning, execution, and monitoring. Participants will learn about total quality management (TQM) concepts and how to apply them across various fields, along with techniques for performance improvement and problem-solving. The course strengthens participants' ability to meet quality objectives efficiently and effectively."
     },
     "course5": {
-      "title": "Digital Transformation Technologies Training",
-      "content": "This training provides insights into adopting digital transformation in business. It focuses on strategies for using technology to optimize operations and deliver value to customers. The program highlights the importance of digital transformation and how to identify related opportunities and challenges. It also includes practical examples of successful transformations and guidance on managing cultural change within organizations to ensure the success of digital strategies."
+      "title": "Systems and Network Management Training",
+      "content": "This training focuses on efficiently designing and managing systems and networks. It covers setting up wired and wireless networks, along with configuring the necessary hardware. Participants will learn how to troubleshoot and quickly resolve issues to ensure smooth and secure system performance. The course also reviews essential concepts of network management, including network optimization, performance enhancement, and regular updates. The goal is to equip participants with the skills needed to manage systems independently and effectively."
     },
     "course6": {
       "title": "Cybersecurity and Information Security Training",
@@ -46,8 +45,8 @@
       "content": "This program aims to empower participants to identify and manage risks effectively in the workplace. It begins by explaining how to conduct thorough risk analysis to identify potential risks and assess their impact. Participants will develop strategies to mitigate risks, including emergency planning. The course introduces modern tools and techniques, such as scenario analysis and risk matrices, while promoting a culture of risk management through continuous process improvement within the organization."
     },
     "course8": {
-      "title": "Systems and Network Management Training",
-      "content": "This training focuses on efficiently designing and managing systems and networks. It covers setting up wired and wireless networks, along with configuring the necessary hardware. Participants will learn how to troubleshoot and quickly resolve issues to ensure smooth and secure system performance. The course also reviews essential concepts of network management, including network optimization, performance enhancement, and regular updates. The goal is to equip participants with the skills needed to manage systems independently and effectively."
+      "title": "Digital Transformation Technologies Training",
+      "content": "This training provides insights into adopting digital transformation in business. It focuses on strategies for using technology to optimize operations and deliver value to customers. The program highlights the importance of digital transformation and how to identify related opportunities and challenges. It also includes practical examples of successful transformations and guidance on managing cultural change within organizations to ensure the success of digital strategies."
     }
   },
   "HomePage": {
@@ -84,9 +83,9 @@
     "messagePH": "type your message"
   },
   "about": {
-    "name":"rsay",
+    "name": "rsay",
     "title": "about us",
-    "message":"A goal properly set with ** is halfway reached!",
+    "message": "A goal properly set with ** is halfway reached!",
     "section1": {
       "first": "RSAY ITC",
       "info1": "A leading Saudi company specializing in professional education services across various fields, including cybersecurity, quality management, and risk management, along with other technical disciplines. We offer flexible learning solutions, allowing you to choose between online learning or attending sessions in state-of-the-art training facilities. This enables ambitious individuals to enhance their skills and grow their expertise while aligning their learning journey with their passion and schedule."

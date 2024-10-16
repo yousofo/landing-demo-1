@@ -24,7 +24,7 @@ const Home = () => {
 
   const images = [
     "/images/placeholders/quality-management.webp",
-    "/images/placeholders/Digital-transformation-for-organisations-1080x609.jpg",
+    "/images/placeholders/Systems-Network-Management-Training.jpg",
     "/images/placeholders/cybersecurity.jpg",
   ];
   const styles = {
@@ -193,10 +193,10 @@ const Home = () => {
       <div className="px-4">
         <ScreenWrapper className="bg-[#EBF5FF] flex flex-col lg:flex-row justify-between gap-4 rounded-3xl lg:p-6">
           <section className="flex flex-col gap-6 lg:items-start justify-center text-rsayBlack w-fit lg:ps-6">
-            <h4 className="text-3xl font-bold text-center lg:text-left capitalize w-fit">
+            <h4 className="text-3xl font-bold text-start capitalize w-fit">
               {translate("who")}
             </h4>
-            <p className="text-lg md:text-xl text-center lg:text-left !leading-relaxed font-normal max-w-[700px]">
+            <p className="text-lg md:text-xl text-start !leading-relaxed font-normal max-w-[700px]">
               {translate("about1")}
             </p>
             <button

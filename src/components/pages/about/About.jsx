@@ -128,10 +128,10 @@ const About = () => {
       <div className="px-4 w-full">
         <ScreenWrapper className="bg-[#EBF5FF] flex flex-col lg:flex-row justify-center gap-4 rounded-3xl lg:p-6">
           <section className="flex flex-col gap-6 lg:items-start justify-center text-rsayBlack w-fit lg:ps-6">
-            <h4 className="text-3xl font-bold text-center lg:text-left capitalize w-fit">
+            <h4 className="text-3xl font-bold text-start capitalize w-fit">
             {translateAbout("section3.first")}
             </h4>
-            <p className="text-lg md:text-xl text-center lg:text-left !leading-relaxed font-normal max-w-[700px]">
+            <p className="text-lg md:text-xl text-start !leading-relaxed font-normal max-w-[700px]">
             {translateAbout("section3.info1")}
             </p>
           </section>
@@ -150,10 +150,10 @@ const About = () => {
       <div className="px-4 w-full mt-8 mb-12">
         <ScreenWrapper className="bg-[#fff6ed] flex flex-col w-full lg:flex-row justify-center gap-4 rounded-3xl lg:p-6">
           <section className="flex order-2 flex-col gap-6 lg:items-start justify-center text-rsayBlack w-fit lg:ps-6">
-            <h4 className="text-3xl font-bold text-center lg:text-left capitalize w-fit">
+            <h4 className="text-3xl font-bold text-start capitalize w-fit">
             {translateAbout("section4.first")}
             </h4>
-            <p className="text-lg md:text-xl text-center lg:text-left !leading-relaxed font-normal max-w-[700px]">
+            <p className="text-lg md:text-xl text-start !leading-relaxed font-normal max-w-[700px]">
             {translateAbout("section4.info1")}
             </p>
           </section>
