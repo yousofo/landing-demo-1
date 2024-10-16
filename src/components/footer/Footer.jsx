@@ -55,18 +55,12 @@ const Footer = () => {
             <div>
               <ul className="text-gray-500  font-medium text-start">
                 <li>
-                  <a
-                    href="mailto:info@rsaay.com"
-                    className="hover:underline"
-                  >
+                  <a href="mailto:info@rsaay.com" className="hover:underline">
                     info@rsaay.com
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="tel:0549851842"
-                    className="hover:underline"
-                  >
+                  <a href="tel:0549851842" className="hover:underline">
                     0549851842
                   </a>
                 </li>
@@ -76,8 +70,8 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 w-full lg:w-0 sm:mx-auto  lg:my-8" />
         <div className="flex flex-col gap-4">
-        <span className="text-sm text-gray-500 sm:text-cente">
-          {translateFooter("address")}
+          <span className="text-sm text-gray-500 sm:text-cente">
+            {translateFooter("address")}
           </span>
           <span className="text-sm text-gray-500 sm:text-cente">
             © 2024{" "}

@@ -31,9 +31,9 @@ body {
   @media (min-width: 768px) {
     min-height: calc(100vh - 244px);
   }
-  > * {
-    flex-grow: 1;
-  }
+}
+.main-swiper > .swiper-wrapper > .swiper-slide > *{
+  flex-grow: 1;
 }
 /* @layer utilities {
   .text-balance {
