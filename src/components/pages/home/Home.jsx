@@ -23,9 +23,9 @@ const Home = () => {
   const slideStyles = "flex justify-center items-center text-lg h-fit";
 
   const images = [
-    "/images/placeholders/softwareengineering.jpeg",
-    "/images/placeholders/ai-training.webp",
-    "/images/placeholders/cloud-computing-900x600.jpg",
+    "/images/placeholders/quality-management.webp",
+    "/images/placeholders/Digital-transformation-for-organisations-1080x609.jpg",
+    "/images/placeholders/cybersecurity.jpg",
   ];
   const styles = {
     slide: {
@@ -136,10 +136,10 @@ const Home = () => {
                     />
                   </div>
                   <h4 className="mb-[14px] text-gray-900 text-2xl font-semibold">
-                    {translate2(`course${i + 1}.title`)}
+                    {translate2(`course${i + 4}.title`)}
                   </h4>
                   <p className="text-lg lg:text-xl font-medium text-gray-700">
-                    {translate2(`course${i + 1}.content`)}
+                    {translate2(`course${i + 4}.content`)}
                   </p>
                   {/* <Link
                     onClick={(e) => handleLinkClick(e, 5)}
@@ -191,7 +191,7 @@ const Home = () => {
       </div>
       {/* who are we */}
       <div className="px-4">
-        <ScreenWrapper className="bg-[#DCECE9] flex flex-col lg:flex-row justify-between gap-4 rounded-3xl lg:p-6">
+        <ScreenWrapper className="bg-[#EBF5FF] flex flex-col lg:flex-row justify-between gap-4 rounded-3xl lg:p-6">
           <section className="flex flex-col gap-6 lg:items-start justify-center text-rsayBlack w-fit lg:ps-6">
             <h4 className="text-3xl font-bold text-center lg:text-left capitalize w-fit">
               {translate("who")}
@@ -210,7 +210,7 @@ const Home = () => {
             <Image
               src={"/images/placeholders/home/about.png"}
               alt="home more about rsay"
-              width={600}
+              width={539}
               height={0}
               // className="w-full h-full object-cover"
             />

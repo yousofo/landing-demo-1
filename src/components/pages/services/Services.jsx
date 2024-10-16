@@ -12,30 +12,31 @@ const Services = () => {
     "/images/placeholders/Digital-transformation-for-organisations-1080x609.jpg",
     "/images/placeholders/cybersecurity.jpg",
     "/images/placeholders/risk-management.jpg",
-  ]
+    "/images/placeholders/Systems-Network-Management-Training.jpg",
+  ];
   const translate = useTranslations("courses");
+  const translateServices = useTranslations("services");
   return (
     <section className="pb-12 pt-20  lg:pb-[90px] lg:pt-[120px] bg-white">
       <div className="container mx-auto">
         <div className=" flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
-              <span className="mb-2 block text-lg font-semibold text-primary">
-                Our Services
-              </span>
-              <h2 className="mb-3 text-3xl font-bold leading-[1.2]  sm:text-4xl md:text-[40px]">
-                What We Offer
+            <div className="mx-auto mb-12 max-w-[750px] text-center lg:mb-20">
+              {/* <span className="mb-2 block text-lg font-semibold text-primary capitalize">
+                {translateServices("title")}
+              </span> */}
+              <h2 className="mb-3 lg:mb-5 text-3xl font-bold leading-[1.2]  sm:text-4xl md:text-[40px]">
+              {translateServices("title")}
               </h2>
-              <p className="text-base text-body-color">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
+              <p className="text-lg text-body-color">
+              {translateServices("info")}
               </p>
             </div>
           </div>
         </div>
 
         <div className=" flex flex-wrap">
-          {Array(7)
+          {Array(8)
             .fill(0)
             .map((_, index) => (
               <ServiceCard
@@ -67,7 +68,9 @@ const ServiceCard = ({ icon, title, details, img }) => {
           <img src={img} className="w-full h-full object-cover" alt="" />
         </div>
         <h4 className="mb-[14px] text-2xl font-semibold ">{title}</h4>
-        <p className="text-body-color text-xl font-medium text-gray-700">{details}</p>
+        <p className="text-body-color text-xl font-medium text-gray-700">
+          {details}
+        </p>
         {/* <Link
           onClick={(e) => handleLinkClick(e, 5)}
           href="/service"

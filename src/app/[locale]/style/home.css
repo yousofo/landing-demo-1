@@ -26,17 +26,17 @@
   content: "";
   position: absolute;
   bottom: -24%;
-  width: 150%;
+  width: 150vw;
   height: 30%;
   background-color: white;
 }
 .home-page .first-sec::before {
-  left: -50%;
+  left: -50vw;
   transform: rotate(6deg);
 }
 .home-page .first-sec::after {
   transform: rotate(-6deg);
-  right: -50%;
+  right: -50vw;
 }
 .home-page .second-sec .second-sec-title {
   @apply relative flex justify-center;

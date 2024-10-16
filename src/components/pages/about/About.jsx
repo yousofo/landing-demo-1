@@ -1,6 +1,7 @@
 "use client";
 import ScreenWrapper from "@/components/shared/ScreenWrapper";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { useSelector } from "react-redux";
@@ -36,7 +37,7 @@ const About = () => {
           <h2 className="text-5xl font-bold text-white uppercase">
             {translateAbout("title")}
           </h2>
-          <p className="text-2xl text-white font-semibold text-center">
+          {/* <p className="text-2xl text-white font-semibold text-center">
             {translateAbout("message").split("**")[0]}{" "}
             <span
               style={{ animationDuration: "3s" }}
@@ -45,7 +46,7 @@ const About = () => {
               {translateAbout("name")}
             </span>{" "}
             {translateAbout("message").split("**")[1]}
-          </p>
+          </p> */}
         </ScreenWrapper>
       </div>
       <ScreenWrapper className="flex flex-col gap-2 items-center pt-8 text-rsayBlack text-center  px-8">
@@ -123,40 +124,46 @@ const About = () => {
         </ul>
       </ScreenWrapper>
       {/* <hr className="w-full my-12" /> */}
-      <div className="flex flex-col justify-between gap-4 items-center bg-[#f1f4f6] w-full">
-        <ScreenWrapper className="flex justify-between gap-4 py-0">
-          <section className="flex flex-col gap-4 items-start justify-start p-4">
-            <h2 className="text-3xl font-bold w-full pb-3 border-b-2 border-gray-300 max-w-60">
-              {translateAbout("section3.first")}
-            </h2>
-            <p className="text-xl font-semibold pt-2 flex flex-col gap-4 list-disc">
-              {translateAbout("section3.info1")}
+      {/* vision */}
+      <div className="px-4 w-full">
+        <ScreenWrapper className="bg-[#EBF5FF] flex flex-col lg:flex-row justify-center gap-4 rounded-3xl lg:p-6">
+          <section className="flex flex-col gap-6 lg:items-start justify-center text-rsayBlack w-fit lg:ps-6">
+            <h4 className="text-3xl font-bold text-center lg:text-left capitalize w-fit">
+            {translateAbout("section3.first")}
+            </h4>
+            <p className="text-lg md:text-xl text-center lg:text-left !leading-relaxed font-normal max-w-[700px]">
+            {translateAbout("section3.info1")}
             </p>
           </section>
-          <div className="hidden lg:block w-full aspect-video relative">
-            <img
-              className="abosulte w-full h-full object-cover"
-              src="/images/placeholders/about-vision.jpg"
-              alt=""
+          <div>
+            <Image
+              src={"/images/placeholders/about-vision.jpg"}
+              alt="home more about rsay"
+              width={539}
+              height={0}
+              // className="w-full h-full object-cover"
             />
           </div>
         </ScreenWrapper>
       </div>
-      <div className="flex flex-col justify-between gap-4  items-center bg-[#f3efec] w-full">
-        <ScreenWrapper className="flex justify-between gap-4 py-0">
-          <section className="flex order-2 flex-col gap-4 items-start justify-start p-4">
-            <h2 className="text-3xl font-bold w-full pb-3 border-b-2 border-gray-300 max-w-60">
-              {translateAbout("section4.first")}
-            </h2>
-            <p className="text-xl font-semibold pt-2 flex flex-col gap-4 list-disc">
-              {translateAbout("section4.info1")}
+      {/* mission */}
+      <div className="px-4 w-full mt-8 mb-12">
+        <ScreenWrapper className="bg-[#fff6ed] flex flex-col w-full lg:flex-row justify-center gap-4 rounded-3xl lg:p-6">
+          <section className="flex order-2 flex-col gap-6 lg:items-start justify-center text-rsayBlack w-fit lg:ps-6">
+            <h4 className="text-3xl font-bold text-center lg:text-left capitalize w-fit">
+            {translateAbout("section4.first")}
+            </h4>
+            <p className="text-lg md:text-xl text-center lg:text-left !leading-relaxed font-normal max-w-[700px]">
+            {translateAbout("section4.info1")}
             </p>
           </section>
-          <div className="hidden lg:block w-full aspect-video relative">
-            <img
-              className="abosulte w-full h-full object-cover"
-              src="/images/placeholders/about-mission-800x380.jpg"
-              alt=""
+          <div>
+            <Image
+              src={"/images/placeholders/mission.png"}
+              alt="home more about rsay"
+              width={448}
+              height={0}
+              // className="w-full h-full object-cover"
             />
           </div>
         </ScreenWrapper>

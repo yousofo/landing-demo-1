@@ -1,14 +1,15 @@
 {
   "info": {
-    "name": "rsay",
+    "name": "RSAY",
     "organization": "rsay information technology company"
   },
   "button":{
     "download":"Download Company Profile",
-    "showAll":"Show All "
+    "showAll":"Show All"
   },
   "services":{
-    "header":""
+    "title":"At RSAY",
+    "info":"We offer specialized training programs that combine theoretical knowledge with practical experience, aiming to develop skills and enhance performance across various technical fields to meet evolving market demands."
   },
   "footer":{
     "about": "about us"
@@ -49,7 +50,7 @@
   },
   "HomePage": {
     "name": "rsay information technology company",
-    "title": "improve your security with rsay",
+    "title": "Knowledge | Skill | Quality | Impact",
     "about1": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success",
     "startBtn": "Start Now",
     "learnBtn": "Learn More",

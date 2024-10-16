@@ -31,17 +31,17 @@
       content: "";
       position: absolute;
       bottom: -24%;
-      width: 150%;
+      width: 150vw;
       height: 30%;
       background-color: white;
     }
     &::before {
-      left: -50%;
+      left: -50vw;
       transform: rotate(6deg);
     }
     &::after {
       transform: rotate(-6deg);
-      right: -50%;
+      right: -50vw;
     }
   }
   .second-sec {
