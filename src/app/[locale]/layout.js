@@ -27,7 +27,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "RSAY | رسائي",
+  title: "RSAY | رساي",
   description: "RSAY for cyber security services.",
   keywords: [
     "RSAY",
