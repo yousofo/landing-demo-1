@@ -2,7 +2,7 @@
 import ScreenWrapper from "@/components/shared/ScreenWrapper";
 import Link from "next/link";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { EffectFade } from "swiper/modules";
 // Import Swiper styles
@@ -10,10 +10,12 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { setCategories } from "@/state/features/categories/categoriesSlice";
 // import "swiper/css/effect-fade";
 
 const Home = () => {
   const swiper = useSelector((store) => store.swiper.swiper);
+  const dispatch = useDispatch();
   function handleLinkClick(i) {
     swiper.slideTo(i);
   }
@@ -38,45 +40,10 @@ const Home = () => {
       fontSize: "2rem",
     },
   };
-  // const partners = (
-  //   <section className="partners bg-gray-900 flex flex-col w-full items-center justify-center gap-8 px-4 py-14 md:h-[300px]  text-white">
-  //     <h3 className="text-2xl">Our Partners</h3>
-  //     <Swiper
-  //       spaceBetween={0}
-  //       slidesPerView={3}
-  //       // onSlideChange={() => console.log("slide change")}
-  //       // onSwiper={(swiper) => dispatch(setSwiper(swiper))}
-  //       className="w-full"
-  //       // autoHeight={true}
-  //       modules={[Autoplay]}
-  //       loop={true}
-  //       autoplay={{ delay: 1000, disableOnInteraction: false }}
-  //       effect="fade"
-  //     >
-  //       {/* 0 */}
-  //       <SwiperSlide>
-  //         <div className={slideStyles}>example</div>
-  //       </SwiperSlide>
-  //       {/* 1 */}
-  //       <SwiperSlide>
-  //         <div className={slideStyles}>example</div>
-  //       </SwiperSlide>
-  //       {/* 2 */}
-  //       <SwiperSlide>
-  //         <div className={slideStyles}>example</div>
-  //       </SwiperSlide>
-  //       {/* 3 */}
-  //       <SwiperSlide>
-  //         <div className={slideStyles}>example</div>
-  //       </SwiperSlide>
-  //       {/* 4 */}
-  //       <SwiperSlide>
-  //         <div className={slideStyles}>example</div>
-  //       </SwiperSlide>
-  //     </Swiper>
-  //     {/* <ul className="flex flex-col md:flex-row gap-4 md:gap-0 w-fit py-2"></ul> */}
-  //   </section>
-  // );
+  const handleCategoryClick = (category) => {
+    dispatch(setCategories([category]));
+    handleLinkClick(2);
+  };
   return (
     <section className="home-page relative flex flex-col overflow-hidden">
       <ScreenWrapper className="text-white first-sec relative flex flex-col justify-between py-8 screen-section items-center">
@@ -123,11 +90,13 @@ const Home = () => {
               {translate("services")}
             </h3>
           </div>
+          {/* items wrapper */}
           <div className="z-10 flex flex-wrap">
             {Array.from({ length: 3 }, (_, i) => (
               <div key={i} className="w-full p-4 md:w-1/2 lg:w-1/3 ">
-                <div className="rounded-2xl transition-all bg-white  p-4 ">
-                  <div className="mb-8 flex aspect-video items-center justify-center rounded-2xl bg-primary overflow-hidden">
+                <div className="rounded-2xl transition-all bg-white  p-4 relative">
+                  {/* img wrapper */}
+                  <div className="flex aspect-video items-center justify-center rounded-lg overflow-hidden border">
                     {/* {icon} */}
                     <img
                       src={images[i]}
@@ -135,24 +104,35 @@ const Home = () => {
                       alt=""
                     />
                   </div>
-                  <h4 className="mb-[14px] text-gray-900 text-2xl font-semibold">
+                  {/* info */}
+                  {/* <div className=" absolute bottom-0 left-0 right-0 m-4  py-4 px-6 rounded-[100px] translate-y-1/2 rounded-tr-none "> */}
+                  <div className="flex flex-col gap-2 bg-white py-4 px-0.5 text-center items-center">
+                    <h4 className="text-rsayBlack text-2xl font-bold capitalize">
+                      category name
+                    </h4>
+                    <p className="text-lg  font-medium text-gray-700">
+                      Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor
+                      sit amet, consectetur ipsum dolor sit amet
+                    </p>
+                    <button
+                      onClick={(e) => handleCategoryClick(i + 1)}
+                      className="capitalize text-primary underline  text-sm  w-fit  font-bold transition-all rounded"
+                    >
+                      show all
+                    </button>
+                  </div>
+                  {/* <h4 className="mb-[14px] text-gray-900 text-2xl font-semibold capitalize">
                     {translate2(`course${i + 4}.title`)}
                   </h4>
                   <p className="text-lg lg:text-xl font-medium text-gray-700">
                     {translate2(`course${i + 4}.content`)}
-                  </p>
-                  {/* <Link
-                    onClick={(e) => handleLinkClick(e, 5)}
-                    href="/service"
-                    className="px-2 py-0.5 mt-4 border-primary border rounded text-sm font-semibold inline-block text-primary hover:bg-primary hover:text-white transition-all"
-                  >
-                    show more
-                  </Link> */}
+                  </p> */}
                 </div>
               </div>
             ))}
           </div>
         </ScreenWrapper>
+        {/* show all btn */}
         <button
           onClick={(e) => handleLinkClick(2)}
           className="text-primary z-10 border border-primary py-1 px-5  rounded-sm hover:bg-primary hover:border-white hover:text-white transition-all flex gap-4 items-center"
@@ -174,16 +154,6 @@ const Home = () => {
             ></path>
           </svg>
         </button>
-        {/* background image */}
-        {/* <Image
-          src={
-            "/images/placeholders/tata_strive_cybersecurity_women_banner_desktop_1920x1080.jpg"
-          }
-          alt="image"
-          fill
-          quality={100}
-          className="w-full h-full object-cover"
-        /> */}
       </section>
       {/* separator */}
       <div className="px-4 w-full ">
@@ -251,14 +221,6 @@ const Home = () => {
           <span className="capitalize">click here to start download</span>
         </a>
       </ScreenWrapper>
-      {/* download old */}
-      {/* <ScreenWrapper className="flex flex-col items-center py-8">
-        <img
-          className="w-full max-w-lg"
-          src="/images/placeholders/More-about-us-brown.png"
-          alt="download rsay profile"
-        />
-      </ScreenWrapper> */}
       {/* video background */}
       <div className="absolute inset-0 w-[calc(100%+40px)] h-[calc(100vh+40px)] left-[-20px] top-[-20px] -z-10">
         <div className="absolute inset-0 w-full h-full bg-black/70"></div>
