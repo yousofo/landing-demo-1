@@ -114,21 +114,6 @@ const Header = () => {
         </button>
 
         <div className="flex ms-auto items-center gap-2 lg:gap-4 h-full">
-          {/* <div className="hidden lg:flex [&>button]:text-lg font-medium">
-            {locale === "en" ? (
-              <button className="underline" onClick={() => switchLocale("ar")}>
-                العربية
-              </button>
-            ) : (
-              <button
-                className="underline  "
-                onClick={() => switchLocale("en")}
-              >
-                English
-              </button>
-            )}
-          </div> */}
-
           {/* nav */}
           <nav className="hidden lg:flex h-full items-center">
             {/* <LanguageSwitcher/> */}
@@ -191,7 +176,7 @@ const Header = () => {
           {/* language */}
           <div
             onClick={() => setLangBtnActive(!langBtnActive)}
-            className="relative hidden md:block no-ani group h-auto p-4 cursor-pointer"
+            className="relative hidden md:block no-ani group h-full p-4 cursor-pointer"
           >
             {/* button */}
             <button className="!flex items-center gap-2 relative z-10">
