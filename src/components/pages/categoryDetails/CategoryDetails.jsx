@@ -22,6 +22,7 @@ const CategoryDetails = () => {
   }
   // /images/placeholders/cybersecurity.jpg
   const tranlateInfo = useTranslations("info");
+  const tranlateHomePage = useTranslations("HomePage");
   let category;
 
   if (tranlateInfo("lang") === "ar") {
@@ -169,7 +170,7 @@ const CategoryDetails = () => {
           {/* importance */}
           <div className="max-w-screen-lg bg-white rounded-3xl p-6 pb-2 drop-shadow-lg border w-full">
             <h3 className="text-3xl font-bold text-rsayBlack text-center mb-4 underline decoration-primary">
-              Why is This Service Crucial?
+              {tranlateHomePage("why")}
             </h3>
             <Swiper
               spaceBetween={0}

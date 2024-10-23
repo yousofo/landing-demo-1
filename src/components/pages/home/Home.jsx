@@ -13,6 +13,7 @@ import { useTranslations } from "next-intl";
 import { setCategories, setCategoryPage } from "@/state/features/categories/categoriesSlice";
 import messagesEn from "@/../messages/en.json";
 import messagesAr from "@/../messages/ar.json";
+import LogoSVG from "@/components/shared/logoSVG/LogoSVG";
 // import "swiper/css/effect-fade";
 
 const Home = () => {
@@ -183,10 +184,11 @@ const Home = () => {
             </button>
           </section>
           <div>
+            {/* <LogoSVG/> */}
             <Image
-              src={"/images/placeholders/home/about.png"}
+              src={"/images/logo/rsay-logo-Photoroom.png"}
               alt="home more about rsay"
-              width={539}
+              width={500}
               height={0}
               // className="w-full h-full object-cover"
             />

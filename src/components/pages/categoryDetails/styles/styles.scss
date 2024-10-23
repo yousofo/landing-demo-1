@@ -28,7 +28,7 @@
     > div {
         @apply flex flex-col items-center uppercase gap-2;
       .icon-wrapper{
-        @apply bg-primary rounded-full flex justify-center items-center p-2 w-fit;
+        @apply animate-pulse bg-primary rounded-full flex justify-center items-center p-2 w-fit;
       }
     }
   }
