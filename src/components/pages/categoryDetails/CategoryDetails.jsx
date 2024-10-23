@@ -164,7 +164,7 @@ const CategoryDetails = () => {
               className="capitalize text-white bg-primary hover:bg-primary hover:ring-4 hover:outline-none hover:ring-primary font-semibold rounded-xl text-lg px-8 py-2.5 text-center transition-all hover:bg-opacity-50"
               onClick={() => handleLinkClick(4)}
             >
-              let's talk
+              let&apos;s talk
             </button>
           </div>
           {/* importance */}
