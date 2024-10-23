@@ -185,7 +185,7 @@ const CategoryDetails = () => {
                 },
               }}
               // onSlideChange={() => (document.documentElement.scrollTop = 0)}
-              onSwiper={(swiper) => console.log("hi")}
+              onSwiper={(swiper) => console.log("swiper initalized")}
               className="w-full h-min !pb-6"
               modules={[Autoplay, Pagination]}
               allowTouchMove={true}

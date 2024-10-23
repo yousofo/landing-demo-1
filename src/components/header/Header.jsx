@@ -93,8 +93,6 @@ const Header = () => {
     },
   ];
   const categoryClicked = (i) => {
-    console.log(categories);
-    console.log(i);
     if (i < 3) {
       dispatch(setCategoryPage(i));
       handleLinkClick(5);

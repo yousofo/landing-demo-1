@@ -21,7 +21,6 @@ import messagesAr from "@/../messages/ar.json";
 const Home = () => {
   const swiper = useSelector((store) => store.swiper.swiper);
   const dispatch = useDispatch();
-  console.log(messagesEn);
   function handleLinkClick(i) {
     swiper.slideTo(i);
   }
