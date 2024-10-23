@@ -30,7 +30,7 @@ const SwiperWrapper = () => {
       modules={[EffectFade]}
       allowTouchMove={false}
       effect="fade"
-    >
+      >
       {/* 0 */}
       <SwiperSlide>
         <Home />

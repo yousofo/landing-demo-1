@@ -192,8 +192,7 @@ const CategoryDetails = () => {
               loop={true}
               autoplay={{
                 delay: 3000,
-                disableOnInteraction: true,
-              }}
+                disableOnInteraction: false,}}
             >
               {category.importance.map((item, i) => (
                 <SwiperSlide className="text-rsayBlack text-center" key={i}>
