@@ -6,14 +6,15 @@ const WhatsApp = () => {
   return (
     //
     <div
-      className={`fixed bottom-[5%] right-0 z-50  lg:hover:text-white transition-all    text-rsayBlack  lg:hover:border-transparent border-r-0 shadow-lg ${
+      className={`fixed bottom-[5%] right-0 z-50 lg:hover:text-white transition-all    text-rsayBlack  lg:hover:border-transparent border-r-0 shadow-lg ${
         !active ? "" : ""
       }`}
     >
-      <div
-        className={`flex items-center rounded-full bg-white hover:bg-primary rounded-r-none ${
+      {/* open btn */}
+      <button
+        className={`flex items-center rounded-full bg-white cursor-pointer hover:bg-primary rounded-r-none ${
           !active
-            ? " max-w-[300px] px-2.5 py-1 border  border-rsayBlack  "
+            ? " max-w-[300px] px-2.5 py-1 border  border-rsayBlack border-r-0 "
             : " max-w-0 "
         }} overflow-hidden`}
         onClick={() => setActive(!active)}
@@ -36,7 +37,8 @@ const WhatsApp = () => {
           />
         </svg>
         <span className="inline-block font-bold capitalize ">chat</span>
-      </div>
+      </button>
+      {/* contact options list */}
       <div
         className={` absolute bottom-0 right-0 bg-[#17143846] gap-3  rounded-full rounded-r-none overflow-hidden flex flex-col items-end transition-all rounded-s-lg ${
           active ? " max-w-[300px] p-4 drop-shadow border" : " max-w-0 "

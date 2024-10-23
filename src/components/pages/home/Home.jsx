@@ -10,39 +10,45 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { setCategories } from "@/state/features/categories/categoriesSlice";
+import { setCategories, setCategoryPage } from "@/state/features/categories/categoriesSlice";
+import messagesEn from "@/../messages/en.json";
+import messagesAr from "@/../messages/ar.json";
 // import "swiper/css/effect-fade";
 
 const Home = () => {
   const swiper = useSelector((store) => store.swiper.swiper);
   const dispatch = useDispatch();
+  console.log(messagesEn);
   function handleLinkClick(i) {
     swiper.slideTo(i);
   }
+  const tranlateInfo = useTranslations("info");
   const translate = useTranslations("HomePage");
   const translate2 = useTranslations("courses");
-  // t('title')
-  const slideStyles = "flex justify-center items-center text-lg h-fit";
 
+  
+  // get categories based on language
+  let categories;
+  if (tranlateInfo("lang") === "ar") {
+    categories = messagesAr.HomePage.categories;
+  } else {
+    categories = messagesEn.HomePage.categories;
+  }
+ 
   const images = [
     "/images/placeholders/quality-management.webp",
     "/images/placeholders/Systems-Network-Management-Training.jpg",
     "/images/placeholders/cybersecurity.jpg",
+    "/images/placeholders/cybersecurity.jpg",
   ];
-  const styles = {
-    slide: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "300px",
-      backgroundColor: "#4a90e2",
-      color: "#fff",
-      fontSize: "2rem",
-    },
-  };
+
   const handleCategoryClick = (category) => {
-    dispatch(setCategories([category]));
-    handleLinkClick(2);
+    if(category < 3){
+      dispatch(setCategoryPage(category))
+      handleLinkClick(5);
+    }else{
+      handleLinkClick(2);
+    }
   };
   return (
     <section className="home-page relative flex flex-col overflow-hidden">
@@ -92,9 +98,9 @@ const Home = () => {
           </div>
           {/* items wrapper */}
           <div className="z-10 flex flex-wrap">
-            {Array.from({ length: 3 }, (_, i) => (
-              <div key={i} className="w-full p-4 md:w-1/2 lg:w-1/3 ">
-                <div className="rounded-2xl transition-all bg-white  p-4 relative">
+            {categories.map((category, i) => (
+              <div key={i} className="w-full p-2 xl:p-4 md:w-1/3 lg:w-1/4 ">
+                <div className="rounded-2xl transition-all bg-white  p-2 xl:p-4 relative">
                   {/* img wrapper */}
                   <div className="flex aspect-video items-center justify-center rounded-lg overflow-hidden border">
                     {/* {icon} */}
@@ -107,33 +113,33 @@ const Home = () => {
                   {/* info */}
                   {/* <div className=" absolute bottom-0 left-0 right-0 m-4  py-4 px-6 rounded-[100px] translate-y-1/2 rounded-tr-none "> */}
                   <div className="flex flex-col gap-2 bg-white py-4 px-0.5 text-center items-center">
-                    <h4 className="text-rsayBlack text-2xl font-bold capitalize">
-                      category name
+                    <h4 className="text-rsayBlack text-lg lg:text-xl xl:text-2xl font-bold capitalize">
+                      {category.title}
                     </h4>
-                    <p className="text-lg  font-medium text-gray-700">
+                    {/* <p className="text-lg  font-medium text-gray-700">
                       Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor
                       sit amet, consectetur ipsum dolor sit amet
-                    </p>
+                    </p> */}
                     <button
-                      onClick={(e) => handleCategoryClick(i + 1)}
+                      onClick={(e) => handleCategoryClick(i)}
                       className="capitalize text-primary underline  text-sm  w-fit  font-bold transition-all rounded"
                     >
-                      show all
+                      show more
                     </button>
                   </div>
                   {/* <h4 className="mb-[14px] text-gray-900 text-2xl font-semibold capitalize">
-                    {translate2(`course${i + 4}.title`)}
-                  </h4>
-                  <p className="text-lg lg:text-xl font-medium text-gray-700">
-                    {translate2(`course${i + 4}.content`)}
-                  </p> */}
+                  {translate2(`course${i + 4}.title`)}
+                </h4>
+                <p className="text-lg lg:text-xl font-medium text-gray-700">
+                  {translate2(`course${i + 4}.content`)}
+                </p> */}
                 </div>
               </div>
             ))}
           </div>
         </ScreenWrapper>
         {/* show all btn */}
-        <button
+        {/* <button
           onClick={(e) => handleLinkClick(2)}
           className="text-primary z-10 border border-primary py-1 px-5  rounded-sm hover:bg-primary hover:border-white hover:text-white transition-all flex gap-4 items-center"
         >
@@ -153,7 +159,7 @@ const Home = () => {
               d="M6 8.5a.47.47 0 0 1-.35-.15l-3.5-3.5c-.2-.2-.2-.51 0-.71L5.65.65c.2-.2.51-.2.71 0s.2.51 0 .71L3.21 4.51l3.15 3.15c.2.2.2.51 0 .71c-.1.1-.23.15-.35.15Z"
             ></path>
           </svg>
-        </button>
+        </button> */}
       </section>
       {/* separator */}
       <div className="px-4 w-full ">
