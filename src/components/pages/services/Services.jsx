@@ -62,7 +62,7 @@ const Services = () => {
             </div>
           </div>
           {/* categories */}
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             {categories.map((category, index) => (
               <button
                 href={`/services/${category.name}`}
@@ -77,7 +77,7 @@ const Services = () => {
                 {category.name}
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* services */}

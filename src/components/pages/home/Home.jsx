@@ -10,7 +10,10 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { setCategories, setCategoryPage } from "@/state/features/categories/categoriesSlice";
+import {
+  setCategories,
+  setCategoryPage,
+} from "@/state/features/categories/categoriesSlice";
 import messagesEn from "@/../messages/en.json";
 import messagesAr from "@/../messages/ar.json";
 // import "swiper/css/effect-fade";
@@ -26,7 +29,6 @@ const Home = () => {
   const translate = useTranslations("HomePage");
   const translate2 = useTranslations("courses");
 
-  
   // get categories based on language
   let categories;
   if (tranlateInfo("lang") === "ar") {
@@ -34,19 +36,66 @@ const Home = () => {
   } else {
     categories = messagesEn.HomePage.categories;
   }
- 
+
   const images = [
-    "/images/placeholders/quality-management.webp",
+    "/images/placeholders/ai-training.webp",
     "/images/placeholders/Systems-Network-Management-Training.jpg",
-    "/images/placeholders/cybersecurity.jpg",
+    "/images/placeholders/cloud-computing-900x600.jpg",
     "/images/placeholders/cybersecurity.jpg",
   ];
-
+  const icons = [
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="m12.89 3l1.96.4L11.11 21l-1.96-.4zm6.7 9L16 8.41V5.58L22.42 12L16 18.41v-2.83zM1.58 12L8 5.58v2.83L4.41 12L8 15.58v2.83z"
+      ></path>
+    </svg>,
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 20 20"
+    >
+      <path
+        fill="currentColor"
+        d="M15 0a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm.6 15.388H4.4V18a.6.6 0 0 0 .6.6h10a.6.6 0 0 0 .6-.6zM10 16a1 1 0 1 1 0 2a1 1 0 0 1 0-2m5-14.6H5a.6.6 0 0 0-.6.6v11.988h11.2V2a.6.6 0 0 0-.6-.6"
+      ></path>
+    </svg>,
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        d="M1 19h22V1H1zm4 4h14zm3 0h8v-4H8zM7.757 5.757l2.122 2.122zM9 10H6zm.879 2.121l-2.122 2.122zM12 13v3zm2.121-.879l2.122 2.122zM18 10h-3zm-1.757-4.243l-2.122 2.122zM12 7V4zm0 0a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"
+      ></path>
+    </svg>,
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 2048 2048"
+    >
+      <path
+        fill="currentColor"
+        d="M384 1536h128v128H256V384H128v1408h384v128H0V256h256V128h384q88 0 169 27t151 81q69-54 150-81t170-27h384v128h256v819l-128-58V384h-128v575l-128-59V256h-256q-71 0-136 24t-120 71v608l-128 58V351q-54-46-119-70t-137-25H384zm1408 255l-448 225l-448-225q0-36 1-76t8-81t20-77t36-67l-193-88v582H640v-640l704-320l704 320l-321 146l8 11q21 31 32 67t17 73t7 76t1 74m-448-627l-395 180l395 180l395-180zm0 709l320-161q-1-26-4-47t-11-41t-16-39t-23-42l-266 121l-266-121q-15 24-24 43t-16 38t-9 40t-4 49z"
+      ></path>
+    </svg>,
+  ];
   const handleCategoryClick = (category) => {
-    if(category < 3){
-      dispatch(setCategoryPage(category))
+    if (category < 3) {
+      dispatch(setCategoryPage(category));
       handleLinkClick(5);
-    }else{
+    } else {
       handleLinkClick(2);
     }
   };
@@ -99,34 +148,68 @@ const Home = () => {
           {/* items wrapper */}
           <div className="z-10 flex flex-wrap">
             {categories.map((category, i) => (
-              <div key={i} className="w-full p-2 xl:p-4 md:w-1/3 lg:w-1/4 ">
-                <div className="rounded-2xl transition-all bg-white  p-2 xl:p-4 relative">
+              <div key={i} className="w-full p-2 xl:p-4 lg:w-1/2 flex flex-col">
+                <div className="rounded-2xl transition-all relative  px-6 py-8  flex  flex-1 justify-between  gap-4 border overflow-hidden">
                   {/* img wrapper */}
-                  <div className="flex aspect-video items-center justify-center rounded-lg overflow-hidden border">
-                    {/* {icon} */}
+                  {/* <div className="flex aspect-video items-center justify-center rounded-lg overflow-hidden border">
                     <img
                       src={images[i]}
                       className="w-full h-full object-cover"
                       alt=""
                     />
+                  </div> */}
+                  <div className="absolute top-0 left-0 w-full h-full -z-10">
+                    <img
+                      src={images[i]}
+                      className="w-full h-full object-cover"
+                      alt=""
+                    />
+                    <div
+                      className="absolute top-0 left-0 w-full h-full "
+                      style={{
+                        background:
+                          "linear-gradient(90deg, rgba(0, 0, 0, .9) , rgba(0, 0, 0, .6) , rgba(0, 0, 0, .9) )",
+                      }}
+                    ></div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="text-yellow-500 w-fit">{icons[i]}</div>
+                    <h4 className="text-white text-lg lg:text-xl  font-bold capitalize">
+                      {category.title}
+                    </h4>
                   </div>
                   {/* info */}
                   {/* <div className=" absolute bottom-0 left-0 right-0 m-4  py-4 px-6 rounded-[100px] translate-y-1/2 rounded-tr-none "> */}
-                  <div className="flex flex-col gap-2 bg-white py-4 px-0.5 text-center items-center">
-                    <h4 className="text-rsayBlack text-lg lg:text-xl xl:text-2xl font-bold capitalize">
+                  {/* <div className="flex flex-1 flex-col gap-2 bg-white py-4 px-0.5 text-center items-center justify-between"> */}
+                  {/* <h4 className="text-rsayBlack text-lg lg:text-xl xl:text-2xl font-bold capitalize">
                       {category.title}
-                    </h4>
-                    {/* <p className="text-lg  font-medium text-gray-700">
+                    </h4> */}
+                  {/* <p className="text-lg  font-medium text-gray-700">
                       Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor
                       sit amet, consectetur ipsum dolor sit amet
                     </p> */}
-                    <button
-                      onClick={(e) => handleCategoryClick(i)}
-                      className="capitalize text-primary underline  text-sm  w-fit  font-bold transition-all rounded"
+                  <button
+                    onClick={(e) => handleCategoryClick(i)}
+                    className="capitalize  font-bold transition-all text-lg h-fit rounded-[100px] py-1.5 px-6 bg-white text-primary hover:bg-opacity-55 flex items-center gap-2"
+                  >
+                    <span>more</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1.78em"
+                      height="1em"
+                      viewBox="0 0 16 9"
                     >
-                      show more
-                    </button>
-                  </div>
+                      <path
+                        fill="currentColor"
+                        d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                      ></path>
+                    </svg>
+                  </button>
+                  {/* </div> */}
                   {/* <h4 className="mb-[14px] text-gray-900 text-2xl font-semibold capitalize">
                   {translate2(`course${i + 4}.title`)}
                 </h4>

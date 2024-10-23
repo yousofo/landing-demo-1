@@ -8,14 +8,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleOpenNavList } from "@/state/features/navList/navListSlice";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
+import messagesEn from "@/../messages/en.json";
+import messagesAr from "@/../messages/ar.json";
+import { setCategoryPage } from "@/state/features/categories/categoriesSlice";
 
 const Header = () => {
   const [contactBtnActive, setContactBtnActive] = useState(false);
   const [langBtnActive, setLangBtnActive] = useState(false);
+  const [servicesBtnActive, setServicesBtnActive] = useState(false);
   const dispatch = useDispatch();
   const [scrolled, setScrolled] = useState(false);
   const translate = useTranslations("Header");
+  const tranlateInfo = useTranslations("info");
   // t('title')
+  let categories;
+  if (tranlateInfo("lang") === "ar") {
+    categories = messagesAr.HomePage.categories;
+  } else {
+    categories = messagesEn.HomePage.categories;
+  }
+
   const swiper = useSelector((store) => store.swiper.swiper);
   function handleLinkClick(i) {
     swiper.slideTo(i);
@@ -80,7 +92,16 @@ const Header = () => {
       link: "/services",
     },
   ];
-
+  const categoryClicked = (i) => {
+    console.log(categories);
+    console.log(i);
+    if (i < 3) {
+      dispatch(setCategoryPage(i));
+      handleLinkClick(5);
+    } else {
+      handleLinkClick(2);
+    }
+  };
   return (
     <header
       className={`bg-white  transition-all main-header  h-[60px] sticky  top-0 z-40   lg:py-0 ${
@@ -113,7 +134,7 @@ const Header = () => {
           </span>
         </button>
 
-        <div className="flex ms-auto items-center gap-2 lg:gap-4 h-full">
+        <div className="flex ms-auto gap-2 lg:gap-4 items-center h-full">
           {/* nav */}
           <nav className="hidden lg:flex h-full items-center">
             {/* <LanguageSwitcher/> */}
@@ -129,6 +150,53 @@ const Header = () => {
               ))}
             </ul>
           </nav>
+          {/* services */}
+          <div
+            onClick={() => setServicesBtnActive(!servicesBtnActive)}
+            className={`relative no-ani group h-auto p-4`}
+          >
+            {/* button */}
+            <button className="!flex items-center gap-2 relative z-10">
+              <span className="capitalize text-lg font-semibold text-primary whitespace-nowrap">
+                {translate("services")}
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="#004aad"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="m19 9l-7 7l-7-7"
+                ></path>
+              </svg>
+            </button>
+            {/* hidden list  */}
+            <div
+              className={`absolute bottom-0  right-0 transition-all  w-max h-fit bg-white opacity-0  flex flex-col  rounded-b-md overflow-hidden ${
+                servicesBtnActive
+                  ? " translate-y-full opacity-100  z-0 "
+                  : " -z-10 "
+              }  `}
+            >
+              {categories.map((category, i) => (
+                <button
+                  key={i}
+                  onClick={() => categoryClicked(i)}
+                  className="px-4 py-2 hover:bg-primary text-primary hover:text-white transition-all border hover:border-transparent"
+                >
+                  <span className="capitalize text-lg font-semibold ">
+                    {category.title}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
           {/* contact */}
           <div
             onClick={() => setContactBtnActive(!contactBtnActive)}
@@ -157,17 +225,17 @@ const Header = () => {
             </button>
             {/* hidden list  */}
             <div
-              className={`absolute bottom-0 z-0  right-0 transition-all  w-max h-fit bg-white opacity-0  flex flex-col border rounded-b-md ${
+              className={`absolute bottom-0 z-0  right-0 transition-all  w-max h-fit bg-white opacity-0  flex flex-col border rounded-b-md overflow-hidden ${
                 contactBtnActive ? " translate-y-full opacity-100 " : " "
               }  `}
             >
-              <button onClick={(e) => handleLinkClick(3)} className="px-4 py-2">
-                <span className="capitalize text-lg font-semibold text-primary">
+              <button onClick={(e) => handleLinkClick(3)} className="px-4 py-2 hover:bg-primary text-primary hover:text-white transition-all border hover:border-transparent">
+                <span className="capitalize text-lg font-semibold ">
                   for universities
                 </span>
               </button>
-              <button onClick={(e) => handleLinkClick(4)} className="px-4 py-2">
-                <span className="capitalize text-lg font-semibold text-primary">
+              <button onClick={(e) => handleLinkClick(4)} className="px-4 py-2 hover:bg-primary text-primary hover:text-white transition-all border hover:border-transparent">
+                <span className="capitalize text-lg font-semibold ">
                   for companies
                 </span>
               </button>
@@ -212,17 +280,17 @@ const Header = () => {
             </button>
             {/* hidden list  */}
             <div
-              className={`absolute bottom-0 z-0  right-0 transition-all  w-max h-fit bg-white opacity-0  flex flex-col border rounded-b-md ${
+              className={`absolute bottom-0 z-0  right-0 transition-all  w-max h-fit bg-white opacity-0  flex flex-col border rounded-b-md overflow-hidden ${
                 langBtnActive ? " translate-y-full opacity-100 " : " "
               }}`}
             >
-              <button onClick={(e) => switchLocale("ar")} className="px-4 py-2">
-                <span className="capitalize text-lg font-semibold text-primary">
+              <button onClick={(e) => switchLocale("ar")} className="px-4 py-2 hover:bg-primary text-primary hover:text-white transition-all border hover:border-transparent">
+                <span className="capitalize text-lg font-semibold">
                   العربية
                 </span>
               </button>
-              <button onClick={(e) => switchLocale("en")} className="px-4 py-2">
-                <span className="capitalize text-lg font-semibold text-primary">
+              <button onClick={(e) => switchLocale("en")} className="px-4 py-2 hover:bg-primary text-primary hover:text-white transition-all border hover:border-transparent">
+                <span className="capitalize text-lg font-semibold">
                   English
                 </span>
               </button>

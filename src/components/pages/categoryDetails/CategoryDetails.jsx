@@ -169,7 +169,7 @@ const CategoryDetails = () => {
           </div>
           {/* importance */}
           <div className="max-w-screen-lg bg-white rounded-3xl p-6 pb-2 drop-shadow-lg border w-full">
-            <h3 className="text-3xl font-bold text-rsayBlack text-center mb-4 underline decoration-primary">
+            <h3 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-3 ">
               {tranlateHomePage("why")}
             </h3>
             <Swiper
@@ -192,12 +192,13 @@ const CategoryDetails = () => {
               loop={true}
               autoplay={{
                 delay: 3000,
-                disableOnInteraction: false,}}
+                disableOnInteraction: false,
+              }}
             >
               {category.importance.map((item, i) => (
                 <SwiperSlide className="text-rsayBlack text-center" key={i}>
                   <div className="p-4" key={i}>
-                    <h4 className="font-bold text-xl">{item.title}</h4>
+                    <h4 className="font-bold text-xl mb-2">{item.title}</h4>
                     <p className="text-lg">{item.info}</p>
                   </div>
                 </SwiperSlide>
@@ -205,17 +206,32 @@ const CategoryDetails = () => {
             </Swiper>
           </div>
           {/* benefits | features */}
-          <section className="w-full flex justify-between  items-start gap-16">
+          <section className="w-full flex flex-col lg:flex-row justify-between  items-center gap-16">
             {/* benefits | features */}
             <div className="text-rsayBlack bg-white rounded-2xl p-4 text-center flex-1">
-              <h3 className="text-3xl font-bold text-rsayBlack  mb-6 underline decoration-primary">
+              <h3 className="text-3xl font-bold text-rsayBlack  mb-6  pb-2   w-fit border-b pe-8 border-rsayBlack">
                 Features
               </h3>
-              <ul className="flex flex-col gap-4 ">
+              <ul className="flex flex-col gap-4 md:gap-6 items-start">
                 {category.benefits.map((item, i) => (
-                  <li key={i} className="">
-                    <h4 className="font-bold text-xl">{item.title}</h4>
-                    <ul className="text-lg">
+                  <li key={i} className="flex flex-col items-start">
+                    <h4 className="font-bold text-xl w-fit flex items-center gap-2">
+                      <div className="p-0.5 rounded-full" style={{background:"linear-gradient(90deg, #38C38D 0%, #429C99 100%)"}}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="#FFFFFF"
+                            d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span>{item.title}</span>
+                    </h4>
+                    <ul className="text-lg ps-14 list-disc text-start">
                       {item.info.map((feature, i) => (
                         <li key={i}>{feature}</li>
                       ))}
@@ -223,6 +239,12 @@ const CategoryDetails = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+            <div className="w-full lg:w-1/4 p-4">
+              <div className="text-rsayBlack bg-white rounded-2xl p-4 drop-shadow-lg border">
+                <h3 className="text-3xl font-bold text-rsayBlack mb-4">{tranlateInfo("why")}</h3>
+                <p className="text-lg leading-relaxed">{category.why}</p>
+              </div>
             </div>
             {/* importance list */}
             {/* <div className="text-rsayBlack bg-white rounded-2xl p-4 drop-shadow-lg border max-w-[400px]">
