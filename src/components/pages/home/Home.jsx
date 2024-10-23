@@ -48,6 +48,7 @@ const Home = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
+      key={"svg1"}
       viewBox="0 0 24 24"
     >
       <path
@@ -58,6 +59,7 @@ const Home = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
+      key={"svg2"}
       height="32"
       viewBox="0 0 20 20"
     >
@@ -69,6 +71,7 @@ const Home = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
+      key={"svg3"}
       height="32"
       viewBox="0 0 24 24"
     >
@@ -83,6 +86,7 @@ const Home = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
+      key={"svg4"}
       viewBox="0 0 2048 2048"
     >
       <path
