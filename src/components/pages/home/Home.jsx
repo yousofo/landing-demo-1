@@ -13,7 +13,6 @@ import { useTranslations } from "next-intl";
 import { setCategories, setCategoryPage } from "@/state/features/categories/categoriesSlice";
 import messagesEn from "@/../messages/en.json";
 import messagesAr from "@/../messages/ar.json";
-import LogoSVG from "@/components/shared/logoSVG/LogoSVG";
 // import "swiper/css/effect-fade";
 
 const Home = () => {
