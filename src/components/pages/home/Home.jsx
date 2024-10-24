@@ -152,7 +152,7 @@ const Home = () => {
           <div className="z-10 flex flex-wrap">
             {categories.map((category, i) => (
               <div key={i} className="w-full p-2 xl:p-4 lg:w-1/2 flex flex-col">
-                <div className="rounded-2xl transition-all relative  px-6 py-8  flex  flex-1 justify-between  gap-4 border overflow-hidden">
+                <div className="rounded-2xl transition-all relative  px-6 py-8  flex flex-col lg:flex-row flex-1 justify-between  gap-4 border overflow-hidden">
                   {/* img wrapper */}
                   {/* <div className="flex aspect-video items-center justify-center rounded-lg overflow-hidden border">
                     <img
@@ -175,9 +175,9 @@ const Home = () => {
                       }}
                     ></div>
                   </div>
-                  <div className="flex items-center gap-4">
+                  <div className="flex  flex-col lg:flex-row items-center gap-4">
                     <div className="text-yellow-500 w-fit">{icons[i]}</div>
-                    <h4 className="text-white text-lg lg:text-xl  font-bold capitalize">
+                    <h4 className="text-white text-center lg:text-left text-lg lg:text-xl  font-bold capitalize">
                       {category.title}
                     </h4>
                   </div>
@@ -193,7 +193,7 @@ const Home = () => {
                     </p> */}
                   <button
                     onClick={(e) => handleCategoryClick(i)}
-                    className="capitalize  font-bold transition-all text-lg h-fit rounded-[100px] py-1.5 px-6 bg-white text-primary hover:bg-opacity-55 flex items-center gap-2"
+                    className="capitalize  font-bold w-fit mx-auto lg:mx-0 transition-all text-lg h-fit rounded-[100px] py-1.5 px-6 bg-white text-primary hover:bg-opacity-55 flex items-center gap-2"
                   >
                     <span>more</span>
                     <svg
