@@ -151,7 +151,7 @@ const Header = () => {
           {/* services */}
           <div
             onClick={() => setServicesBtnActive(!servicesBtnActive)}
-            className={`relative no-ani group h-auto p-4`}
+            className={`relative no-ani group h-auto p-4 hidden lg:flex`}
           >
             {/* button */}
             <button className="!flex items-center gap-2 relative z-10">
