@@ -271,7 +271,7 @@ const Home = () => {
           <div>
             {/* <LogoSVG/> */}
             <Image
-              src={"/images/logo/rsay-logo-Photoroom.png"}
+              src={"/images/logo/Technology.png"}
               alt="home more about rsay"
               width={500}
               height={0}
@@ -294,7 +294,7 @@ const Home = () => {
         <a
           className="px-7 py-4  relative text-primary font-bold border-primary border transition-all rounded-xl flex flex-col items-center  bg-white shadow-2xl hover:shadow-3xl hover:bg-primary hover:text-white hover:border-white group"
           // href="https://drive.google.com/file/d/12FzQVQR1s5IXB3HCKLG9t8dC_mMx3NYI/"
-          href="https://drive.usercontent.google.com/download?id=12FzQVQR1s5IXB3HCKLG9t8dC_mMx3NYI&export=download&pli=1&authuser=0"
+          href="https://drive.usercontent.google.com/uc?id=1ALGwSpGYsL2hj0MqH-txQmzHNO2a1lT8&export=download"
           download="rsay-profile"
         >
           <span className="absolute top-0.5 right-0.5 text-rsayBlack animate-pulse group-hover:text-white">

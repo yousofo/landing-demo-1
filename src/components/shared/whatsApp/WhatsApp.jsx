@@ -149,7 +149,7 @@ const WhatsApp = () => {
           background:
             "linear-gradient(88deg, rgb(29 145 49) 0%, rgb(73 201 83) 100%)",
         }}
-        href="https://wa.me/+966549851842"
+        href="https://wa.me/+201016686024"
         target="_blank"
         rel="noreferrer"
       >
@@ -201,7 +201,7 @@ const WhatsApp = () => {
       </a>
       <a
         className="relative p-2.5  rounded-full cursor-pointer text-white hover:opacity-85 transition-all"
-        href="mailto:info@rsaay.com"
+        href="mailto:jon772002@gmail.com"
         target="_blank"
         rel="noreferrer"
         style={{

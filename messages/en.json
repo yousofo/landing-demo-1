@@ -1,8 +1,8 @@
 {
   "info": {
     "lang": "en",
-    "name": "RSAY",
-    "organization": "rsay information technology company",
+    "name": "𝓎𝑜𝓈𝑜𝒻𝑜",
+    "organization": "𝓎𝑜𝓈𝑜𝒻𝑜 Company",
     "why":"why choose us?"
   },
   "button": {
@@ -10,12 +10,12 @@
     "showAll": "Show All"
   },
   "services": {
-    "title": "At RSAY",
+    "title": "At 𝓎𝑜𝓈𝑜𝒻𝑜",
     "info": "We offer specialized training programs that combine theoretical knowledge with practical experience, aiming to develop skills and enhance performance across various technical fields to meet evolving market demands."
   },
   "footer": {
     "about": "about us",
-    "address": "Abdul Samad Al-Tanoukhi Street, Al-Zahra District, Riyadh"
+    "address": "Gihan Street ,Mansoura"
   },
   "courses": {
     "course1": {
@@ -52,9 +52,9 @@
     }
   },
   "HomePage": {
-    "name": "rsay information technology company",
+    "name": "𝓎𝑜𝓈𝑜𝒻𝑜 company",
     "title": "Knowledge | Skill | Quality | Impact",
-    "about1": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success",
+    "about1": "𝓎𝑜𝓈𝑜𝒻𝑜 offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success",
     "startBtn": "Start Now",
     "learnBtn": "Learn More",
     "planSecTitle1": "start your plan now",
@@ -139,12 +139,12 @@
             ]
           }
         ],
-        "why": "At Rsay Information Technology, we are committed to delivering high-quality, customized websites that meet the unique needs of each client. Our goal is to create engaging digital experiences that strengthen customer relationships and drive business success in today’s competitive digital environment."
+        "why": "At 𝓎𝑜𝓈𝑜𝒻𝑜 Information Technology, we are committed to delivering high-quality, customized websites that meet the unique needs of each client. Our goal is to create engaging digital experiences that strengthen customer relationships and drive business success in today’s competitive digital environment."
       },
       {
         "title": "Mobile Application Development (Android & iOS)",
         "overview": "In today’s world, where smartphones have become essential tools for everyday life, having a mobile application is crucial for businesses to connect with their customers and offer services seamlessly.",
-        "details": "At Rsay Information Technology, we specialize in developing custom mobile applications for Android and iOS, tailored to meet your needs and drive your business forward.",
+        "details": "At 𝓎𝑜𝓈𝑜𝒻𝑜 Information Technology, we specialize in developing custom mobile applications for Android and iOS, tailored to meet your needs and drive your business forward.",
         "importance": [
           {
             "title": "Enhanced Digital Presence",
@@ -215,10 +215,10 @@
             ]
           }
         ],
-        "why": "At Rsay Information Technology, we ensure that your mobile app not only meets your expectations but also gives you a competitive edge in the digital marketplace."
+        "why": "At 𝓎𝑜𝓈𝑜𝒻𝑜 Information Technology, we ensure that your mobile app not only meets your expectations but also gives you a competitive edge in the digital marketplace."
       },
       {
-        "title": "Rsay Integrated Learning Management System (LMS)",
+        "title": "𝓎𝑜𝓈𝑜𝒻𝑜 Integrated Learning Management System (LMS)",
         "overview": "Our LMS is a comprehensive digital learning solution designed to help organizations create, manage, and deliver training programs efficiently. It provides a flexible learning environment that supports both self-paced and live training sessions, enabling organizations to enhance employee skills and offer high-quality educational experiences.",
         "details": "Our LMS is a comprehensive digital learning solution designed to help organizations create, manage, and deliver training programs efficiently. It provides a flexible learning environment that supports both self-paced and live training sessions, enabling organizations to enhance employee skills and offer high-quality educational experiences.",
         "importance": [
@@ -318,9 +318,9 @@
         "why": "Rasai’s LMS is an essential tool for organizations looking to enhance their learning and development efforts. It provides a modern, efficient, and scalable platform that meets the evolving educational needs of businesses and institutions."
       },
       {
-        "title": "RSAY's training Courses",
-        "overview": "rsay courses overview",
-        "details": "rsay courses details",
+        "title": "𝓎𝑜𝓈𝑜𝒻𝑜's training Courses",
+        "overview": "𝓎𝑜𝓈𝑜𝒻𝑜 courses overview",
+        "details": "𝓎𝑜𝓈𝑜𝒻𝑜 courses details",
         "importance": [
           {
             "title": "importance",
@@ -341,7 +341,7 @@
             "info": ["info"]
           }
         ],
-        "why": "rsay why choose us"
+        "why": "𝓎𝑜𝓈𝑜𝒻𝑜 why choose us"
       }
     ]
   },
@@ -368,28 +368,28 @@
     "messagePH": "type your message"
   },
   "about": {
-    "name": "rsay",
+    "name": "𝓎𝑜𝓈𝑜𝒻𝑜",
     "title": "about us",
     "message": "A goal properly set with ** is halfway reached!",
     "section1": {
-      "first": "RSAY ITC",
-      "info1": "A leading Saudi company specializing in professional education services across various fields, including cybersecurity, quality management, and risk management, along with other technical disciplines. We offer flexible learning solutions, allowing you to choose between online learning or attending sessions in state-of-the-art training facilities. This enables ambitious individuals to enhance their skills and grow their expertise while aligning their learning journey with their passion and schedule."
+      "first": "𝓎𝑜𝓈𝑜𝒻𝑜",
+      "info1": "A leading Egyption company specializing in professional education services across various fields, including cybersecurity, quality management, and risk management, along with other technical disciplines. We offer flexible learning solutions, allowing you to choose between online learning or attending sessions in state-of-the-art training facilities. This enables ambitious individuals to enhance their skills and grow their expertise while aligning their learning journey with their passion and schedule."
     },
     "section2": {
-      "first": "RSAY ITC",
+      "first": "𝓎𝑜𝓈𝑜𝒻𝑜",
       "info1": "A leading provider of professional training and development services, backed by a team of certified experts and professionals across various business domains. We support learners throughout their journey, helping them achieve professionalism and advance in their careers.",
       "info2": "Our programs are carefully designed to align with the latest trends in the business world, developed by industry experts, and enhanced through global partnerships to offer internationally accredited courses across diverse fields.",
       "info3": "Our course content is comprehensive, concise, and interactive, ensuring an optimal learning experience that keeps pace with the modern business landscape.",
       "info4": "We also provide flexible learning options, allowing learners to choose between online education or in-person sessions in state-of-the-art training facilities, empowering them to grow their expertise according to their personal schedules.",
-      "info5": "RSAY is your premier destination for earning internationally recognized certificates through engaging, easy-to-understand programs. We also offer hundreds of practice questions to help participants confidently pass their exams."
+      "info5": "𝓎𝑜𝓈𝑜𝒻𝑜 is your premier destination for earning internationally recognized certificates through engaging, easy-to-understand programs. We also offer hundreds of practice questions to help participants confidently pass their exams."
     },
     "section3": {
       "first": "Vision",
-      "info1": "To be Rsay first choice for professional education and development in the Arab world by offering innovative training programs and internationally accredited certificates that meet market needs and contribute to building professional competencies capable of achieving sustainable success."
+      "info1": "To be 𝓎𝑜𝓈𝑜𝒻𝑜 first choice for professional education and development in the Arab world by offering innovative training programs and internationally accredited certificates that meet market needs and contribute to building professional competencies capable of achieving sustainable success."
     },
     "section4": {
       "first": "Mission",
-      "info1": "At Rsay, we are committed to empowering individuals to achieve their professional ambitions and develop their skills by providing flexible and comprehensive educational services, supported by local and global expertise, to ensure a holistic learning experience that enhances efficiency and professionalism in evolving work environments."
+      "info1": "At 𝓎𝑜𝓈𝑜𝒻𝑜, we are committed to empowering individuals to achieve their professional ambitions and develop their skills by providing flexible and comprehensive educational services, supported by local and global expertise, to ensure a holistic learning experience that enhances efficiency and professionalism in evolving work environments."
     }
   }
 }

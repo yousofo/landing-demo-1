@@ -13,21 +13,18 @@ const Footer = () => {
   return (
     <footer className="text-white  border-t  bg-white rounded-lg shadow ">
       <ScreenWrapper className="flex flex-col lg:flex-row justify-between py-4 md:py-8 items-center">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
+        <div className="md:flex md:justify-between items-center">
+          <div className="md:mb-0 me-4">
             <button
               onClick={() => handleLinkClick(0)}
               href="/"
               className="flex items-center"
             >
               <img
-                src="/images/placeholders/rsay-logo-white.png"
+                src="/images/logo/yosofo-logo.png"
                 className="w-20 rounded-full"
                 alt="FlowBite Logo"
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap">
-                RSAY
-              </span>
             </button>
           </div>
           <div className="flex gap-8 sm:gap-6">
@@ -39,7 +36,7 @@ const Footer = () => {
                     href="/"
                     className="hover:underline"
                   >
-                    RSAY
+                    Yosofo
                   </button>
                 </li>
                 <li>
@@ -55,13 +52,13 @@ const Footer = () => {
             <div>
               <ul className="text-gray-500  font-medium text-start">
                 <li>
-                  <a href="mailto:info@rsaay.com" className="hover:underline">
-                    info@rsaay.com
+                  <a href="mailto:jon772002@gmail.com" className="hover:underline">
+                  jon772002@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+966549851842" className="hover:underline">
-                    +966549851842
+                  <a href="tel:+20106686024" className="hover:underline">
+                    +20 106686024
                   </a>
                 </li>
               </ul>
@@ -74,12 +71,12 @@ const Footer = () => {
             {translateFooter("address")}
           </span>
           <span className="text-sm text-gray-500 sm:text-cente">
-            © 2024{" "}
+            © 2025{" "}
             <button
               onClick={() => handleLinkClick(0)}
               className="hover:underline    "
             >
-              RSAY™
+              Yosofo™
             </button>
             . All Rights Reserved.
           </span>

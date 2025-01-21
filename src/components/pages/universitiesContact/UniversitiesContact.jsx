@@ -67,7 +67,7 @@ const UniversitiesContact = () => {
             <div>
               <h2>Partnership Invitation with Universities</h2>
               <p>
-                RSAY is pleased to invite universities and academic institutions
+                yosofo is pleased to invite universities and academic institutions
                 to collaborate with us in providing advanced and professional
                 training programs. We believe in the importance of strategic
                 partnerships in enhancing the quality of education and
@@ -77,7 +77,7 @@ const UniversitiesContact = () => {
                 market.
               </p>
             </div>
-            <h3>Why Partner with RSAY?</h3>
+            <h3>Why Partner with yosofo?</h3>
             <ul>
               <li>
                 <span>Achieving Academic Excellence:</span>{" "}
@@ -124,17 +124,17 @@ const UniversitiesContact = () => {
             <div>
               <h2>للشراكة مع الجامعات</h2>
               <p>
-                يسر شركة رساي أن تدعو الجامعات والمؤسسات الأكاديمية للتعاون معنا
+                يسر شركة يوسفو أن تدعو الجامعات والمؤسسات الأكاديمية للتعاون معنا
                 في تقديم برامج تدريبية متقدمة ومهنية. نحن نؤمن بأهمية الشركات
                 الاستراتيجية في تعزيز جودة التعليم والتدريب المهني، ونعمل في
                 التعاون مع الجامعات في صياغة فريدة لاستحداث آفاقًا للشراكة في
                 تطوير قوى عاملة ماهرة تلبي احتياجات سوق العمل المتغيرة.
               </p>
             </div>
-            <h3>لماذا الشراكة مع رساي؟</h3>
+            <h3>لماذا الشراكة مع يوسفو؟</h3>
             <ul>
               <li>
-                <span>لماذا الشراكة مع رساي؟</span>{" "}
+                <span>لماذا الشراكة مع يوسفو؟</span>{" "}
                 <span>
                   نحن نسعى لتقديم برامج تدريبية تتماشى مع أحدث التطورات في
                   مجالات الأعمال والتكنولوجيا، من خلال التعاون مع الجامعات،

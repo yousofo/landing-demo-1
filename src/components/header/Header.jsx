@@ -113,11 +113,13 @@ const Header = () => {
           className="text-primary font-bold text-3xl lg:text-5xl flex relative items-center logo active"
           dir="ltr"
         >
-          <span>R</span>
-          <span>S</span>
-          <span>A</span>
-          <span>Y</span>
-          <span className="p-1.5 rounded-full border border-primary">
+          <span>𝓎</span>
+          <span>𝑜</span>
+          <span>𝓈</span>
+          <span>𝑜</span>
+          <span>𝒻</span>
+          <span>𝑜</span>
+          {/* <span className="p-1.5 rounded-full border border-primary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -129,7 +131,7 @@ const Header = () => {
                 d="M10 2a5 5 0 0 0-5 5v2a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H7V7a3 3 0 0 1 5.906-.75a1 1 0 0 0 1.936-.5A5 5 0 0 0 10 2"
               ></path>
             </svg>
-          </span>
+          </span> */}
         </button>
 
         <div className="flex ms-auto gap-2 lg:gap-4 items-center h-full">
