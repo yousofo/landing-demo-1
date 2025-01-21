@@ -242,7 +242,7 @@ const Contact = () => {
         <div ref={overlayContainerRef} className="overlay-container">
           <div ref={overlayRef} className="overlay text-start">
             <div className="overlay-left p-4 flex flex-col gap-4 text-white">
-              <h1 className="font-medium text-2xl">Why Choose RSAY?</h1>
+              <h1 className="font-medium text-2xl">Why Choose Yosofo?</h1>
               <ul className="flex flex-col gap-2 list-disc ps-4">
                 <li>
                   Ensure teaching stability, rigorous standards, and
@@ -274,7 +274,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="overlay-right p-4 flex flex-col gap-4 text-white">
-              <h1 className="font-medium text-2xl">Why Choose RSAY?</h1>
+              <h1 className="font-medium text-2xl">Why Choose Yosofo?</h1>
               <ul className="flex flex-col gap-2 list-disc ps-4">
                 <li>
                   Ensure teaching stability, rigorous standards, and
