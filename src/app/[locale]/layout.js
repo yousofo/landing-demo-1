@@ -27,11 +27,11 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "RSAY | رساي",
-  description: "RSAY for cyber security services.",
+  title: "Yosofo",
+  description: "Yosofo for IT services.",
   keywords: [
-    "RSAY",
-    "رسائي",
+    "Yosofo",
+    "يوسفو",
     "cyber",
     "cybersecurity",
     "cyber security",
@@ -48,7 +48,7 @@ export const metadata = {
     "Cybersecurity Training Saudi Arabia",
     "Information Security Services Riyadh",
     "Saudi Arabian Cybersecurity Solutions",
-    "RSAY Cybersecurity Courses",
+    "Yosofo Cybersecurity Courses",
     "Network Management in Saudi Arabia",
     "IT Risk Management Services KSA",
     "Cloud Computing Training Saudi Arabia",
